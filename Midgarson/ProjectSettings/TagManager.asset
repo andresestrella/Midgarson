@@ -52,4 +52,21 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 180794753
+  - name: background
+    uniqueID: 3337592341
+    locked: 0
+  - name: nube
+    uniqueID: 1283979033
+    locked: 0
+  - name: montains
+    uniqueID: 3735335665
+    locked: 0
+  - name: object1
+    uniqueID: 419639535
+    locked: 0
+  - name: object
+    uniqueID: 2361685621
+    locked: 0
+  - name: road
+    uniqueID: 3681615849
     locked: 0
