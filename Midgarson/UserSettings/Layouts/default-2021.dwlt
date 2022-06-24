@@ -357,7 +357,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Sprites/Cainos/Pixel Art Platformer - Village Props/Texture
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Unity-Projects\Midgarson\Midgarson
+  m_LastProjectPath: C:\Users\hp\Desktop\Proyecto Aplicada 2\Midgarson\Midgarson
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
@@ -479,7 +479,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 160
+    m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -520,7 +520,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 36ae0000
       m_LastClickedID: 0
       m_ExpandedIDs: 2cfbffff36980000
       m_RenameOverlay:
@@ -580,7 +580,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -100, y: -25.600006}
+      snapOffsetDelta: {x: -98.66669, y: -26}
       snapCorner: 3
       id: Tool Settings
       index: 0
