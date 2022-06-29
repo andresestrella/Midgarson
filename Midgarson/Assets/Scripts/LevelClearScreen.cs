@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class LevelClearScreen : MonoBehaviour
 {   
-    public TextMeshPro pointsText;
-    public TextMeshPro timeText;
+    public TextMeshProUGUI pointsText;
+    public TextMeshProUGUI timeText;
 
-    public void Setup(int score, float time){
+    public void Setup(){
         gameObject.SetActive(true);
-        pointsText.text = score.ToString() + " POINTS";
-        timeText.text = "TIME: " + time.ToString();
+        //pointsText.text = score.ToString() + " POINTS";
+        //timeText.text = "TIME: " + time.ToString();
     }
 }

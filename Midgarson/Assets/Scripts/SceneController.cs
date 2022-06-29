@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SceneController : MonoBehaviour
 {
+    public PlayerStatusUI playerStatusUI;
+    public int scorePlay = 0;
     public GameOverScreen gameOverScreen;
     public LevelClearScreen levelClearScreen;
     public static SceneController instancia;
@@ -18,10 +20,19 @@ public class SceneController : MonoBehaviour
         
     }
 
+    public void IncrementScore(int punto)
+    {
+        scorePlay += punto;
+        playerStatusUI.updateScoreText();
+    }
+
     public void GameOver(){
         gameOverScreen.Setup();
     }
     public void LevelClear(){
         levelClearScreen.Setup();
     }
+
+    
+
 }

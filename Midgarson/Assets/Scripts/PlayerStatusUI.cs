@@ -14,7 +14,7 @@ public class PlayerStatusUI : MonoBehaviour
     [SerializeField] private Image healtBarShadow, shieldBarShadow;
 
     private float nextHealth, nextShield, timePlay =0.0f;
-    private int scorePlay = 0;
+    
     private bool activeShadowHealth = false, activeShadowShield = false;
 
     private void Awake()
@@ -79,11 +79,9 @@ public class PlayerStatusUI : MonoBehaviour
 
     }
 
-    public void incrementScore(int punto)
+    public void updateScoreText()
     {
-        scorePlay += punto;
-        score.text = "SCORE: " + scorePlay.ToString();
-
+        score.text = "SCORE: " + SceneController.instancia.scorePlay.ToString();
     }
 
     public string formatearTiempo()
