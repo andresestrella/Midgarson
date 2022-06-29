@@ -5,7 +5,7 @@ using UnityEngine;
 public class BirdMovement : MonoBehaviour
 {
     Vector3 _deltaPos = new Vector3();
-    Vector3 moveSpeed = new Vector3(10,0);
+    Vector3 moveSpeed = new Vector3(4,0);
     private SpriteRenderer mySprite;
 
     private void Awake()

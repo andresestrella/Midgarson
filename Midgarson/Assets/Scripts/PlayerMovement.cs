@@ -6,6 +6,10 @@ public class PlayerMovement : MonoBehaviour
     private float moveForce = 8f;
     [SerializeField]
     private float jumpForce = 5f;
+    [SerializeField]
+    private float walkingForce = 8f;
+    [SerializeField]
+    private float runningForce = 12f;
     private float movementX, yVelocity;
     private bool bend, isGrounded, isOnStairs;
     private Rigidbody2D myBody;
@@ -90,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && movementX != 0 && isGrounded && yVelocity == 0)
         {
-            moveForce = 12f;
+            moveForce = runningForce;
             anim.SetBool(RUN_ANIMATION, true);
         }
         if (Input.GetKey(KeyCode.LeftShift) && movementX != 0 && isGrounded && yVelocity == 0)
@@ -99,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            moveForce = 8f;
+            moveForce = walkingForce;
             anim.SetBool(RUN_ANIMATION, false);
         }
     }
@@ -135,5 +139,24 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool(FALL_ANIMATION, false);
             myBody.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
         }
+        else if(collision.gameObject.tag == "Platform")
+        {
+            transform.parent = collision.gameObject.transform;
+            isGrounded = true;
+            isOnStairs = false;
+            anim.SetBool(JUMP_ANIMATION, false);
+            anim.SetBool(FALL_ANIMATION, false);
+            myBody.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+
+        
     }
+
+    void OnCollisionExit2D(Collision2D collision){
+        if(collision.gameObject.tag == "Platform"){
+            transform.parent = null;
+        }
+    }
+
+
 }
