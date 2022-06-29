@@ -5,10 +5,13 @@ using UnityEngine;
 public class Boss1Movement : MonoBehaviour
 {
     public Transform player;
+    //public GameObject otherObject;
+    public Animator otherAnimator;
+    public PlayerLife playerLife;
     
     public Rigidbody2D rb;
     public double life = 100;
-    public double damageTaken = 0.20;
+    public double damageTaken = 0.50;
     public float moveSpeed = 2f;
 
     public float chrono;
@@ -26,6 +29,9 @@ public class Boss1Movement : MonoBehaviour
 
     private Vector2 velocity = new Vector2();*/
 
+    void Awake () {
+        //otherAnimator = otherObject.GetComponent<Animator>();
+    }
     private void Start() {
         rb = gameObject.GetComponent<Rigidbody2D>();
         //dashTime = startDashTime;
@@ -97,15 +103,17 @@ public class Boss1Movement : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.tag == "Player" && anim.GetBool("isDead") == false){            
-            /*if(other.gameObject.GetComponent<Animator>().GetBool("Attack") == true){NO BORRAR
+        if(other.gameObject.tag == "Player" && anim.GetBool("isDead") == false){           
+            if(otherAnimator.GetBool("Attack") == true){
                 life -= life * damageTaken;
+                print(life);
                 //agregar animacion de damage
             }
-            if(gameObject.GetBool("isAttacking") == true){
-                //PlayerMovement.TakeDamage(5);
-            } else{
-                //PlayerMovement.TakeDamage(1);
+            if(anim.GetBool("isAttacking") == true){
+                //playerLife.TakeDamage(50);
+            } /*else{
+                //PlayerLife.TakeDamage(10);
+                print("Take damage -10");
             }*/
         }
     }
