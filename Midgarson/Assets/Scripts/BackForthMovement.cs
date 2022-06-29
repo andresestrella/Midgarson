@@ -9,8 +9,10 @@ public class BackForthMovement : MonoBehaviour
     public Vector3 posA;
     public Vector3 posB;
     public float speed = 2;
+    SpriteRenderer renderer;
     void Start()
     {
+        renderer = GetComponent<SpriteRenderer>();
         posA = transform.localPosition;
         posB = targetB.localPosition;
         nextPos = posB;
@@ -25,10 +27,12 @@ public class BackForthMovement : MonoBehaviour
         transform.localPosition = Vector3.MoveTowards(transform.localPosition, nextPos, speed * Time.deltaTime);
         if(Vector3.Distance(transform.localPosition, nextPos) <= 0.1){
             ChangeDestination();
+            renderer.flipX = !(nextPos.x > gameObject.transform.position.x);
+
         }
     }
 
     private void ChangeDestination(){
-        nextPos = nextPos != posA ? posA : posB; 
+        nextPos = nextPos != posA ? posA : posB;
     }
 }

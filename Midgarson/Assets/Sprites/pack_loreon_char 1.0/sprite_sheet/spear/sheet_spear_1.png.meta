@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -76,9 +76,1629 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sheet_spear_1_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 712
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa92bfe091eecc8448874fbef7b7bea5
+      internalID: 219844161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 712
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b130745ca6132d94297935373f3a8c88
+      internalID: -315751500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 712
+        width: 20
+        height: 36
+      alignment: 9
+      pivot: {x: 0.65206873, y: 0.37930977}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b484e91bb3ebb034cb9ed8832a9217e2
+      internalID: -881158694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_3
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 712
+        width: 20
+        height: 36
+      alignment: 9
+      pivot: {x: 0.69551694, y: 0.40344748}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac6a539a2eaa0740979343a46307e33
+      internalID: 1400881869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_4
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 712
+        width: 18
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f735eb5496d3c64c8a70e173720e051
+      internalID: 1566813925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_5
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 712
+        width: 18
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c8ca3ef6dcb99349ab97fb8742bb4a0
+      internalID: -354789575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_6
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 664
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3de7cd6f3b202e428a640e0d55c3fb4
+      internalID: -2076075854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_7
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 664
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b16ba48769b8a48ae564a31a510b35
+      internalID: -1990192514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_8
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 664
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44bbae65a4043e745a229114be40dc88
+      internalID: 60721612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_9
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 664
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e539a21c8887b934bbbbaf6936b9e78b
+      internalID: -1984531190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_10
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 664
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 649d0359093a11443bd9a00412133881
+      internalID: -313728496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_11
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 664
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8dd7d66a5cf2b4a95225395eb36ae0
+      internalID: -2042968623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_12
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 616
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5577dac1cb6bc6143b733b213f98490b
+      internalID: 1488672641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_13
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 616
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3063e2f05ee5a4abfca50af99bddc8
+      internalID: -1770890700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_14
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 616
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203b2708724d134439bf2fa1847fd9fa
+      internalID: -176847414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_15
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 616
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6b16f3403fb3349b23c4cd35b49d57
+      internalID: -962234847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_16
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 616
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868c63b314456ab4d880f8bd88b63032
+      internalID: -918185072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_17
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 616
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be8c1ebb9118324cbe8d0ab1c9161c2
+      internalID: 722057310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_18
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 616
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e13607b0c292186409882b9005e1a88f
+      internalID: 13439706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_19
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 616
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df486a071c137bc48b4fc734c0ce2747
+      internalID: 1109494796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_20
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 616
+        width: 38
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce2520d219ec9a74697597de0f5a136c
+      internalID: -1588937117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_21
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 616
+        width: 39
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d5f33112c79d84a97013de77448d3b
+      internalID: -2007223912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_22
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 616
+        width: 39
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ce74d9423767544a252e41b149c34a
+      internalID: 155544821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_23
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 568
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59178b81353dae1498ac9c9e4883b889
+      internalID: -904364365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_24
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 568
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539490104d49519429c41844f5ecd03d
+      internalID: 1614839240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_25
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 568
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f019a1d7a36a74fbf4b52090baad72
+      internalID: 332167867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_26
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 568
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43bcf669e3f4ba745af31404ee9abec6
+      internalID: -779899803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_27
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 568
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e7a2637cbff994b963b113afaf4500
+      internalID: -1594540908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_28
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 568
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5c3696d91832e43844ae9750f01eff
+      internalID: -880206633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_29
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 568
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1834371d437c2294ba9b24d9cb727b86
+      internalID: -1290329142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_30
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 568
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f16a5ad37ca264f85cb62f3add3b74
+      internalID: -371063422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_31
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 568
+        width: 35
+        height: 19
+      alignment: 9
+      pivot: {x: 0.6392491, y: 0.8298051}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faabbe85e4f0131499cd46aa09719200
+      internalID: 77947008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_32
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 568
+        width: 36
+        height: 5
+      alignment: 9
+      pivot: {x: 0.4999983, y: 3.145764}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5fb25be945820448ba3bd0399c52dc
+      internalID: -310213096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_33
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 520
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 591137a375cfc8a41a24d38d7219676f
+      internalID: -209680444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 520
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a8ddd78a1711044b2542e20f320970
+      internalID: -132641447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_35
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 523
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b75dddf1fdeb443b74d63adc2674e5
+      internalID: -1755646519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_36
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 520
+        width: 36
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3b3ec411768574c825ebdd1b4719cc
+      internalID: -1668510230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_37
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 520
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92faaf296cbbbd458cf3dd1a6154d00
+      internalID: 2021720920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_38
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 520
+        width: 39
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427eb4483e468bc46a6e2ce1faa60f01
+      internalID: 346941990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_39
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 520
+        width: 36
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628fa901e5741ba4d8efae6f2b09a4dc
+      internalID: 1079051371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_40
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 520
+        width: 36
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0540e66d923e38c4f8cdfee6cefe1ffe
+      internalID: 1844858382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_41
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 520
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ca34ec060f7644ab50533465c9eeb1
+      internalID: -177474381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_42
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 520
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6906873dc6074a04490a243e2b40dec5
+      internalID: -39354380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_43
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 470
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 052ce35724c071f4c8e77fce4fcca8bd
+      internalID: 422766746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_44
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 471
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973579bc25e75b44db5466b21c414af1
+      internalID: 1935799551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_45
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 472
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac03c84e37f1dd4d9f8e210aabd74e2
+      internalID: -431293801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_46
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 472
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae2405afaa8e5e4288507be0c85a0b6
+      internalID: -781826855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_47
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 472
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b63289478c402b4f857797d2da3ea60
+      internalID: 1667785007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_48
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 424
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b8ed50844af894cb9ca9fe5bd22b16
+      internalID: 1512022728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_49
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 424
+        width: 41
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8989ea0109c866f47bd30cf17b667891
+      internalID: -1646071164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_50
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 424
+        width: 36
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9031c0629baa44ebdebd441f27b69c
+      internalID: -832826615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_51
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 424
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b54d361c0e96f94a83072fc68968285
+      internalID: 744276102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_52
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 423
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5f9e36a2ced0f40ad3bbd14465dd52
+      internalID: -778164837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_53
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 424
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 245b3e32db9404c41adcf395a79a197d
+      internalID: -257396056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_54
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 418
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6112d4ae0e0d7b34fb66e8935b21e0a6
+      internalID: -1772310864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_55
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 424
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa39f57407470ec468876c71d93ebf1a
+      internalID: -646583520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_56
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 424
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37526ae9f3532845a2a226cf842352d
+      internalID: 1904302944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_57
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 424
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151f6b2c1ffaa4e4cbbade0955ad2eaa
+      internalID: 1549564565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_58
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 359
+        width: 35
+        height: 29
+      alignment: 9
+      pivot: {x: 0.34691042, y: 0.49999896}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc76515c9227784c88df4f3bf38f116
+      internalID: -1168094279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_59
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 359
+        width: 25
+        height: 39
+      alignment: 9
+      pivot: {x: 0.3122644, y: 0.3796551}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac945466f7512a46b48aebbad3d2586
+      internalID: -6428854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_60
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 359
+        width: 16
+        height: 53
+      alignment: 9
+      pivot: {x: 0.5000019, y: 0.30075073}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e577bd42cab21e48b290fd0d0137abe
+      internalID: -1173531800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_61
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 358
+        width: 60
+        height: 54
+      alignment: 9
+      pivot: {x: 0.23352203, y: 0.27315718}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa51cb4b60c08a4eb43e8643e85b214
+      internalID: -212065065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_62
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 359
+        width: 36
+        height: 23
+      alignment: 9
+      pivot: {x: 0.3818029, y: 0.54500014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d607f08949a1c47a3675d452318754
+      internalID: -700895305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_63
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 359
+        width: 35
+        height: 28
+      alignment: 9
+      pivot: {x: 0.36374685, y: 0.39065117}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747fc2fe66105524cb23f03987ca4c17
+      internalID: -1434146855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_64
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 294
+        width: 35
+        height: 29
+      alignment: 9
+      pivot: {x: 0.33237794, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd29e7e9b71efae46b238cb277a12185
+      internalID: 96070734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_65
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 294
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9ff0aca575c0247a1a9bf82dba735b
+      internalID: -1866790515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_66
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 294
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a541d311442a864a93d271e70e05e73
+      internalID: 1532416674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_67
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 294
+        width: 58
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688cfd81dfd86b5449b6043517f9f786
+      internalID: -1960562090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_68
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 294
+        width: 52
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03dc372492ab8c43ad62a1e74b4324c
+      internalID: 1841791029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_69
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 294
+        width: 39
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0553286dbafd14a834abb532c80e48
+      internalID: 192733230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_70
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 229
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b8afc3d37f1844cba5047459e80c86
+      internalID: -211840856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_71
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 229
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445bdb8d2ff6ccb4f9968ff6979f938b
+      internalID: -2022839324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_72
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 229
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd6f3780b5abeb47be63d73603f1dbd
+      internalID: -66515980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_73
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 229
+        width: 73
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a78e08aab3018aa4eaaac6e660997397
+      internalID: -1890506727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_74
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 228
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88d9d9e34d13454fa478cab07b7aed1
+      internalID: -737197686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_spear_1_75
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 229
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509bc423f09ca644385533f25b7ee2b1
+      internalID: 2001505092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +1709,83 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sheet_spear_1_5: -354789575
+      sheet_spear_1_50: -832826615
+      sheet_spear_1_36: -1668510230
+      sheet_spear_1_0: 219844161
+      sheet_spear_1_18: 13439706
+      sheet_spear_1_70: -211840856
+      sheet_spear_1_67: -1960562090
+      sheet_spear_1_73: -1890506727
+      sheet_spear_1_9: -1984531190
+      sheet_spear_1_1: -315751500
+      sheet_spear_1_20: -1588937117
+      sheet_spear_1_17: 722057310
+      sheet_spear_1_37: 2021720920
+      sheet_spear_1_3: 1400881869
+      sheet_spear_1_16: -918185072
+      sheet_spear_1_8: 60721612
+      sheet_spear_1_13: -1770890700
+      sheet_spear_1_34: -132641447
+      sheet_spear_1_30: -371063422
+      sheet_spear_1_24: 1614839240
+      sheet_spear_1_72: -66515980
+      sheet_spear_1_53: -257396056
+      sheet_spear_1_59: -6428854
+      sheet_spear_1_29: -1290329142
+      sheet_spear_1_27: -1594540908
+      sheet_spear_1_46: -781826855
+      sheet_spear_1_57: 1549564565
+      sheet_spear_1_11: -2042968623
+      sheet_spear_1_47: 1667785007
+      sheet_spear_1_40: 1844858382
+      sheet_spear_1_60: -1173531800
+      sheet_spear_1_68: 1841791029
+      sheet_spear_1_45: -431293801
+      sheet_spear_1_41: -177474381
+      sheet_spear_1_42: -39354380
+      sheet_spear_1_44: 1935799551
+      sheet_spear_1_35: -1755646519
+      sheet_spear_1_74: -737197686
+      sheet_spear_1_65: -1866790515
+      sheet_spear_1_7: -1990192514
+      sheet_spear_1_62: -700895305
+      sheet_spear_1_28: -880206633
+      sheet_spear_1_32: -310213096
+      sheet_spear_1_21: -2007223912
+      sheet_spear_1_2: -881158694
+      sheet_spear_1_43: 422766746
+      sheet_spear_1_23: -904364365
+      sheet_spear_1_69: 192733230
+      sheet_spear_1_71: -2022839324
+      sheet_spear_1_12: 1488672641
+      sheet_spear_1_51: 744276102
+      sheet_spear_1_22: 155544821
+      sheet_spear_1_31: 77947008
+      sheet_spear_1_63: -1434146855
+      sheet_spear_1_55: -646583520
+      sheet_spear_1_56: 1904302944
+      sheet_spear_1_15: -962234847
+      sheet_spear_1_4: 1566813925
+      sheet_spear_1_25: 332167867
+      sheet_spear_1_10: -313728496
+      sheet_spear_1_61: -212065065
+      sheet_spear_1_58: -1168094279
+      sheet_spear_1_19: 1109494796
+      sheet_spear_1_26: -779899803
+      sheet_spear_1_39: 1079051371
+      sheet_spear_1_33: -209680444
+      sheet_spear_1_38: 346941990
+      sheet_spear_1_64: 96070734
+      sheet_spear_1_52: -778164837
+      sheet_spear_1_66: 1532416674
+      sheet_spear_1_54: -1772310864
+      sheet_spear_1_6: -2076075854
+      sheet_spear_1_48: 1512022728
+      sheet_spear_1_49: -1646071164
+      sheet_spear_1_14: -176847414
+      sheet_spear_1_75: 2001505092
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

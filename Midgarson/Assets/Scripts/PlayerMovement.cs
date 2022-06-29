@@ -6,6 +6,10 @@ public class PlayerMovement : MonoBehaviour
     private float moveForce = 8f;
     [SerializeField]
     private float jumpForce = 5f;
+    [SerializeField]
+    private float walkingForce = 8f;
+    [SerializeField]
+    private float runningForce = 12f;
     private float movementX, yVelocity;
     private bool bend, isGrounded, isOnStairs;
     private Rigidbody2D myBody;
@@ -16,6 +20,14 @@ public class PlayerMovement : MonoBehaviour
     private string JUMP_ANIMATION = "Jump";
     private string FALL_ANIMATION = "Fall";
     private string ATTACK_ANIMATION = "Attack";
+
+    private string HEAVY_ATTACK_ANIMATION = "HeavyAttack";
+    private string SHOOTING_ANIMATION = "Shooting";
+    private string THROWING_ANIMATION = "Throwing";
+    private string STANDING_UP_ANIMATION = "StandingUp";
+    private string HIT_ANIMATION = "Hit";
+    //private string DYING_ANIMATION = "";
+
     private Animator anim;
 
     private void Awake()
@@ -29,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
         yVelocity = myBody.velocity.y;
 
-        if (yVelocity < 0 && !isOnStairs)
+        if (yVelocity < 0 && !isOnStairs && !isGrounded)
         {
             anim.SetBool(FALL_ANIMATION, true);
         }
@@ -39,6 +51,10 @@ public class PlayerMovement : MonoBehaviour
         Run();
         Jump();
         Attack();
+        HeavyAttack();
+        BowAttack();
+        GettingHit();
+        ThrowingObject();
     }
     void PlayerMoveKeyboard()
     {
@@ -90,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && movementX != 0 && isGrounded && yVelocity == 0)
         {
-            moveForce = 12f;
+            moveForce = runningForce;
             anim.SetBool(RUN_ANIMATION, true);
         }
         if (Input.GetKey(KeyCode.LeftShift) && movementX != 0 && isGrounded && yVelocity == 0)
@@ -99,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            moveForce = 8f;
+            moveForce = walkingForce;
             anim.SetBool(RUN_ANIMATION, false);
         }
     }
@@ -115,7 +131,56 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool(ATTACK_ANIMATION, false);
         }
+        
     }
+    void HeavyAttack()
+    {
+        if (Input.GetKeyDown(KeyCode.Q) && isGrounded)
+        {
+            anim.SetBool(HEAVY_ATTACK_ANIMATION, true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Q) && isGrounded)
+        {
+            anim.SetBool(HEAVY_ATTACK_ANIMATION, false);
+        }
+    }
+
+    void BowAttack()
+    {
+        if (Input.GetMouseButtonDown(1) && isGrounded)
+        {
+            anim.SetBool(SHOOTING_ANIMATION, true);
+        }
+        if (Input.GetMouseButtonUp(1) && isGrounded)
+        {
+            anim.SetBool(SHOOTING_ANIMATION, false);
+        }
+    }
+    void ThrowingObject()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && isGrounded)
+        {
+            anim.SetBool(THROWING_ANIMATION, true);
+        }
+        if (Input.GetKeyUp(KeyCode.E) && isGrounded)
+        {
+            anim.SetBool(THROWING_ANIMATION, false);
+        }
+    }
+    void GettingHit()
+    {
+        if (Input.GetKeyDown(KeyCode.H) && isGrounded)
+        {
+            anim.SetBool(HIT_ANIMATION, true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.H) && isGrounded)
+        {
+            anim.SetBool(HIT_ANIMATION, false);
+        }
+
+    } 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -135,5 +200,24 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool(FALL_ANIMATION, false);
             myBody.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
         }
+        else if(collision.gameObject.tag == "Platform")
+        {
+            transform.parent = collision.gameObject.transform;
+            isGrounded = true;
+            isOnStairs = false;
+            anim.SetBool(JUMP_ANIMATION, false);
+            anim.SetBool(FALL_ANIMATION, false);
+            myBody.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+
+        
     }
+
+    void OnCollisionExit2D(Collision2D collision){
+        if(collision.gameObject.tag == "Platform"){
+            transform.parent = null;
+        }
+    }
+
+
 }
