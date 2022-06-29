@@ -11,7 +11,7 @@ public class Boss1Movement : MonoBehaviour
     
     public Rigidbody2D rb;
     public double life = 100;
-    public double damageTaken = 0.50;
+    public double damageTaken = 0.9;
     public float moveSpeed = 2f;
 
     public float chrono;
@@ -110,7 +110,7 @@ public class Boss1Movement : MonoBehaviour
                 //agregar animacion de damage
             }
             if(anim.GetBool("isAttacking") == true){
-                //playerLife.TakeDamage(50);
+                playerLife.TakeDamage(5);
             } /*else{
                 //PlayerLife.TakeDamage(10);
                 print("Take damage -10");
