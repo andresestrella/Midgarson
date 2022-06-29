@@ -1,0 +1,544 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.4f1 (cb45f9cae8b7) revision 13321721'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Core' Language: 'en' Physical Memory: 10178 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity 2021.3.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Universidad/12vo Cuatrimestre/Programación Aplicada/Midgarson/Midgarson
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+52948
+Successfully changed project path to: D:/Universidad/12vo Cuatrimestre/Programación Aplicada/Midgarson/Midgarson
+D:/Universidad/12vo Cuatrimestre/Programación Aplicada/Midgarson/Midgarson
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 375.02 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.4f1 (cb45f9cae8b7)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2021.3.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Universidad/12vo Cuatrimestre/Programación Aplicada/Midgarson/Midgarson/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon(TM) Vega 3 Graphics (ID=0x15d8)
+    Vendor:   ATI
+    VRAM:     5089 MB
+    Driver:   27.20.1028.1
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity 2021.3.4f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity 2021.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity 2021.3.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56304
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity 2021.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.009685 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 238.64 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.883 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1884ms)
+		BeginReloadAssembly (159ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (1436ms)
+			LoadAssemblies (155ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (234ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (1020ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (239ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (544ms)
+				ProcessInitializeOnLoadMethodAttributes (219ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.014310 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Universidad\12vo Cuatrimestre\Programación Aplicada\Midgarson\Midgarson\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Universidad\12vo Cuatrimestre\Programación Aplicada\Midgarson\Midgarson\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 365.48 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.134 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3136ms)
+		BeginReloadAssembly (253ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (13ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (2580ms)
+			LoadAssemblies (195ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (712ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (162ms)
+			SetupLoadedEditorAssemblies (1377ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (366ms)
+				BeforeProcessingInitializeOnLoad (289ms)
+				ProcessInitializeOnLoadAttributes (596ms)
+				ProcessInitializeOnLoadMethodAttributes (104ms)
+				AfterProcessingInitializeOnLoad (16ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Refreshing native plugins compatible for Editor in 5.31 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4076 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 39 unused Assets / (127.9 KB). Loaded Objects now: 4534.
+Memory consumption went from 153.8 MB to 153.6 MB.
+Total: 8.064900 ms (FindLiveObjects: 0.492200 ms CreateObjectMapping: 0.232500 ms MarkObjects: 7.080200 ms  DeleteObjects: 0.257800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 218422.172846 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png
+  artifactKey: Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png using Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0a7c189ffc290d8f8f08fb2c86c488a') in 0.247198 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.521145 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png
+  artifactKey: Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png using Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1ba8900a46673e5c92fd913f89c4dae') in 0.476499 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 499.300906 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png
+  artifactKey: Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png using Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0cdc85bdd4e0cb93bd5d85c4cbd002f') in 0.530845 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 76.604361 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png
+  artifactKey: Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png using Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54db85373342ceaf45de4111fe05f344') in 0.422391 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.874627 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png
+  artifactKey: Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png using Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ba4709e88790306916331abe323a09e') in 0.447280 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.312634 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png
+  artifactKey: Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png using Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '862a60d3a0a62e227def02510dcc8777') in 0.417005 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.376836 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png
+  artifactKey: Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png using Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '031ad332824d4fe100707028410fabe0') in 0.475919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.939637 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png
+  artifactKey: Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png using Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e019b88cd8da655e141a092f8a149dcc') in 0.436485 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.295432 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png
+  artifactKey: Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png using Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e415deb37fd6f6b6f511edf7afabf63b') in 0.447540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.391679 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png
+  artifactKey: Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png using Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a888089e89bea4e4fad66620a572e1ab') in 0.461435 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.463010 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png
+  artifactKey: Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png using Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79730e561b6fb36cda6a7e2097839ee3') in 0.466211 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.963240 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png
+  artifactKey: Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png using Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85b1d598ee2def5a6ed6f0a1bf6097cc') in 0.444953 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.404157 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png
+  artifactKey: Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/spear/sheet_spear_1.png using Guid(2753d17cd8e9d694e91c4ae4300fd66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0571ac5ef258abf62db1d7538f6f7772') in 0.375235 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 38.810746 seconds.
+  path: Assets/Prefab/BasicSoldier.prefab
+  artifactKey: Guid(df2490afdc4fd8c439825e098e5223e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/BasicSoldier.prefab using Guid(df2490afdc4fd8c439825e098e5223e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (BasicSoldier) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+The Animator Controller (BasicSoldier) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+ -> (artifact id: 'f13b3d6e127e0eecb9df2bccb2c2f337') in 0.089988 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 73.558365 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/sword2/sheet_sword2_2.png
+  artifactKey: Guid(17a5d157f29984d49b04e2fb7e865c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/sword2/sheet_sword2_2.png using Guid(17a5d157f29984d49b04e2fb7e865c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c2fbfe5d19b19fcc50a9cd000693ca0') in 0.543797 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.066505 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/sword2/sheet_sword2_2.png
+  artifactKey: Guid(17a5d157f29984d49b04e2fb7e865c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/sword2/sheet_sword2_2.png using Guid(17a5d157f29984d49b04e2fb7e865c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22f525225e64d4501996d398cafdd816') in 0.489017 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.742702 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/sword2/sheet_sword2_2.png
+  artifactKey: Guid(17a5d157f29984d49b04e2fb7e865c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/sword2/sheet_sword2_2.png using Guid(17a5d157f29984d49b04e2fb7e865c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a686505f6bec21083a94f618c5c0371b') in 0.483735 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 36.721645 seconds.
+  path: Assets/Prefab/SwordmanEnemy.prefab
+  artifactKey: Guid(4dc4c11c59f3e7244b8721df861a67e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/SwordmanEnemy.prefab using Guid(4dc4c11c59f3e7244b8721df861a67e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'SwordmanEnemy': Transition 'AnyState -> Hit' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor\Src\Animation\StateMachine.cpp line 1845]
+
+Asset 'SwordmanEnemy': Transition 'AnyState -> Attack' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor\Src\Animation\StateMachine.cpp line 1845]
+
+ -> (artifact id: 'bb5aa500f02ebf41f1fc93811d3ea23b') in 0.022466 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 76.157951 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain
+  artifactKey: Guid(7f2d3c26df240184a9200aee3d36f205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain using Guid(7f2d3c26df240184a9200aee3d36f205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6da7275cae38647b4dd7774b9b9470c7') in 0.027519 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.353423 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_spear
+  artifactKey: Guid(037ce9d438ff6614a9bcb5d71441b341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_spear using Guid(037ce9d438ff6614a9bcb5d71441b341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d19b0ff9e74f344dbcf4237df214d79') in 0.014763 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.529757 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_spear/sheet_captain_spear_1.png
+  artifactKey: Guid(74439ec2af362444392c1e3b7aa765c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_spear/sheet_captain_spear_1.png using Guid(74439ec2af362444392c1e3b7aa765c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4889bb4522b079bb8d5ed88019727aae') in 0.027457 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.885054 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_spear/sheet_captain_spear_1.png
+  artifactKey: Guid(74439ec2af362444392c1e3b7aa765c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_spear/sheet_captain_spear_1.png using Guid(74439ec2af362444392c1e3b7aa765c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a74de0e16aa183b6b4a9f2a62100af23') in 0.538288 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 113.454579 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4d4a4982f03248bb86b661e75619fb5') in 0.255027 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_3.png
+  artifactKey: Guid(002ae4d4ca21f9244a86e08585782f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_3.png using Guid(002ae4d4ca21f9244a86e08585782f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b99e958f1c3c339a03647e819016970b') in 0.112372 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 29.862388 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0145549cbfe7c1091d186ba404deff8b') in 0.021240 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.949266 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88cc78a12b79c0720cdba32c31ad8909') in 0.495891 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 105.933863 seconds.
+  path: Assets/Animations/FirstBoss
+  artifactKey: Guid(f8ab8f0a6af3a86458d97dfa0daf727a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/FirstBoss using Guid(f8ab8f0a6af3a86458d97dfa0daf727a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '141545ffaba0c61cc4f29530ddecc9dd') in 0.010003 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.018939 seconds.
+  path: Assets/Animations/FirstBoss/Walkin.anim
+  artifactKey: Guid(0aa1a1ede4f867e4196eca55e0e957b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/FirstBoss/Walkin.anim using Guid(0aa1a1ede4f867e4196eca55e0e957b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3b83ab015117d76aeda70fa6ce5450e') in 0.012767 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 435.067904 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/hero/hero_sword
+  artifactKey: Guid(30523604695abe24288079a181f45804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/hero/hero_sword using Guid(30523604695abe24288079a181f45804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c57ea9ffc91367fe5895a002328776db') in 0.088201 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/hero/hero_sword/sheet_hero_sword_3.png
+  artifactKey: Guid(d2af295f01cab7e44936433aa2d71bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/hero/hero_sword/sheet_hero_sword_3.png using Guid(d2af295f01cab7e44936433aa2d71bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4553cc1fe222cebb85825a0facddc151') in 0.149304 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 95.340133 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec22aedcd8f96bf3fd0d6934e54cfd1f') in 0.517886 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 77.637180 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8612ac10d83ff376566432c247d8a957') in 0.492089 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 29.320114 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bfa65c8d4e156b127c644188c92d40d') in 0.506538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.707964 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29c3c2122331b8e825329cf411fd2cc8') in 0.554906 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.268128 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fcbcd2852cc47acd7b6eec4c8dfafe5') in 0.483777 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.043224 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2294a20092093f29c584b8b360bfdd8b') in 0.511406 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.826018 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6659887c2fa78fdb0bb29f7e0e78a6cf') in 0.558913 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.939863 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11b066dc38cce1f2f0b099501d90fca5') in 0.391605 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.907681 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9817f6d492f86e71e7cfc670d8cca749') in 0.402869 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 80.056314 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '763e5d6a5062032c1ad3e5a277031569') in 0.461890 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 32.877124 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '128e68213cd0e30966d6e5c2ca084848') in 0.403264 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.858811 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e22d2ca29db36c479c6d7baba4fa9859') in 0.499320 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.328192 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19630034b2d28f0feeff92688e1a016b') in 0.524075 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.820930 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6314a4dd9ca1b2a850f5de95c05bd65e') in 0.490008 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.304868 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ef10278d5ab7fb250051f70fa48f44c') in 0.503258 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 100.058155 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9c0269fa6c4cec4ff5e08f46cec3674') in 0.514784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.487175 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47ef0acadcaad600949c739e5696c8d0') in 0.426051 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.628527 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd525b2a50540915283aadde0ea5041e5') in 0.393237 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.742097 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5497d9311614cf21f13c531bf57324ee') in 0.514008 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.335405 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '129e789efd0ae3adf16769f564ee8198') in 0.447122 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.948967 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fed54b2a993ba95288e4f27f2d93ad8a') in 0.518087 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.644847 seconds.
+  path: Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png
+  artifactKey: Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pack_loreon_char 1.0/sprite_sheet/captain/captain_sword/sheet_captain_sword_1.png using Guid(95a0db217b6eea64699ac8ae992bcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '603828d47542501e4f5cc530e95193b0') in 0.476961 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 114.317610 seconds.
+  path: Assets/Prefab/BasicSoldier.prefab
+  artifactKey: Guid(df2490afdc4fd8c439825e098e5223e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/BasicSoldier.prefab using Guid(df2490afdc4fd8c439825e098e5223e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25a0661cf9a12e2011b0a86534d8134d') in 0.027661 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.302029 seconds.
+  path: Assets/Prefab/FirstBoss.prefab
+  artifactKey: Guid(f29fe9dffb1d3c445a26c39dab9d61be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/FirstBoss.prefab using Guid(f29fe9dffb1d3c445a26c39dab9d61be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6586592685f930e767b81586d14f84df') in 0.034915 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 708.744986 seconds.
+  path: Assets/Prefab/FirstBoss.prefab
+  artifactKey: Guid(f29fe9dffb1d3c445a26c39dab9d61be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/FirstBoss.prefab using Guid(f29fe9dffb1d3c445a26c39dab9d61be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63530f3f54fa484be8a7d6d34bf925ee') in 0.050634 seconds 
