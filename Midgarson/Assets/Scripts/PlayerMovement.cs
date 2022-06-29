@@ -30,8 +30,6 @@ public class PlayerMovement : MonoBehaviour
 
     private Animator anim;
 
-    public SceneController sceneController;
-
     private void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
@@ -210,12 +208,6 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool(JUMP_ANIMATION, false);
             anim.SetBool(FALL_ANIMATION, false);
             myBody.constraints = RigidbodyConstraints2D.FreezeRotation;
-        }
-
-        else if (collision.gameObject.tag == "END")
-        {
-             sceneController.LevelClear();
-           
         }
 
         
