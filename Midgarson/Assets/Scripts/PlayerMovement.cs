@@ -16,6 +16,14 @@ public class PlayerMovement : MonoBehaviour
     private string JUMP_ANIMATION = "Jump";
     private string FALL_ANIMATION = "Fall";
     private string ATTACK_ANIMATION = "Attack";
+
+    private string HEAVY_ATTACK_ANIMATION = "HeavyAttack";
+    private string SHOOTING_ANIMATION = "Shooting";
+    private string THROWING_ANIMATION = "Throwing";
+    private string STANDING_UP_ANIMATION = "StandingUp";
+    private string HIT_ANIMATION = "Hit";
+    //private string DYING_ANIMATION = "";
+
     private Animator anim;
 
     private void Awake()
@@ -39,6 +47,10 @@ public class PlayerMovement : MonoBehaviour
         Run();
         Jump();
         Attack();
+        HeavyAttack();
+        BowAttack();
+        GettingHit();
+        ThrowingObject();
     }
     void PlayerMoveKeyboard()
     {
@@ -115,7 +127,56 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool(ATTACK_ANIMATION, false);
         }
+        
     }
+    void HeavyAttack()
+    {
+        if (Input.GetKeyDown(KeyCode.Q) && isGrounded)
+        {
+            anim.SetBool(HEAVY_ATTACK_ANIMATION, true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Q) && isGrounded)
+        {
+            anim.SetBool(HEAVY_ATTACK_ANIMATION, false);
+        }
+    }
+
+    void BowAttack()
+    {
+        if (Input.GetMouseButtonDown(1) && isGrounded)
+        {
+            anim.SetBool(SHOOTING_ANIMATION, true);
+        }
+        if (Input.GetMouseButtonUp(1) && isGrounded)
+        {
+            anim.SetBool(SHOOTING_ANIMATION, false);
+        }
+    }
+    void ThrowingObject()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && isGrounded)
+        {
+            anim.SetBool(THROWING_ANIMATION, true);
+        }
+        if (Input.GetKeyUp(KeyCode.E) && isGrounded)
+        {
+            anim.SetBool(THROWING_ANIMATION, false);
+        }
+    }
+    void GettingHit()
+    {
+        if (Input.GetKeyDown(KeyCode.H) && isGrounded)
+        {
+            anim.SetBool(HIT_ANIMATION, true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.H) && isGrounded)
+        {
+            anim.SetBool(HIT_ANIMATION, false);
+        }
+
+    } 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
