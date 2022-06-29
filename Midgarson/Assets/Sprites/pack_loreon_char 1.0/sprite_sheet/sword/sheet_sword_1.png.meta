@@ -108,7 +108,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 17
-        y: 712
+        y: 804
         width: 15
         height: 30
       alignment: 0
@@ -129,7 +129,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 67
-        y: 712
+        y: 804
         width: 15
         height: 31
       alignment: 0
@@ -150,7 +150,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 114
-        y: 712
+        y: 804
         width: 18
         height: 30
       alignment: 0
@@ -171,7 +171,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 164
-        y: 712
+        y: 804
         width: 18
         height: 31
       alignment: 0
@@ -192,7 +192,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 214
-        y: 712
+        y: 804
         width: 18
         height: 31
       alignment: 0
@@ -213,7 +213,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 264
-        y: 712
+        y: 804
         width: 18
         height: 32
       alignment: 0
@@ -234,7 +234,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 318
-        y: 712
+        y: 804
         width: 13
         height: 30
       alignment: 0
@@ -255,7 +255,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 368
-        y: 712
+        y: 804
         width: 13
         height: 31
       alignment: 0
@@ -276,9 +276,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 664
+        y: 756
         width: 18
-        height: 30
+        height: 29
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,7 +297,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 66
-        y: 664
+        y: 756
         width: 18
         height: 30
       alignment: 0
@@ -318,7 +318,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 116
-        y: 664
+        y: 756
         width: 18
         height: 30
       alignment: 0
@@ -339,7 +339,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 464
-        y: 664
+        y: 756
         width: 19
         height: 29
       alignment: 0
@@ -360,7 +360,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 664
+        y: 756
         width: 21
         height: 28
       alignment: 0
@@ -381,7 +381,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 563
-        y: 664
+        y: 756
         width: 20
         height: 29
       alignment: 0
@@ -402,7 +402,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 13
-        y: 616
+        y: 708
         width: 20
         height: 31
       alignment: 0
@@ -423,7 +423,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 63
-        y: 616
+        y: 708
         width: 20
         height: 29
       alignment: 0
@@ -444,7 +444,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 113
-        y: 616
+        y: 708
         width: 20
         height: 30
       alignment: 0
@@ -465,7 +465,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 163
-        y: 616
+        y: 708
         width: 20
         height: 31
       alignment: 0
@@ -486,7 +486,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 213
-        y: 616
+        y: 708
         width: 20
         height: 29
       alignment: 0
@@ -507,7 +507,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 263
-        y: 616
+        y: 708
         width: 20
         height: 30
       alignment: 0
@@ -528,7 +528,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 364
-        y: 616
+        y: 708
         width: 19
         height: 29
       alignment: 0
@@ -549,7 +549,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 415
-        y: 616
+        y: 708
         width: 22
         height: 29
       alignment: 0
@@ -570,7 +570,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 461
-        y: 616
+        y: 708
         width: 28
         height: 21
       alignment: 0
@@ -591,7 +591,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 506
-        y: 616
+        y: 708
         width: 39
         height: 9
       alignment: 0
@@ -612,7 +612,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 556
-        y: 616
+        y: 708
         width: 39
         height: 5
       alignment: 0
@@ -633,7 +633,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 19
-        y: 568
+        y: 660
         width: 12
         height: 35
       alignment: 0
@@ -654,7 +654,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 63
-        y: 568
+        y: 660
         width: 21
         height: 29
       alignment: 0
@@ -675,7 +675,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 116
-        y: 568
+        y: 660
         width: 21
         height: 30
       alignment: 0
@@ -696,7 +696,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 165
-        y: 568
+        y: 660
         width: 20
         height: 31
       alignment: 0
@@ -717,7 +717,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 216
-        y: 568
+        y: 660
         width: 24
         height: 29
       alignment: 0
@@ -738,7 +738,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 269
-        y: 568
+        y: 660
         width: 22
         height: 30
       alignment: 0
@@ -759,7 +759,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 414
-        y: 568
+        y: 660
         width: 19
         height: 29
       alignment: 0
@@ -780,11 +780,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 459
-        y: 567
+        y: 659
         width: 22
         height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6338008}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -801,11 +801,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 506
-        y: 568
+        y: 660
         width: 32
         height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4999962, y: 0.85717773}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -822,11 +822,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 551
-        y: 568
+        y: 660
         width: 42
         height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.49999708, y: 3.4373536}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -843,7 +843,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 14
-        y: 520
+        y: 612
         width: 19
         height: 29
       alignment: 0
@@ -864,7 +864,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 520
+        y: 612
         width: 18
         height: 31
       alignment: 0
@@ -885,9 +885,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 114
-        y: 521
+        y: 611
         width: 20
-        height: 30
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -906,7 +906,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 163
-        y: 520
+        y: 612
         width: 18
         height: 31
       alignment: 0
@@ -927,7 +927,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 216
-        y: 520
+        y: 612
         width: 20
         height: 25
       alignment: 0
@@ -948,11 +948,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 356
-        y: 520
+        y: 612
         width: 39
         height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.52139205, y: 2.8841674}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -969,11 +969,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 410
-        y: 520
+        y: 612
         width: 33
         height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.50000095, y: 1.3288625}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -990,11 +990,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 465
-        y: 520
+        y: 612
         width: 22
         height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.48272565, y: 0.7497944}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1011,11 +1011,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 516
-        y: 520
+        y: 612
         width: 20
         height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.50000304, y: 0.56081057}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1032,7 +1032,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 564
-        y: 520
+        y: 612
         width: 19
         height: 29
       alignment: 0
@@ -1053,7 +1053,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 20
-        y: 470
+        y: 562
         width: 25
         height: 34
       alignment: 0
@@ -1074,7 +1074,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 68
-        y: 471
+        y: 563
         width: 25
         height: 29
       alignment: 0
@@ -1095,7 +1095,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 119
-        y: 472
+        y: 564
         width: 23
         height: 30
       alignment: 0
@@ -1116,7 +1116,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 166
-        y: 472
+        y: 564
         width: 20
         height: 25
       alignment: 0
@@ -1137,7 +1137,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 214
-        y: 472
+        y: 564
         width: 19
         height: 29
       alignment: 0
@@ -1158,7 +1158,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 14
-        y: 424
+        y: 516
         width: 19
         height: 29
       alignment: 0
@@ -1179,7 +1179,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 59
-        y: 424
+        y: 516
         width: 35
         height: 22
       alignment: 0
@@ -1200,7 +1200,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 115
-        y: 424
+        y: 516
         width: 25
         height: 16
       alignment: 0
@@ -1221,7 +1221,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 152
-        y: 424
+        y: 516
         width: 30
         height: 17
       alignment: 0
@@ -1242,7 +1242,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 212
-        y: 423
+        y: 515
         width: 23
         height: 23
       alignment: 0
@@ -1263,7 +1263,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 266
-        y: 424
+        y: 516
         width: 20
         height: 25
       alignment: 0
@@ -1284,7 +1284,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 362
-        y: 418
+        y: 510
         width: 23
         height: 32
       alignment: 0
@@ -1305,7 +1305,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 464
-        y: 424
+        y: 516
         width: 19
         height: 29
       alignment: 0
@@ -1326,7 +1326,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 511
-        y: 424
+        y: 516
         width: 26
         height: 29
       alignment: 0
@@ -1347,7 +1347,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 562
-        y: 424
+        y: 516
         width: 22
         height: 29
       alignment: 0
@@ -1368,7 +1368,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 31
-        y: 359
+        y: 451
         width: 18
         height: 29
       alignment: 0
@@ -1389,11 +1389,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 131
-        y: 359
+        y: 451
         width: 18
         height: 38
-      alignment: 9
-      pivot: {x: 0.5, y: 0.42}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1410,11 +1410,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 213
-        y: 359
+        y: 451
         width: 36
         height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.48}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1431,11 +1431,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 313
-        y: 359
+        y: 451
         width: 60
         height: 38
-      alignment: 9
-      pivot: {x: 0.5, y: 0.42}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1452,9 +1452,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 433
-        y: 359
+        y: 451
         width: 20
-        height: 30
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1473,9 +1473,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 533
-        y: 359
+        y: 451
         width: 27
-        height: 30
+        height: 29
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1494,7 +1494,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 31
-        y: 294
+        y: 386
         width: 18
         height: 29
       alignment: 0
@@ -1515,7 +1515,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 130
-        y: 294
+        y: 386
         width: 19
         height: 29
       alignment: 0
@@ -1536,7 +1536,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 229
-        y: 294
+        y: 386
         width: 24
         height: 29
       alignment: 0
@@ -1557,7 +1557,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 333
-        y: 294
+        y: 386
         width: 47
         height: 28
       alignment: 0
@@ -1578,7 +1578,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 433
-        y: 294
+        y: 386
         width: 42
         height: 28
       alignment: 0
@@ -1599,7 +1599,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 533
-        y: 294
+        y: 386
         width: 27
         height: 29
       alignment: 0
@@ -1620,7 +1620,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 31
-        y: 229
+        y: 321
         width: 18
         height: 29
       alignment: 0
@@ -1641,7 +1641,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 129
-        y: 229
+        y: 321
         width: 20
         height: 35
       alignment: 0
@@ -1662,7 +1662,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 212
-        y: 229
+        y: 321
         width: 36
         height: 29
       alignment: 0
@@ -1683,7 +1683,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 314
-        y: 229
+        y: 321
         width: 64
         height: 30
       alignment: 0
@@ -1704,7 +1704,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 433
-        y: 229
+        y: 321
         width: 19
         height: 28
       alignment: 0
@@ -1725,7 +1725,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 533
-        y: 229
+        y: 321
         width: 27
         height: 29
       alignment: 0
@@ -1746,7 +1746,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 31
-        y: 164
+        y: 256
         width: 18
         height: 29
       alignment: 0
@@ -1767,7 +1767,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 132
-        y: 164
+        y: 256
         width: 16
         height: 29
       alignment: 0
@@ -1788,7 +1788,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 217
-        y: 164
+        y: 256
         width: 31
         height: 29
       alignment: 0
@@ -1809,7 +1809,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 318
-        y: 164
+        y: 256
         width: 61
         height: 30
       alignment: 0
@@ -1830,7 +1830,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 433
-        y: 164
+        y: 256
         width: 18
         height: 28
       alignment: 0
@@ -1851,7 +1851,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 533
-        y: 164
+        y: 256
         width: 27
         height: 29
       alignment: 0
@@ -1863,6 +1863,321 @@ TextureImporter:
       bones: []
       spriteID: 5ca541b0e9e95c046a2d664a06eefc6d
       internalID: 1731328465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_sword_1_84
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 193
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45978ff8c0a0eb4d8c14a8ca11c12ec
+      internalID: -996819019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_sword_1_85
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 193
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba937e8a60ae51e47acde8293fb40fd3
+      internalID: -2067498119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_sword_1_86
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 193
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c5907144be58d4c8bc96656a15bb79
+      internalID: 1888328010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_sword_1_87
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 194
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba68c25cf8e02f4e8373ab316256cc2
+      internalID: 1383970572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_sword_1_88
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 193
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec7915bd669e44e46b1b7c9cfafe7bc1
+      internalID: -376751231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_sword_1_89
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 145
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4bc4ae43c80cb84eaeb07058702958e
+      internalID: -1322107329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_sword_1_90
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 145
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3649bdfea6bdc4b4d905fecdfacfc473
+      internalID: 1994331307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_sword_1_91
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 145
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe7dd638040ec1429249c8f716ba5a2
+      internalID: -1148912304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_sword_1_92
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 145
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290b908456a8e344cafcd932e407c316
+      internalID: -796802323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_sword_1_93
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 145
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce5b017cd7c68f418baad30a64f648c
+      internalID: -1506756558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_sword_1_94
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 72
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55546df26b457734a8fab4395a3b3dce
+      internalID: -950831016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_sword_1_95
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 72
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e8a18efdf2bff4993e6eef637cb9e1
+      internalID: -1440131154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_sword_1_96
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 72
+        width: 17
+        height: 51
+      alignment: 9
+      pivot: {x: 0.43375352, y: 0.3233481}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c19b4d6d2403144b85fca064587580f
+      internalID: -596868577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_sword_1_97
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 72
+        width: 60
+        height: 60
+      alignment: 9
+      pivot: {x: 0.25599974, y: 0.256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd89ad363117674c9b56428b314d6f5
+      internalID: 555119394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_sword_1_98
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 66
+        width: 32
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5507431, y: 0.7053131}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525cad5b6681f144f80a1ce6c56a3b4a
+      internalID: -400314344
       vertices: []
       indices: 
       edges: []
@@ -1881,88 +2196,102 @@ TextureImporter:
       sheet_sword_1_51: 274243860
       sheet_sword_1_23: 857584423
       sheet_sword_1_10: 1586460284
-      sheet_sword_1_80: 1643839039
       sheet_sword_1_75: 593859666
       sheet_sword_1_83: 1731328465
       sheet_sword_1_38: 1527149436
       sheet_sword_1_26: -2011703427
       sheet_sword_1_9: -154601224
-      sheet_sword_1_45: -750829959
       sheet_sword_1_66: -267487917
       sheet_sword_1_56: -578405457
-      sheet_sword_1_82: -1853385021
-      sheet_sword_1_36: -1936020361
-      sheet_sword_1_40: -152691126
-      sheet_sword_1_67: -1416956959
-      sheet_sword_1_16: -916389120
       sheet_sword_1_78: -138800541
-      sheet_sword_1_52: -672186132
       sheet_sword_1_39: 1260245836
       sheet_sword_1_21: -1508002521
-      sheet_sword_1_58: -1889524906
       sheet_sword_1_3: 1006178284
-      sheet_sword_1_27: 1441555266
       sheet_sword_1_70: -246005120
       sheet_sword_1_6: -1077979393
-      sheet_sword_1_65: 705715079
-      sheet_sword_1_13: 1207150075
-      sheet_sword_1_20: 1744013343
+      sheet_sword_1_89: -1322107329
+      sheet_sword_1_92: -796802323
       sheet_sword_1_53: 1257533494
-      sheet_sword_1_48: 1994017270
-      sheet_sword_1_77: -1704406920
-      sheet_sword_1_43: 2132917071
-      sheet_sword_1_84: -996819019
-      sheet_sword_1_14: 762998125
-      sheet_sword_1_37: -628010842
       sheet_sword_1_5: -1768401721
+      sheet_sword_1_24: 1175483233
+      sheet_sword_1_43: 2132917071
+      sheet_sword_1_32: 1415222693
+      sheet_sword_1_77: -1704406920
+      sheet_sword_1_47: -105823556
+      sheet_sword_1_84: -996819019
       sheet_sword_1_25: -1716094519
       sheet_sword_1_71: 542950438
-      sheet_sword_1_18: 1834142845
-      sheet_sword_1_81: 2080446081
+      sheet_sword_1_93: -1506756558
+      sheet_sword_1_96: -596868577
       sheet_sword_1_44: -1462397035
-      sheet_sword_1_33: -357173352
       sheet_sword_1_41: -613945697
-      sheet_sword_1_24: 1175483233
-      sheet_sword_1_12: 110969434
-      sheet_sword_1_22: -1350460236
-      sheet_sword_1_47: -105823556
-      sheet_sword_1_32: 1415222693
+      sheet_sword_1_91: -1148912304
       sheet_sword_1_2: -259785299
       sheet_sword_1_29: -584140874
       sheet_sword_1_17: 410314140
-      sheet_sword_1_50: 1433969085
-      sheet_sword_1_62: -412700981
-      sheet_sword_1_4: 804276475
-      sheet_sword_1_79: -1922447082
-      sheet_sword_1_57: -496095630
+      sheet_sword_1_95: -1440131154
       sheet_sword_1_34: -21019854
       sheet_sword_1_42: 1146957462
       sheet_sword_1_68: 1841072859
       sheet_sword_1_8: -1339139697
+      sheet_sword_1_90: 1994331307
       sheet_sword_1_31: -74857592
       sheet_sword_1_64: 434254858
       sheet_sword_1_69: -1550763725
-      sheet_sword_1_30: 1732449321
       sheet_sword_1_1: 510467335
+      sheet_sword_1_63: 1706987325
+      sheet_sword_1_88: -376751231
+      sheet_sword_1_59: 412094974
+      sheet_sword_1_49: 1286168491
+      sheet_sword_1_55: -482418982
+      sheet_sword_1_73: -401297372
+      sheet_sword_1_15: -2097505093
+      sheet_sword_1_35: 304341252
+      sheet_sword_1_46: -1515430266
+      sheet_sword_1_72: 1966053705
+      sheet_sword_1_94: -950831016
+      sheet_sword_1_98: -400314344
+      sheet_sword_1_45: -750829959
+      sheet_sword_1_82: -1853385021
+      sheet_sword_1_86: 1888328010
+      sheet_sword_1_36: -1936020361
+      sheet_sword_1_40: -152691126
+      sheet_sword_1_67: -1416956959
+      sheet_sword_1_16: -916389120
+      sheet_sword_1_52: -672186132
+      sheet_sword_1_58: -1889524906
+      sheet_sword_1_27: 1441555266
+      sheet_sword_1_65: 705715079
+      sheet_sword_1_13: 1207150075
+      sheet_sword_1_20: 1744013343
+      sheet_sword_1_85: -2067498119
+      sheet_sword_1_48: 1994017270
+      sheet_sword_1_79: -1922447082
+      sheet_sword_1_14: 762998125
+      sheet_sword_1_37: -628010842
+      sheet_sword_1_18: 1834142845
+      sheet_sword_1_81: 2080446081
+      sheet_sword_1_33: -357173352
+      sheet_sword_1_12: 110969434
+      sheet_sword_1_22: -1350460236
+      sheet_sword_1_50: 1433969085
+      sheet_sword_1_62: -412700981
+      sheet_sword_1_4: 804276475
+      sheet_sword_1_57: -496095630
+      sheet_sword_1_30: 1732449321
+      sheet_sword_1_61: 1984803877
       sheet_sword_1_11: 1678528203
       sheet_sword_1_7: -386778526
       sheet_sword_1_28: -962793143
       sheet_sword_1_0: 1602460342
-      sheet_sword_1_61: 1984803877
-      sheet_sword_1_63: 1706987325
-      sheet_sword_1_59: 412094974
       sheet_sword_1_76: -1187335262
-      sheet_sword_1_49: 1286168491
       sheet_sword_1_54: -752109773
       sheet_sword_1_74: 1543502844
-      sheet_sword_1_55: -482418982
-      sheet_sword_1_73: -401297372
+      sheet_sword_1_97: 555119394
       sheet_sword_1_60: 1927048022
-      sheet_sword_1_35: 304341252
-      sheet_sword_1_15: -2097505093
+      sheet_sword_1_87: 1383970572
+      sheet_sword_1_80: 1643839039
       sheet_sword_1_19: -1823684528
-      sheet_sword_1_46: -1515430266
-      sheet_sword_1_72: 1966053705
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
