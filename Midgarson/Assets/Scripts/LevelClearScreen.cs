@@ -8,11 +8,12 @@ public class LevelClearScreen : MonoBehaviour
 {   
     public TextMeshProUGUI pointsText;
     public TextMeshProUGUI timeText;
+    public SceneController sceneController;
 
     public void Setup(){
         gameObject.SetActive(true);
-        //pointsText.text = score.ToString() + " POINTS";
-        //timeText.text = "TIME: " + time.ToString();
+        pointsText.text = sceneController.scorePlay.ToString() + " POINTS";
+        timeText.text = "TIME: " + Time.time.ToString();
     }
 
     public void ExitButton(){
