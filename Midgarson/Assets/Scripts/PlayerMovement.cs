@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
         yVelocity = myBody.velocity.y;
 
-        if (yVelocity < 0 && !isOnStairs)
+        if (yVelocity < 0 && !isOnStairs && !isGrounded)
         {
             anim.SetBool(FALL_ANIMATION, true);
         }
