@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
+    public SceneController sceneController;
     public PlayerStatusUI playerStatusUI;
 
     public int maxHealth { get; private set; }
@@ -30,8 +31,9 @@ public class PlayerLife : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightAlt))//Prueba
         {
             TakeDamage(10);
-            SceneController.instancia.IncrementScore(1);
-            Debug.Log(healthRange);
+            sceneController.IncrementScore(1);
+            //SceneController.instancia.IncrementScore(1);
+            //Debug.Log(healthRange);
         }
     }
 
@@ -51,7 +53,8 @@ public class PlayerLife : MonoBehaviour
         currentShield = Mathf.Clamp(currentShield, 0, maxShield);
         playerStatusUI.SetHealth(healthRange, shieldRange);
         if(currentHealth <= 0){
-            SceneController.instancia.GameOver();
+            //SceneController.instancia.GameOver();
+            sceneController.GameOver();
         }
     }
 

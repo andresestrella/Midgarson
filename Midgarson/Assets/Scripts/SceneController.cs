@@ -9,9 +9,13 @@ public class SceneController : MonoBehaviour
     public GameOverScreen gameOverScreen;
     public LevelClearScreen levelClearScreen;
     public static SceneController instancia;
+    
+    void Awake(){
+        //instancia = new SceneController();
+    }
     void Start()
     {
-        instancia = new SceneController();
+        
     }
 
     // Update is called once per frame

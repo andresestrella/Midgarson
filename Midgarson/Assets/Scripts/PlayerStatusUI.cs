@@ -6,6 +6,7 @@ using TMPro;
 
 public class PlayerStatusUI : MonoBehaviour
 {
+    public SceneController sceneController;
 
     public TextMeshProUGUI vida, shield, score, time;
     [Range(0, 5)]
@@ -81,7 +82,8 @@ public class PlayerStatusUI : MonoBehaviour
 
     public void updateScoreText()
     {
-        score.text = "SCORE: " + SceneController.instancia.scorePlay.ToString();
+        //score.text = "SCORE: " + SceneController.instancia.scorePlay.ToString();
+        score.text = "SCORE: " + sceneController.scorePlay.ToString();
     }
 
     public string formatearTiempo()

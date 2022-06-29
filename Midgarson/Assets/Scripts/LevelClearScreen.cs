@@ -14,4 +14,11 @@ public class LevelClearScreen : MonoBehaviour
         //pointsText.text = score.ToString() + " POINTS";
         //timeText.text = "TIME: " + time.ToString();
     }
+
+    public void ExitButton(){
+        //SceneManager.LoadScene("MainMenu");
+    }
+    public void ContinueButton(){
+        //SceneManager.LoadScene("LevelSelectMenu");
+    }
 }
