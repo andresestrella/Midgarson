@@ -8,7 +8,7 @@ public class RockMovement : MonoBehaviour
     Vector3 moveSpeed = new Vector3(4,4,0);
     private SpriteRenderer mySprite;
     private bool falling = false;
-    public GameObject player;
+    //public GameObject player;
     private float player_position;
 
     private void Awake()
@@ -38,7 +38,7 @@ public class RockMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other){
         
         if (other.gameObject.tag == "Player"){
-            //other.GetComponent<PlayerMovement>().dealDmg();
+            other.gameObject.GetComponent<PlayerLife>().TakeDamage(10);
             Destroy(gameObject);
         }else if (other.gameObject.tag == "Ground"){
             Destroy(gameObject);
