@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class BirdSpawner : MonoBehaviour
 {
     public bool stopFlag = false;
     public GameObject birdEnemy;
@@ -32,6 +32,4 @@ public class GameManager : MonoBehaviour
             
         }
     }
-
-
 }
