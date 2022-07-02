@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -76,9 +76,1629 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 712
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4843db28f40dae47849b6119a65c03f
+      internalID: -1043174341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 712
+        width: 27
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1960ac47dd60d404aae4a61efd4ad8a1
+      internalID: -2087243395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 712
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14f613715f3ebf41b6482ac3434e9de
+      internalID: -761554851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 712
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a33874d2eef0d945841f6d97890d9b6
+      internalID: 229094601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_4
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 712
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91fd8f82ff70fa4ab917da9a432909f
+      internalID: -280192389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_5
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 712
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8836a59378b154ebc8ab64f81b329b
+      internalID: -227836385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_6
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 664
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c0511d43cb52346b9e3252d94fffe4
+      internalID: -399121859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_7
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 664
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c0f231e74741eb4db64e95b82622e62
+      internalID: 219691555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_8
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 664
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3858de9548cfa1643b9109b52d142714
+      internalID: -1244158666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_9
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 664
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d821d4ae881d8984b953734d1a50fbd5
+      internalID: 1400099487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 664
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253a5347872ba22428c513e1767c5716
+      internalID: 1154085103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_11
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 664
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf0533e625f7734091a6fc1e95b4f3d
+      internalID: 309493176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 616
+        width: 39
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8aeebf5f5fa9c4289bab1d9994af1d
+      internalID: -1659333358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_13
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 616
+        width: 40
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bfea13fb46a9fb438895d4f56bb63aa
+      internalID: 1434268668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_14
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 616
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7ddfd07888ad764397cd3479a225841
+      internalID: -401681583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_15
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 616
+        width: 39
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3b4b71ad6f6d540ad366218dfbbc7f
+      internalID: 24952664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_16
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 616
+        width: 40
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9550f71222024a4dafe6200c2c79400
+      internalID: 1813443260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_17
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 616
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d495f2b0a406ac14aa963898fd50e873
+      internalID: -107791530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_18
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 616
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dcec6e3b408b384484a11bf0a24bab1
+      internalID: 740583658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_19
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 616
+        width: 39
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a9324cbfb1b06a4cbb3be4fa3cd8f3d
+      internalID: -143866781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_20
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 616
+        width: 44
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c715841f2429a0498c56e7e8df336f3
+      internalID: -1243263040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_21
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 616
+        width: 45
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537a9545f36d03e4db55a0d8c9aa23ca
+      internalID: 775918739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_22
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 616
+        width: 45
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dea1aafcb30f124397895304c595d1e
+      internalID: -1273989284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_23
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 568
+        width: 43
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e462c91ae514f84c940cff274214f45
+      internalID: 563315521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_24
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 568
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6e145a198b0594c93e71667f292deb
+      internalID: 1221803224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_25
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 568
+        width: 43
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c17e7085e782a48bf09400978b789a
+      internalID: -1498030959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_26
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 568
+        width: 43
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c316de78c75e3b4388d57a2466e2e95
+      internalID: 940257984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_27
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 568
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465608596869cda48b681e6781332ae2
+      internalID: 1502244018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 568
+        width: 43
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346822a5263e72645a2722db16657c95
+      internalID: 1105457653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_29
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 568
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a591c0d03008fba4cb6def861fcf343e
+      internalID: -1384318820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_30
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 568
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240c4508bd6471e4e83e5bcdf04e73e2
+      internalID: 756022824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_31
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 568
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74fc6eee4154eb40b2147fbf8f9d46a
+      internalID: 585401296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_32
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 568
+        width: 36
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b413c5713380b4f9f316f312976609
+      internalID: 648641748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_33
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 520
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4327149203ffc4a9d7c438416eb21e
+      internalID: 519814735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_34
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 520
+        width: 43
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a008c87d35b794788640a44c77a393
+      internalID: -70659536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_35
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 523
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29b603443cd97e49a9d67818d76eafb
+      internalID: -494692203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_36
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 520
+        width: 42
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022fa701254425a47be8312f04dca370
+      internalID: -1522134759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_37
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 520
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26db58e447bd8ec4f95f7de88c1e3e0a
+      internalID: 1150537181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_38
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 520
+        width: 45
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e6b0aec215ef944a4cde45616d3a42
+      internalID: 1880026354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_39
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 520
+        width: 39
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786c3b50a01a8774d83cb14f578912a8
+      internalID: 372121765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_40
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 520
+        width: 36
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef1d84093d8c954286439d02042d582
+      internalID: -1597614939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_41
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 520
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb30a888a98b5284fb2148dfbbec497b
+      internalID: -732852436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_42
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 520
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f356bf2af194b744b996690bdb8ba831
+      internalID: -1116597050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_43
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 470
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60bd4afb98dad54439907d0734281489
+      internalID: -3253717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_44
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 471
+        width: 36
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262d0d5ff584e2944922f98bde4c597e
+      internalID: -1591453796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_45
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 472
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d48241a13f7184082736edd66a15b7
+      internalID: -1610054549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_46
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 472
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47dd817b71ed1d74fa6629daaa1d12f9
+      internalID: -726229070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_47
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 472
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2bf74ef29e6f3419876aec68769823
+      internalID: 76082809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_48
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 424
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1365988945f9dc34cafdea72488816e4
+      internalID: 1900442977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_49
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 424
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b0be77e5f3cb548947256a6cf23358
+      internalID: -64591086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_50
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 424
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b494b87874c9aed48bd7af33e3ab8917
+      internalID: -935184210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_51
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 424
+        width: 38
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ede1c18c2b0f843aa690454088ab2b
+      internalID: 1924018310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_52
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 423
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb465d046b6ead140a7c878ede980bb0
+      internalID: 863198557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_53
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 424
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1249db3c24567f54bada42d65edc75bc
+      internalID: -1915823091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_54
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 418
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9f3ef84dde8894d88d0633c889d7b6
+      internalID: 134569997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_55
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 424
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9093472727ed9499e59539d7c6bc50
+      internalID: -290249615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_56
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 424
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c15537e080e92489cd14f88aede54f
+      internalID: -899536514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_57
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 424
+        width: 41
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89540a938c31c504ea89507dba17be13
+      internalID: -108202195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_58
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 359
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b4039b5beddc884eb3f58512990ee7e
+      internalID: -2062372102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_59
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 359
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c295c32d85481498720164e3241da3
+      internalID: -869306402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_60
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 359
+        width: 26
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8cd66f5237386846bc5698cc5e695df
+      internalID: -1611240900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_61
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 358
+        width: 63
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceda97d1a7fbb274a8ca2540dfd6742c
+      internalID: -613819255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_62
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 359
+        width: 41
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4eea02662a67464f8a80e923066cfce
+      internalID: -1074224932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_63
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 359
+        width: 42
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6135f1acdca41d94aa52f53d33a271d0
+      internalID: -887228342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_64
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 294
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c8078615ad333e4eb3a2ba78a053c9c
+      internalID: 1982000214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_65
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 294
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0372ea438a79f524995747721607d11f
+      internalID: -2104439028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_66
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 294
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a8e6ec954aca14a82b2c1a8f0a2eb7
+      internalID: 662627577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_67
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 294
+        width: 65
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16dda22543c680a44883fae68a3dba48
+      internalID: -1455567195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_68
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 294
+        width: 60
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23a2b723ddefd446a6bb3ffe108334e
+      internalID: -486578948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_69
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 294
+        width: 48
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103a77d98a0e81b419250c7c7a90807a
+      internalID: 1634984599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_70
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 229
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e8ac829c3f2784db28d8f102e18e33
+      internalID: -2128608257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_71
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 229
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b019b60c7561a40835751eebc0e835
+      internalID: 2023890148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_72
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 229
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7241cec80057745bb004c298a3cd30
+      internalID: 1263956998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_73
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 228
+        width: 73
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52d96987618547478a24e329349b01b
+      internalID: 1672954612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_74
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 228
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e312ef8fac7a34db7affa526b98fa2
+      internalID: 307027024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_spear_1_75
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 229
+        width: 43
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d0f9cf7a08f4b54d914ea816445ce61
+      internalID: 1295033285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +1709,83 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sheet_captain_spear_1_50: -935184210
+      sheet_captain_spear_1_20: -1243263040
+      sheet_captain_spear_1_52: 863198557
+      sheet_captain_spear_1_75: 1295033285
+      sheet_captain_spear_1_61: -613819255
+      sheet_captain_spear_1_34: -70659536
+      sheet_captain_spear_1_45: -1610054549
+      sheet_captain_spear_1_46: -726229070
+      sheet_captain_spear_1_56: -899536514
+      sheet_captain_spear_1_69: 1634984599
+      sheet_captain_spear_1_28: 1105457653
+      sheet_captain_spear_1_8: -1244158666
+      sheet_captain_spear_1_55: -290249615
+      sheet_captain_spear_1_44: -1591453796
+      sheet_captain_spear_1_30: 756022824
+      sheet_captain_spear_1_68: -486578948
+      sheet_captain_spear_1_7: 219691555
+      sheet_captain_spear_1_58: -2062372102
+      sheet_captain_spear_1_67: -1455567195
+      sheet_captain_spear_1_21: 775918739
+      sheet_captain_spear_1_35: -494692203
+      sheet_captain_spear_1_39: 372121765
+      sheet_captain_spear_1_2: -761554851
+      sheet_captain_spear_1_60: -1611240900
+      sheet_captain_spear_1_40: -1597614939
+      sheet_captain_spear_1_9: 1400099487
+      sheet_captain_spear_1_26: 940257984
+      sheet_captain_spear_1_23: 563315521
+      sheet_captain_spear_1_12: -1659333358
+      sheet_captain_spear_1_57: -108202195
+      sheet_captain_spear_1_38: 1880026354
+      sheet_captain_spear_1_53: -1915823091
+      sheet_captain_spear_1_31: 585401296
+      sheet_captain_spear_1_17: -107791530
+      sheet_captain_spear_1_16: 1813443260
+      sheet_captain_spear_1_41: -732852436
+      sheet_captain_spear_1_43: -3253717
+      sheet_captain_spear_1_14: -401681583
+      sheet_captain_spear_1_1: -2087243395
+      sheet_captain_spear_1_51: 1924018310
+      sheet_captain_spear_1_29: -1384318820
+      sheet_captain_spear_1_33: 519814735
+      sheet_captain_spear_1_66: 662627577
+      sheet_captain_spear_1_42: -1116597050
+      sheet_captain_spear_1_36: -1522134759
+      sheet_captain_spear_1_63: -887228342
+      sheet_captain_spear_1_27: 1502244018
+      sheet_captain_spear_1_48: 1900442977
+      sheet_captain_spear_1_25: -1498030959
+      sheet_captain_spear_1_13: 1434268668
+      sheet_captain_spear_1_4: -280192389
+      sheet_captain_spear_1_10: 1154085103
+      sheet_captain_spear_1_59: -869306402
+      sheet_captain_spear_1_49: -64591086
+      sheet_captain_spear_1_62: -1074224932
+      sheet_captain_spear_1_65: -2104439028
+      sheet_captain_spear_1_18: 740583658
+      sheet_captain_spear_1_22: -1273989284
+      sheet_captain_spear_1_15: 24952664
+      sheet_captain_spear_1_24: 1221803224
+      sheet_captain_spear_1_73: 1672954612
+      sheet_captain_spear_1_19: -143866781
+      sheet_captain_spear_1_0: -1043174341
+      sheet_captain_spear_1_11: 309493176
+      sheet_captain_spear_1_54: 134569997
+      sheet_captain_spear_1_32: 648641748
+      sheet_captain_spear_1_37: 1150537181
+      sheet_captain_spear_1_70: -2128608257
+      sheet_captain_spear_1_64: 1982000214
+      sheet_captain_spear_1_74: 307027024
+      sheet_captain_spear_1_5: -227836385
+      sheet_captain_spear_1_47: 76082809
+      sheet_captain_spear_1_71: 2023890148
+      sheet_captain_spear_1_72: 1263956998
+      sheet_captain_spear_1_3: 229094601
+      sheet_captain_spear_1_6: -399121859
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
