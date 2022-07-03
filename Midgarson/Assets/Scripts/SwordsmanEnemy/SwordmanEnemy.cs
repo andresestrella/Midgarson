@@ -7,7 +7,7 @@ public class SwordmanEnemy : MonoBehaviour
     public int rutine;
     public float chrono;
     public Animator animator;
-    public float walkSpeed = 1.5f,runSpeed = 5f;
+    public float walkSpeed = 2f,runSpeed = 8f;
     public GameObject target;
     public bool atacking;
     public float direction;
@@ -26,7 +26,7 @@ public class SwordmanEnemy : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        target = GameObject.Find("Player");
+        target = GameObject.FindGameObjectWithTag("Player");
 
     }
 
@@ -38,9 +38,9 @@ public class SwordmanEnemy : MonoBehaviour
 
     public void behavor()
     {
-        if (Mathf.Abs(transform.position.x - target.transform.position.x) > enemyBounds && !animator.GetBool("IsAtacking"))
+        if (!animator.GetBool("IsOnRange") && !animator.GetBool("IsAtacking"))
         {
-            animator.SetFloat("Speed", 0);
+            //animator.SetFloat("Speed", 0);
             chrono += 1 * Time.deltaTime;
             if (chrono >= 4)
             {
@@ -51,7 +51,7 @@ public class SwordmanEnemy : MonoBehaviour
             switch (rutine)
             {
                 case 0:
-                    animator.SetFloat("Speed", 0);
+                    //animator.SetFloat("Speed", 0);
                     break;
                 case 1:
                     direction = Random.Range(0, 2);
@@ -61,12 +61,12 @@ public class SwordmanEnemy : MonoBehaviour
                     switch (direction)
                     {
                         case 0:
+                            transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
                             transform.rotation = Quaternion.Euler(0, 0, 0);
-                            transform.Translate(Vector3.right * walkSpeed * Time.deltaTime);
                             break;
                         case 1:
+                            transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
                             transform.rotation = Quaternion.Euler(0, 180, 0);
-                            transform.Translate(Vector3.right * walkSpeed * Time.deltaTime);
                             break;
                     }
 
@@ -76,43 +76,25 @@ public class SwordmanEnemy : MonoBehaviour
 
             }
         }
-        else
+        else if (!animator.GetBool("IsAtacking"))
         {
-            if (Mathf.Abs(transform.position.x - target.transform.position.x) > enemyBounds && !animator.GetBool("IsAtacking"))
+            if (transform.position.x < target.transform.position.x)
             {
-                if (transform.position.x < target.transform.position.x)
-                {
-                    animator.SetFloat("Speed", runSpeed);
-                    
-                    transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
-                    transform.rotation = Quaternion.Euler(0, 0, 0);
-                    animator.SetBool("IsAtacking", false);
-                }
-                else
-                {
-                    animator.SetFloat("Speed", runSpeed);
-
-                    transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
-                    transform.rotation = Quaternion.Euler(0, 180, 0);
-                    animator.SetBool("IsAtacking", false);
-                }
+                transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
             }
             else
             {
-                if (!animator.GetBool("IsAtacking"))
-                {
-                    if (transform.position.x < target.transform.position.x)
-                    {
-                        transform.rotation = Quaternion.Euler(0, 0, 0);
-                    }
-                    else
-                    {
-                        transform.rotation = Quaternion.Euler(0, 180, 0);
-                    }
-                    animator.SetFloat("Speed", 0);
-                }
+                transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
+                transform.rotation = Quaternion.Euler(0, 180, 0);
             }
+            animator.SetFloat("Speed", runSpeed);
+
         }
+
+
+
+
     }
 
 }
