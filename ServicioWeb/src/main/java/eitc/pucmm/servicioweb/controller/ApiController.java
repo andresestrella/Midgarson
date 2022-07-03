@@ -5,6 +5,7 @@ import eitc.pucmm.servicioweb.classes.User;
 import eitc.pucmm.servicioweb.services.GameStateService;
 import eitc.pucmm.servicioweb.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
@@ -53,7 +54,7 @@ public class ApiController {
     }
 
     //Endpoints para los estados de juego
-    @RequestMapping("gameState/save")
+    @PutMapping("gameState/save")
     public boolean saveState(@RequestBody GameState gameState) {
         User user = userService.getUserById(gameState.getUserId());
         if (user != null) {
@@ -63,8 +64,9 @@ public class ApiController {
         }
     }
 
-    @RequestMapping("gameState/load")
-    public GameState loadGameStatte(@PathParam("id") long id){
+    @GetMapping("gameState/load/{id}")
+    public GameState loadGameState(@PathParam("id") long id){
+
         return gameStateService.loadGameState(id);
     }
 }

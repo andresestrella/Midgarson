@@ -16,8 +16,8 @@ public class GameStateService {
     }
 
     //Funcion para cargar un estado de juego
-    public GameState loadGameState(long userId){
-        return gameStateRepository.findByUserId(userId);
+    public GameState loadGameState(long id){
+        return gameStateRepository.findById(id).get();
     }
     //Funcion para borrar un estado de juego
     public void deleteGameState(GameState gameState){

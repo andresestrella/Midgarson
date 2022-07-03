@@ -6,13 +6,15 @@ public class SwordmanEnemyHit : MonoBehaviour
 {
     public int damage = 5;
     public Animator animator;
+    public PlayerLife playerLife = new PlayerLife();
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("entro uno");
         if (collision.CompareTag("Player"))
         {
             animator.SetBool("IsAtacking", true);
             animator.SetFloat("Speed", 0);
+            playerLife.TakeDamage(damage);
             //GetComponent<BoxCollider2D>().enabled = false;
         }
     }
