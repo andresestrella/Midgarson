@@ -24,16 +24,11 @@ public class UserService {
         return userRepository.findByNameEqualsIgnoreCaseAndPasswordEqualsIgnoreCase(name,password) != null ? true : false;
     }
 
-    public User getUser(String user){
-        return userRepository.findByNameEqualsIgnoreCase(user);
-    }
-
     //Funcion para registra un usuario
     public User registerUser(User user){
         if(userRepository.findByNameEqualsIgnoreCase(user.getName()) != null){
             return null;
         }else{
-            user.setPuntaje(0);
             return userRepository.save(user);
         }
     }

@@ -162,8 +162,8 @@ public class PlayerMovement : MonoBehaviour
                 foreach (Collider2D enemy in hitEnemies)
                 {
                     Debug.Log("We hit " + enemy.name);
-                    //Llamar a la funcion para hacer daño al enemigo
-                    //
+                    enemy.GetComponent<BasicEnemy>().takeDamage(attackDamage);
+
                 }
             }
             nextAttackTime = Time.time + 1f / attackRate;
@@ -189,8 +189,7 @@ public class PlayerMovement : MonoBehaviour
             foreach (Collider2D enemy in hitEnemies)
             {
                 Debug.Log("We hit " + enemy.name);
-                //Llamar a la funcion para hacer daño al enemigo
-                //
+                enemy.GetComponent<BasicEnemy>().takeDamage(axeAttackDamage);
             }
         }
             nextAxeAttackTime = Time.time + 1f / axeAttackRate;

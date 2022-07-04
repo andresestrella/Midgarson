@@ -20,6 +20,7 @@ public class ApiController {
     @Autowired
     private GameStateService gameStateService;
 
+
     public ApiController(){};
     //Endpoints referentes a los usuarios
     @RequestMapping("user/scoreBoard")
@@ -27,12 +28,9 @@ public class ApiController {
         return userService.getScoreBoard();
     }
 
-    @RequestMapping("user")
-    public User getUser(@RequestParam(name = "user")String user){
-        return userService.getUser(user);
-    }
-    @RequestMapping(value = "user/updateScore", method = RequestMethod.PUT)
-    public User updateScore(@RequestBody User user){return userService.modUser(user);
+    @RequestMapping(value = "user/modUser", method = RequestMethod.PUT)
+    public User modUser(@RequestBody User user){
+        return userService.modUser(user);
     }
 
     @RequestMapping(value = "user/createUser", method = RequestMethod.PUT)
