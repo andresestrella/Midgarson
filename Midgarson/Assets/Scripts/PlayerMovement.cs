@@ -28,6 +28,24 @@ public class PlayerMovement : MonoBehaviour
     private string HIT_ANIMATION = "Hit";
     //private string DYING_ANIMATION = "";
 
+    //Sword Attack
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public int attackDamage = 30;
+    public float attackRate = 2f;
+    float nextAttackTime = 0f;
+
+    //Axe Attack
+    public Transform axeAttackPoint;
+    public float axeAttackRange = 0.5f;
+    public int axeAttackDamage = 60;
+    public float axeAttackRate = 4f;
+    float nextAxeAttackTime = 0f;
+
+    bool flip;
+
+    public LayerMask enemyLayers;
+
     private Animator anim;
 
     private void Awake()
@@ -35,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         myBody = GetComponent<Rigidbody2D>();
         mySprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        flip = false;
     }
     void Update()
     {
@@ -46,15 +65,17 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool(FALL_ANIMATION, true);
         }
 
+        Attack();
+        HeavyAttack();
         PlayerMoveKeyboard();
         WalkAnimation();
         Run();
         Jump();
-        Attack();
-        HeavyAttack();
         BowAttack();
         GettingHit();
         ThrowingObject();
+
+
     }
     void PlayerMoveKeyboard()
     {
@@ -76,14 +97,23 @@ public class PlayerMovement : MonoBehaviour
 
     void WalkAnimation()
     {
-        if (movementX > 0 && isGrounded && yVelocity == 0)
+        if (movementX > 0 && isGrounded)
         {
-            mySprite.flipX = false;
+            if (flip)
+            {
+                flip = false;
+                transform.Rotate(0f, 180f, 0);
+            }
+
             anim.SetBool(WALK_ANIMATION, true);
         }
-        else if (movementX < 0 && isGrounded && yVelocity == 0)
+        else if (movementX < 0 && isGrounded)
         {
-            mySprite.flipX = true;
+            if (!flip)
+            {
+                transform.Rotate(0f, 180f, 0);
+                flip = true;
+            }
             anim.SetBool(WALK_ANIMATION, true);
         }
         else
@@ -122,10 +152,23 @@ public class PlayerMovement : MonoBehaviour
 
     void Attack()
     {
+        
         if (Input.GetMouseButtonDown(0) && isGrounded)
         {
-            anim.SetBool(ATTACK_ANIMATION, true);
-        }
+            if (Time.time >= nextAttackTime)
+            {
+                anim.SetBool(ATTACK_ANIMATION, true);
+                Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+                foreach (Collider2D enemy in hitEnemies)
+                {
+                    Debug.Log("We hit " + enemy.name);
+                    enemy.GetComponent<BasicEnemy>().takeDamage(attackDamage);
+
+                }
+            }
+            nextAttackTime = Time.time + 1f / attackRate;
+
+        }   
 
         if (Input.GetMouseButtonUp(0) && isGrounded)
         {
@@ -133,12 +176,25 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
+
+
     void HeavyAttack()
     {
         if (Input.GetKeyDown(KeyCode.Q) && isGrounded)
         {
+            if (Time.time >= nextAxeAttackTime)
+            {
             anim.SetBool(HEAVY_ATTACK_ANIMATION, true);
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(axeAttackPoint.position, axeAttackRange, enemyLayers);
+            foreach (Collider2D enemy in hitEnemies)
+            {
+                Debug.Log("We hit " + enemy.name);
+                enemy.GetComponent<BasicEnemy>().takeDamage(axeAttackDamage);
+            }
         }
+            nextAxeAttackTime = Time.time + 1f / axeAttackRate;
+        }
+        
 
         if (Input.GetKeyUp(KeyCode.Q) && isGrounded)
         {

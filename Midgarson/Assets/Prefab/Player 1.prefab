@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &588081583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 588081584}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &588081584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588081583}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.53, y: 0.07, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6882761083453271552}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1496865247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1496865248}
+  m_Layer: 0
+  m_Name: AxeAttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1496865248
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496865247}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.14, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6882761083453271552}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6882761083453271555
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,7 +95,9 @@ Transform:
   m_LocalPosition: {x: -69.79, y: -3.25, z: 0}
   m_LocalScale: {x: 1.79, y: 1.79, z: 0}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 588081584}
+  - {fileID: 1496865248}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -146,6 +210,17 @@ MonoBehaviour:
   jumpForce: 6
   walkingForce: 8
   runningForce: 12
+  attackPoint: {fileID: 588081584}
+  attackRange: 0.5
+  attackDamage: 30
+  attackRate: 2
+  axeAttackPoint: {fileID: 1496865248}
+  axeAttackRange: 0.5
+  axeAttackDamage: 60
+  axeAttackRate: 4
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!61 &6882761083453271556
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -184,4 +259,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e880af980220ca4b8ea225bfc7d9a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneController: {fileID: 0}
   playerStatusUI: {fileID: 0}
