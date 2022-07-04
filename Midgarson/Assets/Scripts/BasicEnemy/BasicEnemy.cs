@@ -14,7 +14,7 @@ public class BasicEnemy : MonoBehaviour
     public float enemyBounds = 8;
     public float atackRange = 2;
     public GameObject playerDetected,hit;
-
+    float life = 100;
 
     private void Awake()
     {
@@ -37,62 +37,81 @@ public class BasicEnemy : MonoBehaviour
 
     public void behavor()
     {
-        if (!animator.GetBool("IsOnRange") && !animator.GetBool("IsAtacking"))
+        if (!animator.GetBool("IsDead"))
         {
-            //animator.SetFloat("Speed", 0);
-            chrono += 1 * Time.deltaTime;
-            if (chrono >= 4)
+            if (!animator.GetBool("IsOnRange") && !animator.GetBool("IsAtacking"))
             {
-                rutine = Random.Range(0, 2);
-                chrono = 0;
+                //animator.SetFloat("Speed", 0);
+                chrono += 1 * Time.deltaTime;
+                if (chrono >= 4)
+                {
+                    rutine = Random.Range(0, 2);
+                    chrono = 0;
+                }
+
+                switch (rutine)
+                {
+                    case 0:
+                        //animator.SetFloat("Speed", 0);
+                        break;
+                    case 1:
+                        direction = Random.Range(0, 2);
+                        rutine++;
+                        break;
+                    case 2:
+                        switch (direction)
+                        {
+                            case 0:
+                                transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
+                                transform.rotation = Quaternion.Euler(0, 0, 0);
+                                break;
+                            case 1:
+                                transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
+                                transform.rotation = Quaternion.Euler(0, 180, 0);
+                                break;
+                        }
+
+
+                        animator.SetFloat("Speed", walkSpeed);
+                        break;
+
+                }
+            }
+            else if (!animator.GetBool("IsAtacking"))
+            {
+                if (transform.position.x < target.transform.position.x)
+                {
+                    transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+                else
+                {
+                    transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                }
+                animator.SetFloat("Speed", runSpeed);
+
             }
 
-            switch (rutine)
-            {
-                case 0:
-                    //animator.SetFloat("Speed", 0);
-                    break;
-                case 1:
-                    direction = Random.Range(0, 2);
-                    rutine++;
-                    break;
-                case 2:
-                    switch (direction)
-                    {
-                        case 0:
-                            transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
-                            transform.rotation = Quaternion.Euler(0, 0, 0);
-                            break;
-                        case 1:
-                            transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
-                            transform.rotation = Quaternion.Euler(0, 180, 0);
-                            break;
-                    }
 
 
-                    animator.SetFloat("Speed", walkSpeed);
-                    break;
-
-            }
         }
-        else if(!animator.GetBool("IsAtacking"))
+
+
+    }
+
+
+    public void takeDamage(int damage)
+    {
+        if (!animator.GetBool("IsDead"))
         {
-            if (transform.position.x < target.transform.position.x)
+            life -= damage;
+            if (life <= 0.0)
             {
-                transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
-                transform.rotation = Quaternion.Euler(0, 0, 0);
+                animator.SetBool("IsDead", true);
             }
-            else
-            {
-                transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
-                transform.rotation = Quaternion.Euler(0, 180, 0);
-            }
-            animator.SetFloat("Speed", runSpeed);
 
         }
-
-
-
 
     }
 

@@ -58,15 +58,30 @@ public class ApiController {
     public boolean saveState(@RequestBody GameState gameState) {
         User user = userService.getUserById(gameState.getUserId());
         if (user != null) {
-            return gameStateService.saveState(gameState);
+            if(gameStateService.existGameState(user.getId())) {
+                GameState old = gameStateService.loadGameState(user.getId());
+                old.setLevel(gameState.getLevel());
+                old.setDificulty(gameState.getDificulty());
+                old.setPlayerHealth(gameState.getPlayerHealth());
+                old.setPlayerShield(gameState.getPlayerShield());
+                old.setMoney(gameState.getMoney());
+                old.setInventory(gameState.getInventory());
+                old.setCurrPosX(gameState.getCurrPosX());
+                old.setCurrPosY(gameState.getCurrPosY());
+                return gameStateService.saveState(old);
+            }
+            else {
+                return gameStateService.saveState(gameState);
+            }
+
         } else {
             return false;
         }
     }
 
     @GetMapping("gameState/load/{id}")
-    public GameState loadGameState(@PathParam("id") long id){
-
-        return gameStateService.loadGameState(id);
+    public GameState loadGameState(@PathVariable long id){
+        GameState gameState = gameStateService.loadGameState(id);
+        return gameState;
     }
 }

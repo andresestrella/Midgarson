@@ -58,5 +58,16 @@ public class PlayerLife : MonoBehaviour
         }
     }
 
+    public void setLoadedHealth(int health, int shield)
+    {
+        currentHealth = health;
+        currentShield = shield;
+        playerStatusUI.SetHealth(healthRange, shieldRange);
+        if (currentHealth <= 0)
+        {
+            sceneController.GameOver();
+        }
+    }
+
     
 }
