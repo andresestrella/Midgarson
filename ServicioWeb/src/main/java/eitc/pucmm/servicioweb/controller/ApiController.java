@@ -68,6 +68,7 @@ public class ApiController {
                 old.setInventory(gameState.getInventory());
                 old.setCurrPosX(gameState.getCurrPosX());
                 old.setCurrPosY(gameState.getCurrPosY());
+                old.setScore(gameState.getScore());
                 return gameStateService.saveState(old);
             }
             else {

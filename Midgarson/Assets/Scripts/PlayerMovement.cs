@@ -170,7 +170,7 @@ public class PlayerMovement : MonoBehaviour
                 foreach (Collider2D enemy in hitEnemies)
                 {
                     Debug.Log("We hit " + enemy.name);
-                    enemy.GetComponent<BasicEnemy>().takeDamage(attackDamage);
+                    enemy.GetComponent<Enemy>().takeDamage(attackDamage);
 
                 }
             }
@@ -197,7 +197,7 @@ public class PlayerMovement : MonoBehaviour
             foreach (Collider2D enemy in hitEnemies)
             {
                 Debug.Log("We hit " + enemy.name);
-                enemy.GetComponent<BasicEnemy>().takeDamage(axeAttackDamage);
+                enemy.GetComponent<Enemy>().takeDamage(axeAttackDamage);
             }
         }
             nextAxeAttackTime = Time.time + 1f / axeAttackRate;

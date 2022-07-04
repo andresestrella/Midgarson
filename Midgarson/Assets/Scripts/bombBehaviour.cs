@@ -36,7 +36,7 @@ public class bombBehaviour : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("We hit " + enemy.name);
-            enemy.GetComponent<BasicEnemy>().takeDamage(damage);
+            enemy.GetComponent<Enemy>().takeDamage(damage);
         }
         Destroy(gameObject);
     }

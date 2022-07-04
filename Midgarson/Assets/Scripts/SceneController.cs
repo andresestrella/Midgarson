@@ -30,6 +30,12 @@ public class SceneController : MonoBehaviour
         playerStatusUI.updateScoreText();
     }
 
+    public void loadScores(int puntos)
+    {
+        scorePlay = puntos;
+        playerStatusUI.updateScoreText();
+    }
+
     public void GameOver(){
         gameOverScreen.Setup();
     }

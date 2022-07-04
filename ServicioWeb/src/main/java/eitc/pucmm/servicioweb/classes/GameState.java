@@ -22,6 +22,7 @@ public class GameState implements Serializable {
     private String inventory;
     private float currPosX;
     private float currPosY;
+    private int score;
 
 
     /*
