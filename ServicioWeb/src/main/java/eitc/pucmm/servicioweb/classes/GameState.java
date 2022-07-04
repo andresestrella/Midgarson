@@ -17,10 +17,11 @@ public class GameState implements Serializable {
     private int level;
     private String dificulty;
     private int playerHealth;
+    private int playerShield;
     private int money;
     private String inventory;
-    private int currPosX;
-    private int currPosY;
+    private float currPosX;
+    private float currPosY;
 
 
     /*

@@ -11,6 +11,8 @@ public class SwordmanEnemy : MonoBehaviour
     public GameObject target;
     public bool atacking;
     public float direction;
+    private float life = 100;
+    bool isDead = false;
 
     public float enemyBounds = 8;
     public float atackRange = 2;
@@ -33,68 +35,90 @@ public class SwordmanEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        behavor();
+        if(!isDead)
+            behavor();
     }
 
     public void behavor()
     {
-        if (!animator.GetBool("IsOnRange") && !animator.GetBool("IsAtacking"))
+            
+            if (!animator.GetBool("IsOnRange") && !animator.GetBool("IsAtacking"))
+            {
+                //animator.SetFloat("Speed", 0);
+                chrono += 1 * Time.deltaTime;
+                if (chrono >= 4)
+                {
+                    rutine = Random.Range(0, 2);
+                    chrono = 0;
+                }
+
+
+                switch (rutine)
+                {
+                    case 0:
+                        //animator.SetFloat("Speed", 0);
+                        break;
+                    case 1:
+                        direction = Random.Range(0, 2);
+                        rutine++;
+                        break;
+                    case 2:
+                        switch (direction)
+                        {
+                            case 0:
+                                transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
+                                transform.rotation = Quaternion.Euler(0, 0, 0);
+                                break;
+                            case 1:
+                                transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
+                                transform.rotation = Quaternion.Euler(0, 180, 0);
+                                break;
+                        }
+
+
+                        animator.SetFloat("Speed", walkSpeed);
+                        break;
+
+                }
+            }
+            else if (!animator.GetBool("IsAtacking"))
+            {
+                if (transform.position.x < target.transform.position.x)
+                {
+                    transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+                else
+                {
+                    transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                }
+                animator.SetFloat("Speed", runSpeed);
+
+            }
+
+        
+
+
+
+
+    }
+
+    public void takeDamage(int damage)
+    {
+        if (!isDead)
         {
-            //animator.SetFloat("Speed", 0);
-            chrono += 1 * Time.deltaTime;
-            if (chrono >= 4)
+            life -= damage;
+            animator.SetBool("OnHit", true);
+            if (life <= 0.0)
             {
-                rutine = Random.Range(0, 2);
-                chrono = 0;
+                animator.SetBool("IsDead", true);
+                animator.SetBool("IsDead", false);
             }
 
-            switch (rutine)
-            {
-                case 0:
-                    //animator.SetFloat("Speed", 0);
-                    break;
-                case 1:
-                    direction = Random.Range(0, 2);
-                    rutine++;
-                    break;
-                case 2:
-                    switch (direction)
-                    {
-                        case 0:
-                            transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
-                            transform.rotation = Quaternion.Euler(0, 0, 0);
-                            break;
-                        case 1:
-                            transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
-                            transform.rotation = Quaternion.Euler(0, 180, 0);
-                            break;
-                    }
-
-
-                    animator.SetFloat("Speed", walkSpeed);
-                    break;
-
-            }
+            animator.SetBool("OnHit", false);
         }
-        else if (!animator.GetBool("IsAtacking"))
-        {
-            if (transform.position.x < target.transform.position.x)
-            {
-                transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
-                transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
-            else
-            {
-                transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
-                transform.rotation = Quaternion.Euler(0, 180, 0);
-            }
-            animator.SetFloat("Speed", runSpeed);
-
-        }
-
-
-
-
+        
     }
 
 }

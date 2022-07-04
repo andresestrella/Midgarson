@@ -4,45 +4,34 @@ using UnityEngine;
 
 public class GameState
 {
-    private long id
+    public long? id
     {
         get { return id; }
         set { id = value; }
     }
-    private long userId
+    public long userId;
+    public int level;
+
+    public string dificulty;
+    public int playerHealth;
+    public int playerShield;
+    public int money;
+    public string inventory;
+    public float currPosX;
+    public float currPosY;
+
+    public GameState(long userId,int level,string dificulty, int playerHealth,int playerShield, int money,string inventory, float currPosX,float currPosY)
     {
-        get { return userId; }
-        set { userId = value; }
-    }
-    private int level
-    {
-        get { return level; }
-        set { level = value; }
-    }
-    private int playerHealth
-    {
-        get { return playerHealth; }
-        set { playerHealth = value; }
-    }
-    private int money
-    {
-        get { return money; }
-        set { money = value; }
-    }
-    private string inventory
-    {
-        get { return inventory; }
-        set { inventory = value; }
-    }
-    private int currPosX
-    {
-        get { return currPosX; }
-        set { currPosX = value; }
-    }
-    private int currPosY
-    {
-        get { return currPosY; }
-        set { currPosY = value; }
+        this.userId = userId;
+        this.level = level;
+        this.dificulty = dificulty;
+        this.playerHealth = playerHealth;
+        this.playerShield = playerShield;
+        this.money = money;
+        this.inventory = inventory;
+        this.currPosX = currPosX;
+        this.currPosY = currPosY;
+
     }
 
 }

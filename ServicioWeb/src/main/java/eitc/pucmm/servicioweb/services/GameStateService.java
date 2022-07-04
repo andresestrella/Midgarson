@@ -12,12 +12,16 @@ public class GameStateService {
 
     //Funcion para guardar un estado de juego
     public boolean saveState(GameState gameState){
-        return gameStateRepository.save(gameState) != null ? true: false;
+        return gameStateRepository.save(gameState) != null;
     }
 
     //Funcion para cargar un estado de juego
-    public GameState loadGameState(long id){
-        return gameStateRepository.findById(id).get();
+    public GameState loadGameState(long userId){
+        return gameStateRepository.findByUserId(userId);
+    }
+
+    public Boolean existGameState(long userId){
+        return gameStateRepository.existsByUserId(userId);
     }
     //Funcion para borrar un estado de juego
     public void deleteGameState(GameState gameState){
