@@ -19,8 +19,9 @@ public class GameState
     public string inventory;
     public float currPosX;
     public float currPosY;
+    public int score;
 
-    public GameState(long userId,int level,string dificulty, int playerHealth,int playerShield, int money,string inventory, float currPosX,float currPosY)
+    public GameState(long userId,int level,string dificulty, int playerHealth,int playerShield, int money,string inventory, float currPosX,float currPosY,int score)
     {
         this.userId = userId;
         this.level = level;
@@ -31,7 +32,7 @@ public class GameState
         this.inventory = inventory;
         this.currPosX = currPosX;
         this.currPosY = currPosY;
-
+        this.score = score;
     }
 
 }

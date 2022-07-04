@@ -10,7 +10,7 @@ public class BasicEnemyRange : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !animator.GetBool("IsDead"))
         {
             animator.SetBool("IsOnRange", true);   
         }
@@ -19,7 +19,7 @@ public class BasicEnemyRange : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !animator.GetBool("IsDead"))
         {
             animator.SetBool("IsOnRange", false);
         }

@@ -35,7 +35,7 @@ public class GameStateController : MonoBehaviour
         }
          
         currentState = new GameState(1, 1, "easy", playerLife.currentHealth,playerLife.currentShield, 150,
-            "gun", player.transform.position.x, player.transform.position.y);
+            "gun", player.transform.position.x, player.transform.position.y,playerLife.sceneController.scorePlay);
         Debug.Log(JsonUtility.ToJson( currentState));
         
         if (loaded)
@@ -61,7 +61,7 @@ public class GameStateController : MonoBehaviour
         Debug.Log(player.transform.position);
         player.transform.position = new Vector3(currentState.currPosX, currentState.currPosY, 0);
         Debug.Log(player.transform.position);
-        playerLife.setLoadedHealth(currentState.playerHealth, currentState.playerShield);
+        playerLife.setLoadedHealth(currentState.playerHealth, currentState.playerShield,currentState.score);
     }
 
 

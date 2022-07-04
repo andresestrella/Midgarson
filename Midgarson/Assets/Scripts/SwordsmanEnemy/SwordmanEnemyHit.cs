@@ -6,15 +6,23 @@ public class SwordmanEnemyHit : MonoBehaviour
 {
     public int damage = 5;
     public Animator animator;
-    public PlayerLife playerLife = new PlayerLife();
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            animator.SetBool("IsAtacking", true);
-            animator.SetFloat("Speed", 0);
-            playerLife.TakeDamage(damage);
+            if (!animator.GetBool("IsDead"))
+            {
+                animator.SetBool("IsAtacking", true);
+                animator.SetFloat("Speed", 0);
+                animator.SetBool("OnHitPlayer", true);
+            }
+            else
+            {
+                animator.SetBool("IsAtacking", false);
+                animator.SetFloat("Speed", 0);
+                animator.SetBool("OnHitPlayer", false);
+            }
             //GetComponent<BoxCollider2D>().enabled = false;
         }
     }
@@ -25,8 +33,10 @@ public class SwordmanEnemyHit : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             animator.SetBool("IsAtacking", false);
-            
+            animator.SetBool("OnHitPlayer", false);
             //GetComponent<BoxCollider2D>().enabled = false;
         }
     }
+
+
 }
