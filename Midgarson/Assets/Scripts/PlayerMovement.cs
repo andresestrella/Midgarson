@@ -42,6 +42,12 @@ public class PlayerMovement : MonoBehaviour
     public float axeAttackRate = 4f;
     float nextAxeAttackTime = 0f;
 
+
+    //Bomb attack
+    Vector3 startingSpeed = new Vector3(10f,10f);
+    float currentAngle,shootingAngle = 45;
+    public GameObject bomb;
+
     bool flip;
 
     public LayerMask enemyLayers;
@@ -101,6 +107,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (flip)
             {
+                shootingAngle = 45;
                 flip = false;
                 transform.Rotate(0f, 180f, 0);
             }
@@ -111,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (!flip)
             {
+                shootingAngle = 135;
                 transform.Rotate(0f, 180f, 0);
                 flip = true;
             }
@@ -217,7 +225,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && isGrounded)
         {
+            currentAngle = shootingAngle * Mathf.Deg2Rad;
+
             anim.SetBool(THROWING_ANIMATION, true);
+            Instantiate(bomb, gameObject.transform.position, Quaternion.identity).GetComponent<bombBehaviour>().Shoot(startingSpeed, currentAngle);
+
         }
         if (Input.GetKeyUp(KeyCode.E) && isGrounded)
         {
