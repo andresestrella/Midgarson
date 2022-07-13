@@ -192,7 +192,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &6882761083453271557
 MonoBehaviour:
@@ -218,6 +218,8 @@ MonoBehaviour:
   axeAttackRange: 0.5
   axeAttackDamage: 60
   axeAttackRate: 4
+  bomb: {fileID: 2063857220940564627, guid: 37b9f73d659eb8e4cae4e7541c2db68c, type: 3}
+  arrow: {fileID: 3677692824331880756, guid: 2f797b1b06c429f46bf03571047b7577, type: 3}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
