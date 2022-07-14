@@ -72,6 +72,9 @@ public class Boss1Movement : MonoBehaviour
         if(life <= 1){
             anim.SetBool("isWalking", false);
             anim.SetBool("isDead", true);
+
+            GameObject.Find("TimelineManager").GetComponent<TimelineController>().Play();
+            life = 2; //para que no se active el cutscene cada frame despues de que muere el boss
         }
         /*if(Input.GetButtonDown("Fire1")){
             life -= life * damageTaken;
