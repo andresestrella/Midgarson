@@ -277,8 +277,28 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool(FALL_ANIMATION, false);
             myBody.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
+        else if (collision.gameObject.CompareTag("Heal"))
+        {
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.CompareTag("Shield"))
+        {
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.CompareTag("MinCoins"))
+        {
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.CompareTag("MedCoins"))
+        {
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.CompareTag("MaxCoins"))
+        {
+            Destroy(collision.gameObject);
+        }
 
-        
+
     }
 
     void OnCollisionExit2D(Collision2D collision){
