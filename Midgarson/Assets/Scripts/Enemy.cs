@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     public float atackRange = 2;
     public GameObject playerDetected, hit;
     protected float life = 100;
+    public GameObject Item;
 
 
     public void behavor()
@@ -99,6 +100,14 @@ public class Enemy : MonoBehaviour
 
 
         }
+        else
+        {
+            if (Item != null)
+            {
+                DropItem();
+                Item = null;
+            }
+        }
 
 
     }
@@ -121,6 +130,12 @@ public class Enemy : MonoBehaviour
             animator.SetBool("OnHit", false);
         }
 
+    }
+
+    public void DropItem()
+    {
+        Vector3 position = transform.position;
+        Instantiate(Item, position, Quaternion.identity);
     }
 
 }

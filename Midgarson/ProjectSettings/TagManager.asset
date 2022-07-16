@@ -12,6 +12,7 @@ TagManager:
   - MinCoins
   - MedCoins
   - MaxCoins
+  - ShieldItem
   layers:
   - Default
   - TransparentFX
