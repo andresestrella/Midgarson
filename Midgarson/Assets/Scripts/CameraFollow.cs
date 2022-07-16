@@ -5,8 +5,8 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     private Transform player;
-    private float yOffset = 2.7f;
-    private float MIN_LIM_X = -60, MAX_LIM_X = 130;
+    public float yOffset = 2.7f;
+    public float MIN_LIM_X = -60, MAX_LIM_X = 130;
     public float FollowSpeed = 10f;
 
     void Start()
