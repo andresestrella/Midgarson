@@ -58,3 +58,4 @@ Midgarson\Logs\AssetImportWorker1.log
 
 Midgarson\Logs\AssetImportWorker0.log
 /Midgarson/Logs/AssetImportWorker0.log
+*.vsidx
