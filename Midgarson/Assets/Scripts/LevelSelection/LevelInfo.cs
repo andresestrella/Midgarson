@@ -9,7 +9,7 @@ public static class LevelInfo{
 
     //level 3
     public static int lvl3Score = 0;
-    public static string lvl3Title = "Ciudad Licoln"; // - Mercia
+    public static string lvl3Title = "Ciudad Licoln"; //- Mercia
 
     //level 4
     public static int lvl4Score = 0;
