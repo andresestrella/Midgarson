@@ -7,6 +7,12 @@ TagManager:
   - Ground
   - Stairs
   - Platform
+  - Heal
+  - Shield
+  - MinCoins
+  - MedCoins
+  - MaxCoins
+  - ShieldItem
   layers:
   - Default
   - TransparentFX
@@ -15,7 +21,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Enemies
   - 
   - 
   - 
