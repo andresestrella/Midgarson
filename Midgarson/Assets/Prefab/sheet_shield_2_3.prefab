@@ -186,14 +186,17 @@ MonoBehaviour:
   damageTaken: 0.9
   otherAnimator: {fileID: 0}
   simpleAttackRange: 9
+  knife: {fileID: 7063093504866126508, guid: f4d6d31db5eabee4cbe367513c3533bc, type: 3}
+  timeToshoot: 2
+  countDown: 0
   playerLife: {fileID: 0}
   vida: 0
   controladorAtaque: {fileID: 3311731083544513601}
-  radioAtaque: 1
+  radioAtaque: 1.2
   danoAtaque: 20
   jumpForce: 5
   dash: 0
-  timeDash: 0
+  timeDash: 1
   velocityDash: 12
 --- !u!95 &3311731083839081568
 Animator:

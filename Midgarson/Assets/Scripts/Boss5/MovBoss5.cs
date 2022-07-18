@@ -15,7 +15,13 @@ public class MovBoss5 : MonoBehaviour
     public Animator otherAnimator;
     public float simpleAttackRange = 9f;
 
+    public GameObject knife;
+    public float timeToshoot, countDown;
+
     public PlayerLife playerLife;
+
+    int rutina;
+    float chrono;
 
     [SerializeField] private float vida;
 
@@ -39,16 +45,64 @@ public class MovBoss5 : MonoBehaviour
         animator = GetComponent<Animator>();
         rg = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player1").GetComponent<Transform>();
-        
+        countDown = timeToshoot;
+
     }
     void Update()
     {
 
-
-
         ditanciaPlayer = Vector2.Distance(transform.position, player.position);
         animator.SetFloat("DistanciaPlayer", ditanciaPlayer);
-       //Dash_skill();
+
+        chrono += 1 * Time.deltaTime;
+       
+
+
+        if (chrono >= Random.Range(1, 2))
+        {
+            rutina = Random.Range(0, 3);
+            chrono = 0;
+        }
+
+        if (rutina <= 1)
+        {
+            animator.SetBool("isWalking", true);
+            if (ditanciaPlayer > 7)
+            {
+               // Dash_skill();
+            }
+
+            if (ditanciaPlayer > 5 && ditanciaPlayer < 7)
+            {
+              //  Jump();
+            }
+
+        }
+        if (rutina > 1)
+        {
+            countDown -= Time.deltaTime;
+            
+             if (countDown < 0)
+             {
+                animator.SetBool("isWalking", false);
+                ShootPlayer(!observandoDerecha);
+                countDown = timeToshoot;
+                
+            }
+            else
+            {
+                animator.SetBool("isWalking", true);
+
+            }
+
+       
+
+        }
+
+
+        // 
+
+        //Dash_skill();
         //Jump();
 
 
@@ -58,8 +112,8 @@ public class MovBoss5 : MonoBehaviour
     void Dash_skill()
     {
         //esto lo puedo manejar aleatorio
-        if (ditanciaPlayer < 8)
-        {
+      //  if (ditanciaPlayer < 8)
+      //  {
             timeDash += 1 * Time.deltaTime;
 
             if(timeDash < 0.35f)
@@ -74,14 +128,14 @@ public class MovBoss5 : MonoBehaviour
                 animator.SetBool("Dash", false);
             }
 
-        }
-        else
-        {
-            dash = false;
-            animator.SetBool("Dash", false);
-            timeDash = 0;
+       // }
+       // else
+       // {
+          //  dash = false;
+          //  animator.SetBool("Dash", false);
+          //  timeDash = 0;
 
-        }
+       // }
     }
 
     void Jump()
@@ -120,6 +174,10 @@ public class MovBoss5 : MonoBehaviour
 
     }
 
+    public void ShootPlayer(bool status)
+    {
+        Instantiate(knife, transform.position, Quaternion.identity).GetComponent<ArrowBehaviour>().shoot(status, 0.4f); ;
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

@@ -15,7 +15,10 @@ public class Instakill : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider other){
-        //other.GetComponent<PlayerMovement>.dealDmg(999);
+    private void OnCollisionEnter2D(Collision2D other){
+        if (other.gameObject.CompareTag("Player")){
+            other.gameObject.GetComponent<PlayerLife>().TakeDamage(999);
+        }
+        
     }
 }

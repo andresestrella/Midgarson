@@ -37,10 +37,10 @@ public class RockMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other){
         
-        if (other.gameObject.tag == "Player"){
+        if (other.gameObject.CompareTag("Player")){
             other.gameObject.GetComponent<PlayerLife>().TakeDamage(10);
             Destroy(gameObject);
-        }else if (other.gameObject.tag == "Ground"){
+        }else{
             Destroy(gameObject);
         }
         
