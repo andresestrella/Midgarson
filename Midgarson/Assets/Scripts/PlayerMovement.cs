@@ -62,6 +62,9 @@ public class PlayerMovement : MonoBehaviour
 
     private Animator anim;
 
+    public GameObject shield;
+    private const float shieldDistance = 2f;
+
     private void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
@@ -297,8 +300,34 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool(FALL_ANIMATION, false);
             myBody.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
+        else if (collision.gameObject.CompareTag("Heal"))
+        {
+            Destroy(collision.gameObject);
+            gameObject.GetComponent<PlayerLife>().AddHealth(20);
+        }
+        else if (collision.gameObject.CompareTag("Shield"))
+        {
+            Destroy(collision.gameObject);
+            gameObject.GetComponent<PlayerLife>().AddShield(20);
+        }
+        else if (collision.gameObject.CompareTag("MinCoins"))
+        {
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.CompareTag("MedCoins"))
+        {
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.CompareTag("MaxCoins"))
+        {
+            Destroy(collision.gameObject);
+        }else if (collision.gameObject.CompareTag("ShieldItem"))
+        {
+            Destroy(collision.gameObject);
+            Instantiate(shield, gameObject.transform.position, Quaternion.identity).GetComponent<ShieldBehaviour>().Shoot(gameObject, shieldDistance);
+        }
 
-        
+
     }
 
     void OnCollisionExit2D(Collision2D collision){
