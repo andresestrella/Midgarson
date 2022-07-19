@@ -26,6 +26,7 @@ public class enemyArrow : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
            playerLife.TakeDamage(5);
+           Destroy(gameObject);
         }
 
     }

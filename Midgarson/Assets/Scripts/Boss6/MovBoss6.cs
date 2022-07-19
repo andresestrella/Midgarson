@@ -19,9 +19,11 @@ public class MovBoss6 : MonoBehaviour
     public float timeToshoot, countDown;
 
     public PlayerLife playerLife;
+    public GrappieHook hook;
 
     int rutina;
     float chrono;
+
 
     [SerializeField] private float vida;
 
@@ -36,9 +38,11 @@ public class MovBoss6 : MonoBehaviour
     public float velocityDash;
     float ditanciaPlayer;
 
+    GameObject target;
     private void Awake()
     {
         playerLife = GameObject.Find("Player1").GetComponent<PlayerLife>();
+        hook = GetComponent<GrappieHook>();
     }
     void Start()
     {
@@ -56,6 +60,11 @@ public class MovBoss6 : MonoBehaviour
 
         chrono += 1 * Time.deltaTime;
 
+        if (ditanciaPlayer > 7 && ditanciaPlayer < 10)
+        {
+            hook.StartGrapple();
+        }
+
 
 
         if (chrono >= Random.Range(1, 2))
@@ -66,15 +75,20 @@ public class MovBoss6 : MonoBehaviour
 
         if (rutina <= 1)
         {
-            animator.SetBool("isWalking", true);
+            if (ditanciaPlayer > 5)
+            {
+                animator.SetBool("isWalking", true);
+            }
+   
             if (ditanciaPlayer > 7)
             {
-                // Dash_skill();
+                Dash_skill();
             }
 
             if (ditanciaPlayer > 5 && ditanciaPlayer < 7)
             {
-                //  Jump();
+                print("jump");
+                Jump();
             }
 
         }
@@ -100,20 +114,11 @@ public class MovBoss6 : MonoBehaviour
         }
 
 
-        // 
-
-        //Dash_skill();
-        //Jump();
-
-
-
     }
 
     void Dash_skill()
     {
-        //esto lo puedo manejar aleatorio
-        //  if (ditanciaPlayer < 8)
-        //  {
+
         timeDash += 1 * Time.deltaTime;
 
         if (timeDash < 0.35f)
@@ -128,23 +133,12 @@ public class MovBoss6 : MonoBehaviour
             animator.SetBool("Dash", false);
         }
 
-        // }
-        // else
-        // {
-        //  dash = false;
-        //  animator.SetBool("Dash", false);
-        //  timeDash = 0;
-
-        // }
     }
 
     void Jump()
     {
-        if (ditanciaPlayer < 8)
-        {
-            rg.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            animator.SetBool("Jump", true);
-        }
+        rg.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+       // animator.SetBool("Jump", true);
     }
 
 
@@ -166,9 +160,7 @@ public class MovBoss6 : MonoBehaviour
         {
             if (objeto.CompareTag("Player"))
             {
-                // objeto.GetComponent<>
                 playerLife.TakeDamage(5);
-
             }
         }
 
@@ -188,7 +180,6 @@ public class MovBoss6 : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            print("entro");
             //  if (otherAnimator.GetBool("Attack") == true)
             //  {
             //  life -= life * damageTaken;
@@ -215,6 +206,14 @@ public class MovBoss6 : MonoBehaviour
         {
             //animacion de muerte
         }
+
+    }
+
+    public void TargetHit(GameObject hit)
+    {
+
+        target = hit;
+      //  line.enabled = true;
 
     }
 }

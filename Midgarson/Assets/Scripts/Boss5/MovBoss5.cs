@@ -69,12 +69,13 @@ public class MovBoss5 : MonoBehaviour
             animator.SetBool("isWalking", true);
             if (ditanciaPlayer > 7)
             {
-               // Dash_skill();
+                Dash_skill();
             }
 
             if (ditanciaPlayer > 5 && ditanciaPlayer < 7)
             {
-              //  Jump();
+                print("jump");
+                Jump();
             }
 
         }
@@ -87,7 +88,7 @@ public class MovBoss5 : MonoBehaviour
                 animator.SetBool("isWalking", false);
                 ShootPlayer(!observandoDerecha);
                 countDown = timeToshoot;
-                
+
             }
             else
             {
@@ -100,20 +101,10 @@ public class MovBoss5 : MonoBehaviour
         }
 
 
-        // 
-
-        //Dash_skill();
-        //Jump();
-
-
-
     }
 
     void Dash_skill()
     {
-        //esto lo puedo manejar aleatorio
-      //  if (ditanciaPlayer < 8)
-      //  {
             timeDash += 1 * Time.deltaTime;
 
             if(timeDash < 0.35f)
@@ -127,24 +118,12 @@ public class MovBoss5 : MonoBehaviour
                 dash = false;
                 animator.SetBool("Dash", false);
             }
-
-       // }
-       // else
-       // {
-          //  dash = false;
-          //  animator.SetBool("Dash", false);
-          //  timeDash = 0;
-
-       // }
     }
 
     void Jump()
     {
-        if (ditanciaPlayer < 8)
-        {
-            rg.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            animator.SetBool("Jump", true);
-        }
+          rg.AddForce(new Vector2(transform.position.x, jumpForce), ForceMode2D.Impulse);
+         // animator.SetBool("Jump", true);
     }
 
 
@@ -166,7 +145,6 @@ public class MovBoss5 : MonoBehaviour
         {
             if(objeto.CompareTag("Player"))
             {
-                // objeto.GetComponent<>
                 playerLife.TakeDamage(5);
 
             }
@@ -186,9 +164,9 @@ public class MovBoss5 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         if (other.gameObject.tag == "Player")
         {
-            print("entro");
             //  if (otherAnimator.GetBool("Attack") == true)
             //  {
             //  life -= life * damageTaken;

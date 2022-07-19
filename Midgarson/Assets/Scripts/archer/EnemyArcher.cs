@@ -10,6 +10,7 @@ public class EnemyArcher : MonoBehaviour
     public double damageTaken = 0.9;
     public Animator anim;
     public Animator otherAnimator;
+    float distanciaPlayer;
 
     public Transform player;
     public bool observandoDerecha = true;
@@ -22,23 +23,25 @@ public class EnemyArcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        countDown -= Time.deltaTime;
-        if(countDown < 0)
+        distanciaPlayer = Vector2.Distance(transform.position, player.position);
+        if (distanciaPlayer < 30)
         {
-            ShootPlayer();
-            countDown = timeToshoot;
+            countDown -= Time.deltaTime;
+            if (countDown < 0)
+            {
+                ShootPlayer();
+                countDown = timeToshoot;
+            }
+
+            MirarPlayer();
+
         }
-
-        MirarPlayer();
-
 
     }
 
     public void ShootPlayer()
     {
         GameObject spell = Instantiate(arrow,transform.position, Quaternion.identity);
-
-
     }
 
     public void MirarPlayer()
@@ -60,15 +63,15 @@ public class EnemyArcher : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && anim.GetBool("isDead") == false)
-        {
-            if (otherAnimator.GetBool("Attack") == true)
-            {
-                life -= life * damageTaken;
-                print(life);
+       // if (other.gameObject.tag == "Player" && anim.GetBool("isDead") == false)
+        //{
+           // if (otherAnimator.GetBool("Attack") == true)
+           // {
+               // life -= life * damageTaken;
+              //  print(life);
                 //agregar animacion de damage
-            }
-        }
+          //  }
+       // }
            
         
     }

@@ -5,18 +5,21 @@ using UnityEngine;
 public class arrowDestroy : MonoBehaviour
 {
     // Start is called before the first frame update
+    float time =0;
     void Start()
     {
-        
+     
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Time.deltaTime > Time.deltaTime + 2)
-        {
-            Destroy(gameObject);
-        }
-        
+
+
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }
