@@ -7,7 +7,14 @@ public class ArrowBehaviour : MonoBehaviour
     float shootingTime, flyingSpeed;
     int damage = 5;
     Vector2 pos;
-  
+
+    public PlayerLife playerLife;
+
+    private void Awake()
+    {
+        playerLife = GameObject.Find("Player1").GetComponent<PlayerLife>();
+    }
+
     public void shoot(bool flip, float velocity)
     {
         shootingTime = Time.time;
@@ -36,6 +43,12 @@ public class ArrowBehaviour : MonoBehaviour
         if (collision.gameObject.tag != "Player")
         {
             collision.gameObject.GetComponent<Enemy>().takeDamage(damage);
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            playerLife.TakeDamage(5);
             Destroy(gameObject);
         }
     }
