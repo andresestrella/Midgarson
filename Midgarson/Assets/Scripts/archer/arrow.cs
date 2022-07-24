@@ -12,7 +12,7 @@ public class arrow : MonoBehaviour
     {
         movSpeed = 5;//cambiar
         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.Find("Player1").GetComponent<Transform>();
+        player = GameObject.Find("Player 1").GetComponent<Transform>();
         if ((player.position.x < transform.position.x ))
         {
             transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);

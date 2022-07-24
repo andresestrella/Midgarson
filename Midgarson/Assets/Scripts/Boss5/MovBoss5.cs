@@ -38,13 +38,13 @@ public class MovBoss5 : MonoBehaviour
 
     private void Awake()
     {
-        playerLife = GameObject.Find("Player1").GetComponent<PlayerLife>();
+        playerLife = GameObject.Find("Player 1").GetComponent<PlayerLife>();
     }
     void Start()
     {
         animator = GetComponent<Animator>();
         rg = GetComponent<Rigidbody2D>();
-        player = GameObject.Find("Player1").GetComponent<Transform>();
+        player = GameObject.Find("Player 1").GetComponent<Transform>();
         countDown = timeToshoot;
 
     }

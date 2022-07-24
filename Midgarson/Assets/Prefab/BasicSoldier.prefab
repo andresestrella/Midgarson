@@ -328,3 +328,4 @@ MonoBehaviour:
   atackRange: 2
   playerDetected: {fileID: 0}
   hit: {fileID: 0}
+  Item: {fileID: 0}
