@@ -12,7 +12,7 @@ public class ArrowBehaviour : MonoBehaviour
 
     private void Awake()
     {
-        playerLife = GameObject.Find("Player1").GetComponent<PlayerLife>();
+        playerLife = GameObject.Find("Player 1").GetComponent<PlayerLife>();
     }
 
     public void shoot(bool flip, float velocity)
