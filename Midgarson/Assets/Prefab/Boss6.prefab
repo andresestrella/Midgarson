@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 3794504745681946859}
   - component: {fileID: 3794504745681946857}
   - component: {fileID: 525275913786329200}
+  - component: {fileID: 8899100732748335147}
   m_Layer: 0
   m_Name: Boss6
   m_TagString: Untagged
@@ -319,3 +320,23 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &8899100732748335147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3794504745681946855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501d9beb557b3b0468e858b2fdecad68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grapplableMask:
+    serializedVersion: 2
+    m_Bits: 0
+  maxDistance: 10
+  grappleSpeed: 10
+  grappleShootSpeed: 20
+  retracting: 0
+  player: {fileID: 0}
