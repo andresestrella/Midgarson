@@ -21,7 +21,7 @@ public class GrappieHook : MonoBehaviour
     private void Start()
     {
         line = GetComponent<LineRenderer>();
-        player = GameObject.Find("Player1").GetComponent<Transform>();
+        player = GameObject.Find("Player 1").GetComponent<Transform>();
     }
 
     private void Update()
