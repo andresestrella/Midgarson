@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShieldBehaviour : MonoBehaviour
 {
     GameObject centerObject;
-    Vector3 _currentPosition = new Vector3(), currentSpeed = new Vector3(10, 10), angle;
+    Vector3 _currentPosition = new Vector3(), currentSpeed = new Vector3(7, 7), angle;
     float currentDistance, scalarAcceleration = 0f, shootingTime;
     void Start()
     {
