@@ -1,11 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Enemy : MonoBehaviour
 {
+    public long? id;
     public int rutine;
-    public string name;
+    public new EnemyTag name;
     public int damage;
     public float chrono = 0;
     float chrono2 = 0;
@@ -16,15 +17,46 @@ public class Enemy : MonoBehaviour
     public PlayerLife playerLife;
     public float enemyBounds = 8;
     public float atackRange = 2;
+    public float life = 100;
+    public bool isDead = false;
+    public float currPosX;
+    public float currPosY;
+
+
+
+    public Enemy()
+    { /*
+        this.name = name;
+        this.damage = damage;
+        this.life = life;
+        this.isDead = isDead;
+        */
+    }
+
     public GameObject playerDetected, hit;
-    protected float life = 100;
+    //protected float life = 100;
     public GameObject Item;
+
 
 
     public void behavor()
     {
 
+        if (isDead)
+        {
+            animator.SetBool("IsDead", true);
+            animator.SetBool("IsAtacking", false);
+            animator.SetFloat("Speed", 0);
+            animator.SetBool("OnHitPlayer", false);
+            chrono += 1 * Time.deltaTime;
+            if (chrono >= 2)
+            {
+                Destroy(gameObject);
+                chrono = 0;
 
+            }
+            
+        }
 
         if (!animator.GetBool("IsDead"))
         {
@@ -49,8 +81,9 @@ public class Enemy : MonoBehaviour
                 chrono += 1 * Time.deltaTime;
                 if (chrono >= 4)
                 {
-                    rutine = Random.Range(0, 2);
+                    rutine = UnityEngine.Random.Range(0, 2);
                     chrono = 0;
+                    
                 }
 
                 switch (rutine)
@@ -59,7 +92,7 @@ public class Enemy : MonoBehaviour
                         //animator.SetFloat("Speed", 0);
                         break;
                     case 1:
-                        direction = Random.Range(0, 2);
+                        direction = UnityEngine.Random.Range(0, 2);
                         rutine++;
                         break;
                     case 2:
@@ -114,21 +147,48 @@ public class Enemy : MonoBehaviour
 
     public void takeDamage(int damage)
     {
-        if (!animator.GetBool("IsDead"))
+        if(!name.Equals(EnemyTag.Archery) && !name.Equals(EnemyTag.Boss) )
         {
-            life -= damage;
-            animator.SetBool("OnHit", true);
-            if (life <= 0.0)
+            if (!animator.GetBool("IsDead"))
             {
-                animator.SetBool("IsDead", true);
-                animator.SetBool("IsAtacking", false);
-                animator.SetFloat("Speed", 0);
-                animator.SetBool("OnHitPlayer", false);
-                playerLife.sceneController.IncrementScore(1);
-            }
+                life -= damage;
+                animator.SetBool("OnHit", true);
+                if (life <= 0.0)
+                {
+                    animator.SetBool("IsDead", true);
+                    animator.SetBool("IsAtacking", false);
+                    animator.SetFloat("Speed", 0);
+                    animator.SetBool("OnHitPlayer", false);
+                    isDead = true;
 
-            animator.SetBool("OnHit", false);
+                    playerLife.sceneController.IncrementScore(1);
+
+                }
+
+                animator.SetBool("OnHit", false);
+            }
         }
+        else
+        {
+            if (!isDead)
+            {
+                life -= damage;
+                if(life <= 0.0)
+                {
+                    isDead = true;
+                    Destroy(gameObject);
+                    if (Item != null)
+                    {
+                        DropItem();
+                        Item = null;
+                    }
+                    playerLife.sceneController.IncrementScore(1);
+                    
+                }
+            }
+            
+        }
+        
 
     }
 

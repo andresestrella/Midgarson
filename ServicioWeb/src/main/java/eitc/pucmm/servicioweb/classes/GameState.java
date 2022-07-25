@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -23,7 +24,9 @@ public class GameState implements Serializable {
     private float currPosX;
     private float currPosY;
     private int score;
-
+    @OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+    @JoinColumn(name = "id_enemy")
+    private Set<Enemy> enemies;
 
     /*
     Se podría guardar un json

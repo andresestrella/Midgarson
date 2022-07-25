@@ -22,7 +22,11 @@ TagManager:
   - Water
   - UI
   - Ground
+<<<<<<< HEAD
+  - Enemy
+=======
   - Enemies
+>>>>>>> b727123b2899955dd15895fe02bf51c8e93c67ce
   - 
   - 
   - 
