@@ -1,8 +1,6 @@
 package eitc.pucmm.servicioweb.services;
 
-import eitc.pucmm.servicioweb.classes.Enemy;
 import eitc.pucmm.servicioweb.classes.GameState;
-import eitc.pucmm.servicioweb.repository.EnemyRepository;
 import eitc.pucmm.servicioweb.repository.GameStateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,9 +9,6 @@ import org.springframework.stereotype.Service;
 public class GameStateService {
     @Autowired
     private GameStateRepository gameStateRepository;
-
-    @Autowired
-    private EnemyRepository enemyRepository;
 
     //Funcion para guardar un estado de juego
     public boolean saveState(GameState gameState){
@@ -32,13 +27,4 @@ public class GameStateService {
     public void deleteGameState(GameState gameState){
         gameStateRepository.delete(gameState);
     }
-
-    public Enemy saveEnemy(Enemy enemy){
-        return enemyRepository.save(enemy);
-    }
-
-    public Enemy findEnemyById(Long id){
-        return enemyRepository.findById(id).get();
-    }
-
 }

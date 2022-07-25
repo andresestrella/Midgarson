@@ -199,35 +199,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d3c083355e89c4da0d6ee195bd2c69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rutine: 0
-  name: 0
-  damage: 0
-  chrono: 0
-  animator: {fileID: 0}
-  walkSpeed: 2
-  runSpeed: 6
-  target: {fileID: 0}
-  direction: 0
-  playerLife: {fileID: 0}
-  enemyBounds: 8
-  atackRange: 2
-  life: 100
-  isDead: 0
-  currPosX: 0
-  currPosY: 0
-  playerDetected: {fileID: 0}
-  hit: {fileID: 0}
-  Item: {fileID: 964758277733320115, guid: dd12da12626dd4b4da262d74375d44ba, type: 3}
   rg: {fileID: 0}
   player: {fileID: 0}
   observandoDerecha: 1
+  life: 100
   damageTaken: 0.9
   otherAnimator: {fileID: 0}
   simpleAttackRange: 9
   knife: {fileID: 7063093504866126508, guid: f4d6d31db5eabee4cbe367513c3533bc, type: 3}
   timeToshoot: 2
   countDown: 0
-  hook: {fileID: 0}
+  playerLife: {fileID: 0}
   vida: 0
   controladorAtaque: {fileID: 8984523161545601885}
   radioAtaque: 1.5

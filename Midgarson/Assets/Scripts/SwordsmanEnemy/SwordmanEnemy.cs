@@ -17,7 +17,7 @@ public class SwordmanEnemy : Enemy
         animator = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player");
         damage = 7;
-        name = EnemyTag.Swordsman;
+        name = "Swordman";
 
     }
 

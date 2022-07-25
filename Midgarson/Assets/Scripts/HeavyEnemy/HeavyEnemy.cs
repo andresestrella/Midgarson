@@ -16,7 +16,7 @@ public class HeavyEnemy : Enemy
         animator = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player");
         damage = 5;
-        name = EnemyTag.HeavySoldier;
+        name = "Basic";
     }
 
     
