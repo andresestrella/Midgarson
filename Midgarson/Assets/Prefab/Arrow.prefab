@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2889180709672016984}
   - component: {fileID: 4489207933871613824}
   - component: {fileID: -4793801553248307287}
-  - component: {fileID: 5847540457627774556}
+  - component: {fileID: 4580283206171423092}
+  - component: {fileID: 5552760489655715563}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -112,7 +113,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.19, y: 0.04}
   m_EdgeRadius: 0
---- !u!114 &5847540457627774556
+--- !u!50 &4580283206171423092
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3677692824331880756}
+  m_BodyType: 0
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &5552760489655715563
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +143,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3677692824331880756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf39a34b931e6a48a8d29ebe60d792a, type: 3}
+  m_Script: {fileID: 11500000, guid: b9094f607057d384b975a38fee8e980f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  playerLife: {fileID: 0}
