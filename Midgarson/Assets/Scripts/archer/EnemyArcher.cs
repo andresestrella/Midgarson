@@ -16,7 +16,7 @@ public class EnemyArcher : MonoBehaviour
     public bool observandoDerecha = true;
     void Start()
     {
-        player = GameObject.Find("Player1").GetComponent<Transform>();
+        player = GameObject.Find("Player 1").GetComponent<Transform>();
         countDown = timeToshoot;
     }
 

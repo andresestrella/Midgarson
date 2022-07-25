@@ -6,22 +6,24 @@ public class SceneController : MonoBehaviour
 {
     public PlayerStatusUI playerStatusUI;
     public int scorePlay = 0;
+    public int coins = 0;
     public GameOverScreen gameOverScreen;
     public LevelClearScreen levelClearScreen;
     public static SceneController instancia;
-    
-    void Awake(){
+
+    void Awake()
+    {
         //instancia = new SceneController();
     }
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void IncrementScore(int punto)
@@ -36,13 +38,21 @@ public class SceneController : MonoBehaviour
         playerStatusUI.updateScoreText();
     }
 
-    public void GameOver(){
+    public void incrementCoins(int coinsValue)
+    {
+        coins += coinsValue;
+        playerStatusUI.updateCoinsText();
+    }
+
+    public void GameOver()
+    {
         gameOverScreen.Setup();
     }
-    public void LevelClear(){
+    public void LevelClear()
+    {
         levelClearScreen.Setup();
     }
 
-    
+
 
 }

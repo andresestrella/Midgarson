@@ -41,14 +41,14 @@ public class MovBoss6 : MonoBehaviour
     GameObject target;
     private void Awake()
     {
-        playerLife = GameObject.Find("Player1").GetComponent<PlayerLife>();
+        playerLife = GameObject.Find("Player 1").GetComponent<PlayerLife>();
         hook = GetComponent<GrappieHook>();
     }
     void Start()
     {
         animator = GetComponent<Animator>();
         rg = GetComponent<Rigidbody2D>();
-        player = GameObject.Find("Player1").GetComponent<Transform>();
+        player = GameObject.Find("Player 1").GetComponent<Transform>();
         countDown = timeToshoot;
 
     }
@@ -58,60 +58,70 @@ public class MovBoss6 : MonoBehaviour
         ditanciaPlayer = Vector2.Distance(transform.position, player.position);
         animator.SetFloat("DistanciaPlayer", ditanciaPlayer);
 
-        chrono += 1 * Time.deltaTime;
-
-        if (ditanciaPlayer > 7 && ditanciaPlayer < 10)
+        if (ditanciaPlayer > 10)
         {
-            hook.StartGrapple();
+            animator.SetBool("isWalking", false);
+        }
+        else
+        {
+            chrono += 1 * Time.deltaTime;
+
+            if (ditanciaPlayer > 7 && ditanciaPlayer < 10)
+            {
+                hook.StartGrapple();
+            }
+
+
+
+            if (chrono >= Random.Range(1, 2))
+            {
+                rutina = Random.Range(0, 3);
+                chrono = 0;
+            }
+
+            if (rutina <= 1)
+            {
+                if (ditanciaPlayer > 5)
+                {
+                    animator.SetBool("isWalking", true);
+                }
+
+                if (ditanciaPlayer > 7)
+                {
+                    Dash_skill();
+                }
+
+                if (ditanciaPlayer > 5 && ditanciaPlayer < 7)
+                {
+                    print("jump");
+                    Jump();
+                }
+
+            }
+            if (rutina > 1)
+            {
+                countDown -= Time.deltaTime;
+
+                if (countDown < 0)
+                {
+                    animator.SetBool("isWalking", false);
+                    ShootPlayer(!observandoDerecha);
+                    countDown = timeToshoot;
+
+                }
+                else
+                {
+                    animator.SetBool("isWalking", true);
+
+                }
+
+
+
+            }
+
         }
 
-
-
-        if (chrono >= Random.Range(1, 2))
-        {
-            rutina = Random.Range(0, 3);
-            chrono = 0;
-        }
-
-        if (rutina <= 1)
-        {
-            if (ditanciaPlayer > 5)
-            {
-                animator.SetBool("isWalking", true);
-            }
-   
-            if (ditanciaPlayer > 7)
-            {
-                Dash_skill();
-            }
-
-            if (ditanciaPlayer > 5 && ditanciaPlayer < 7)
-            {
-                print("jump");
-                Jump();
-            }
-
-        }
-        if (rutina > 1)
-        {
-            countDown -= Time.deltaTime;
-
-            if (countDown < 0)
-            {
-                animator.SetBool("isWalking", false);
-                ShootPlayer(!observandoDerecha);
-                countDown = timeToshoot;
-
-            }
-            else
-            {
-                animator.SetBool("isWalking", true);
-
-            }
-
-
-
-        }
+       
 
 
     }

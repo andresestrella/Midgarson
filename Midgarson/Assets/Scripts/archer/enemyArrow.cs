@@ -8,7 +8,7 @@ public class enemyArrow : MonoBehaviour
 
     private void Awake()
     {
-        playerLife = GameObject.Find("Player1").GetComponent<PlayerLife>();
+        playerLife = GameObject.Find("Player 1").GetComponent<PlayerLife>();
     }
     void Start()
     {
