@@ -64,7 +64,6 @@ public class PlayerMovement : MonoBehaviour
 
     //Shield
     public GameObject shield;
-    private const float shieldDistance = 1.5f;
     private bool shieldActive = false;
     private int selectedShield = 0;
     public ShieldDatabase shieldDB;
@@ -110,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (gameObject.GetComponent<PlayerLife>().currentShield > 0 && !shieldActive)
         {
-            Instantiate(shield, gameObject.transform.position, Quaternion.identity).GetComponent<ShieldBehaviour>().Shoot(gameObject, shieldDistance);
+            Instantiate(shield, gameObject.transform.position, Quaternion.identity).GetComponent<ShieldBehaviour>().Shoot(gameObject);
             shieldActive = true;
         }else if (gameObject.GetComponent<PlayerLife>().currentShield == 0)
         {
