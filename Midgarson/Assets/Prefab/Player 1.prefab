@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260465388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.56, y: 1.03, z: 0}
+  m_LocalPosition: {x: 0.85, y: 0.16, z: 0}
   m_LocalScale: {x: 0.23, y: 0.12420001, z: 0.23}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -126,15 +126,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grappleRope: {fileID: 986977570}
-  grappleToAll: 1
-  grappableLayerNumber: 9
+  grappleToAll: 0
+  grappableLayerNumber: 0
   m_camera: {fileID: 0}
   gunHolder: {fileID: 6882761083453271552}
   gunPivot: {fileID: 1383156850}
   firePoint: {fileID: 615978834}
   m_springJoint2D: {fileID: 775982191}
   m_rigidbody: {fileID: 6882761083453271558}
-  rotateOverTime: 1
+  rotateOverTime: 0
   rotationSpeed: 4
   hasMaxDistance: 0
   maxDistnace: 20
@@ -363,17 +363,53 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.099876955
+      outSlope: -0.099876955
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
+      time: 0.11806981
+      value: -0.011792453
+      inSlope: -0.0041053705
+      outSlope: -0.0041053705
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.36950275
+      value: 0.011255454
+      inSlope: -0.039886054
+      outSlope: -0.039886054
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.51124346
+      value: -0.013044335
+      inSlope: -0.039134677
+      outSlope: -0.039134677
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6684753
+      value: 0.0016047899
+      inSlope: 0.044164166
+      outSlope: 0.044164166
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.004840634
+      outSlope: -0.004840634
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -393,7 +429,16 @@ MonoBehaviour:
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.085215606
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 1
@@ -401,7 +446,7 @@ MonoBehaviour:
       outSlope: 0
       tangentMode: 34
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -432,7 +477,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383156849}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.93033135, y: -0.35057783, z: 0}
+  m_LocalPosition: {x: 0.05, y: 0.04, z: 0}
   m_LocalScale: {x: 0.55865926, y: 0.55865926, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -635,6 +680,8 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
+  shield: {fileID: 3876559744156369299, guid: 6d44a884d2647274ba48fbfebc02e635, type: 3}
+  shieldDB: {fileID: 11400000, guid: a265cf7c5dae515489e2b5bce4543009, type: 2}
 --- !u!61 &6882761083453271556
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -688,9 +735,9 @@ SpringJoint2D:
   m_ConnectedRigidBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
+  m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.27, y: -0.9}
+  m_ConnectedAnchor: {x: -63.8, y: -3.1}
   m_AutoConfigureDistance: 1
   m_Distance: 0.005
   m_DampingRatio: 1
