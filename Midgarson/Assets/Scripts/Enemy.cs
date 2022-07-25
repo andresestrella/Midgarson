@@ -1,11 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Enemy : MonoBehaviour
 {
+    public long? id;
     public int rutine;
-    public string name;
+    public new EnemyTag name;
     public int damage;
     public float chrono = 0;
     float chrono2 = 0;
@@ -16,14 +17,34 @@ public class Enemy : MonoBehaviour
     public PlayerLife playerLife;
     public float enemyBounds = 8;
     public float atackRange = 2;
-    public GameObject playerDetected, hit;
-    protected float life = 100;
+    public float life = 100;
+    public bool isDead = false;
+    public float currPosX;
+    public float currPosY;
+
+
+
+    public Enemy()
+    { /*
+        this.name = name;
+        this.damage = damage;
+        this.life = life;
+        this.isDead = isDead;
+        */
+    }
+
 
 
     public void behavor()
     {
 
-
+        if (isDead)
+        {
+            animator.SetBool("IsDead", true);
+            animator.SetBool("IsAtacking", false);
+            animator.SetFloat("Speed", 0);
+            animator.SetBool("OnHitPlayer", false);
+        }
 
         if (!animator.GetBool("IsDead"))
         {
@@ -48,7 +69,7 @@ public class Enemy : MonoBehaviour
                 chrono += 1 * Time.deltaTime;
                 if (chrono >= 4)
                 {
-                    rutine = Random.Range(0, 2);
+                    rutine = UnityEngine.Random.Range(0, 2);
                     chrono = 0;
                 }
 
@@ -58,7 +79,7 @@ public class Enemy : MonoBehaviour
                         //animator.SetFloat("Speed", 0);
                         break;
                     case 1:
-                        direction = Random.Range(0, 2);
+                        direction = UnityEngine.Random.Range(0, 2);
                         rutine++;
                         break;
                     case 2:
@@ -115,7 +136,9 @@ public class Enemy : MonoBehaviour
                 animator.SetBool("IsAtacking", false);
                 animator.SetFloat("Speed", 0);
                 animator.SetBool("OnHitPlayer", false);
+                isDead = true;
                 playerLife.sceneController.IncrementScore(1);
+                
             }
 
             animator.SetBool("OnHit", false);

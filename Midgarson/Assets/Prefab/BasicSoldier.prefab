@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rutine: 0
-  name: 
+  name: 0
   damage: 0
   chrono: 0
   animator: {fileID: 5420585943816657242}
@@ -323,8 +323,6 @@ MonoBehaviour:
   runSpeed: 6
   target: {fileID: 0}
   direction: 0
-  playerLife: {fileID: 0}
+  playerLife: {fileID: 8687974867654685598, guid: 35e50388a4f9b0d4fbaa2eaccbc77fce, type: 3}
   enemyBounds: 8
   atackRange: 2
-  playerDetected: {fileID: 0}
-  hit: {fileID: 0}
