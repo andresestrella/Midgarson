@@ -78,7 +78,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (!PlayerPrefs.HasKey("selectedShield"))
         {
-            Debug.Log("No hay key");
             selectedShield = 0;
         }
         else
@@ -345,14 +344,17 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("MinCoins"))
         {
+            gameObject.GetComponent<PlayerLife>().sceneController.incrementCoins(1);
             Destroy(collision.gameObject);
         }
         else if (collision.gameObject.CompareTag("MedCoins"))
         {
+            gameObject.GetComponent<PlayerLife>().sceneController.incrementCoins(5);
             Destroy(collision.gameObject);
         }
         else if (collision.gameObject.CompareTag("MaxCoins"))
         {
+            gameObject.GetComponent<PlayerLife>().sceneController.incrementCoins(10);
             Destroy(collision.gameObject);
         }
 
