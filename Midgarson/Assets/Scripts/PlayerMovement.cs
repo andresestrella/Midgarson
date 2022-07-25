@@ -62,8 +62,12 @@ public class PlayerMovement : MonoBehaviour
 
     private Animator anim;
 
+    //Shield
     public GameObject shield;
-    private const float shieldDistance = 2f;
+    private const float shieldDistance = 1.5f;
+    private bool shieldActive = false;
+    private int selectedShield = 0;
+    public ShieldDatabase shieldDB;
 
     private void Awake()
     {
@@ -71,7 +75,20 @@ public class PlayerMovement : MonoBehaviour
         mySprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         flip = false;
+
+        if (!PlayerPrefs.HasKey("selectedShield"))
+        {
+            Debug.Log("No hay key");
+            selectedShield = 0;
+        }
+        else
+        {
+            selectedShield = PlayerPrefs.GetInt("selectedShield");
+        }
+
+        UpdateShield(selectedShield);
     }
+
     void Update()
     {
 
@@ -91,6 +108,22 @@ public class PlayerMovement : MonoBehaviour
         BowAttack();
         ThrowBomb();
         throwKnife();
+
+        if (gameObject.GetComponent<PlayerLife>().currentShield > 0 && !shieldActive)
+        {
+            Instantiate(shield, gameObject.transform.position, Quaternion.identity).GetComponent<ShieldBehaviour>().Shoot(gameObject, shieldDistance);
+            shieldActive = true;
+        }else if (gameObject.GetComponent<PlayerLife>().currentShield == 0)
+        {
+            GameObject shield = GameObject.FindGameObjectWithTag("ShieldItem");
+
+            if(shield != null)
+            {
+                Destroy(shield);
+            }
+            
+            shieldActive = false;
+        }
 
     }
     void PlayerMoveKeyboard()
@@ -321,10 +354,6 @@ public class PlayerMovement : MonoBehaviour
         else if (collision.gameObject.CompareTag("MaxCoins"))
         {
             Destroy(collision.gameObject);
-        }else if (collision.gameObject.CompareTag("ShieldItem"))
-        {
-            Destroy(collision.gameObject);
-            Instantiate(shield, gameObject.transform.position, Quaternion.identity).GetComponent<ShieldBehaviour>().Shoot(gameObject, shieldDistance);
         }
 
 
@@ -344,7 +373,15 @@ public class PlayerMovement : MonoBehaviour
         arrowPos.y += 0.15f;
         Instantiate(arrow, arrowPos, Quaternion.identity).GetComponent<ArrowBehaviour>().shoot(flip,1f);
     }
-    
 
+    private void UpdateShield(int selectedOption)
+    {
+        Shield shieldScript = shieldDB.GetShield(selectedOption);
+        
+        if(shield != null)
+        {
+            shield.GetComponent<SpriteRenderer>().sprite = shieldScript.shieldSprite;
+        }
+    }
 
 }
