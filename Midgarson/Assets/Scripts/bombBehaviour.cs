@@ -29,16 +29,22 @@ public class bombBehaviour : MonoBehaviour
         _shooted = true;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter(Collider other)
     {
-        anim.SetBool(explode, true);
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(gameObject.transform.position, damageRange, enemyLayers);
-        foreach (Collider2D enemy in hitEnemies)
+
+        if (other.gameObject.tag != "Player")
         {
-            Debug.Log("We hit " + enemy.name);
-            enemy.GetComponent<Enemy>().takeDamage(damage);
+            anim.SetBool(explode, true);
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(gameObject.transform.position, damageRange, enemyLayers);
+            foreach (Collider2D enemy in hitEnemies)
+            {
+                Debug.Log("We hit " + enemy.name);
+                enemy.GetComponent<Enemy>().takeDamage(damage);
+            }
+            Destroy(gameObject);
+
         }
-        Destroy(gameObject);
+
     }
     
 }

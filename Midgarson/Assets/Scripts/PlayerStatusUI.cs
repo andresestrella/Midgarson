@@ -8,19 +8,19 @@ public class PlayerStatusUI : MonoBehaviour
 {
     public SceneController sceneController;
 
-    public TextMeshProUGUI vida, shield, score, time;
+    public TextMeshProUGUI vida, shield, score, time, coins;
     [Range(0, 5)]
     [SerializeField] private float barSpeed = 1f;
     [SerializeField] private Image healtBar, shieldBar;
     [SerializeField] private Image healtBarShadow, shieldBarShadow;
 
-    private float nextHealth, nextShield, timePlay =0.0f;
-    
+    private float nextHealth, nextShield, timePlay = 0.0f;
+
     private bool activeShadowHealth = false, activeShadowShield = false;
 
     private void Awake()
     {
-      
+
         healtBar.fillAmount = 1f;
         healtBarShadow.fillAmount = healtBar.fillAmount;
         nextHealth = healtBar.fillAmount;
@@ -84,6 +84,12 @@ public class PlayerStatusUI : MonoBehaviour
     {
         //score.text = "SCORE: " + SceneController.instancia.scorePlay.ToString();
         score.text = "SCORE: " + sceneController.scorePlay.ToString();
+    }
+
+    public void updateCoinsText()
+    {
+        //score.text = "SCORE: " + SceneController.instancia.scorePlay.ToString();
+        coins.text = "COINS: " + sceneController.coins.ToString();
     }
 
     public string formatearTiempo()

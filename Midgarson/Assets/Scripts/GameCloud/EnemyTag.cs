@@ -7,5 +7,6 @@ public enum EnemyTag
     Basic,
     Swordsman,
     HeavySoldier,
-    Boss1
+    Boss,
+    Archery
 }

@@ -323,6 +323,13 @@ MonoBehaviour:
   runSpeed: 6
   target: {fileID: 0}
   direction: 0
-  playerLife: {fileID: 8687974867654685598, guid: 35e50388a4f9b0d4fbaa2eaccbc77fce, type: 3}
+  playerLife: {fileID: 0}
   enemyBounds: 8
   atackRange: 2
+  life: 100
+  isDead: 0
+  currPosX: 0
+  currPosY: 0
+  playerDetected: {fileID: 0}
+  hit: {fileID: 0}
+  Item: {fileID: 964758277733320115, guid: cfac8fb988aa9c147ad441b6502d877a, type: 3}

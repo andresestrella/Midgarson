@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,9 +76,1587 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sheet_archer_1_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 712
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a941effeb111c4040a89043323f73e87
+      internalID: -1942163037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 712
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684f81afeac9a2d4e84965cf963a4e67
+      internalID: -598699265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 712
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9331fd22795c544992ab9308ecabc09
+      internalID: -786513907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_3
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 712
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462200895b2984b4b99dd3ea29327832
+      internalID: -804675796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_4
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 664
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28caa5c03956484b91c44ffe927375d
+      internalID: -480961802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_5
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 664
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208a18964e3fdac42b2101799b1305db
+      internalID: 810625277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_6
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 664
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040239eb554dae0438d09621d4175d15
+      internalID: -1889691481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_7
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 664
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5cf9a750efd8d429c0a79df03a653a
+      internalID: 1637261369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_8
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 664
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728e03f13f31cb749b70e37b135b7acb
+      internalID: -911467860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_9
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 664
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f654bab0e971194fae8f03fc1a53ae7
+      internalID: -1034320566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_10
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 616
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f08760c1af477c42aa9e57d1254f46c
+      internalID: -173456198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_11
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 616
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1907b67e0a663d44b188284c5319419
+      internalID: 748861551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_12
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 616
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8268615dbe89be24a81c1f6ab5b1ccf5
+      internalID: 324280562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_13
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 616
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e77d18dd1e386449bce7c6adfb455e
+      internalID: 2095156532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_14
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 616
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790b3c1fade94484282ebf6b89e2544c
+      internalID: 1912561195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_15
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 616
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4cf9ca09c426b45a4308cf5b731eaa
+      internalID: -1809901542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_16
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 616
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 959533f91d83a144da07b2ff64106ad0
+      internalID: -431806317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_17
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 616
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7ec3137b3553a43baafde19da2c4d2
+      internalID: -1872452326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_18
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 616
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b8dad7ef521944486a32d97bc33cdc
+      internalID: 903758605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_19
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 616
+        width: 31
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23768cb51bb5189468be1153337e52d6
+      internalID: -1587855338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_20
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 616
+        width: 33
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7a35756f14db34687aa0f42fe91484
+      internalID: 77303937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_21
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 568
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7fc580631f223a42ae5d2cfd2241c98
+      internalID: 1005558605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_22
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 568
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53dcd36f1b89ebf468b8b000d633cf70
+      internalID: 2121425955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_23
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 568
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade0786c1642b434da41463d5cfc997e
+      internalID: -1913128329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_24
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 568
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751a95e6facc9744faca0c13d46e7848
+      internalID: 896787922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_25
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 568
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2f7b2373fce864dbb3079c4406fabd
+      internalID: 2103439986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_26
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 568
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5bb4c8f02bb02d4d8a96256301c45b6
+      internalID: 620077400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_27
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 568
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636761a8679081b45b8d13bab915458d
+      internalID: 1925882082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_28
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 566
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30352a010cb87c64fa43c229f2a167ba
+      internalID: -1699380181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_29
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 568
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4ec34709a01344f83c18dfccc67870
+      internalID: 1225846017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_30
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 568
+        width: 36
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe3a60cdb6c698146995647eebd968ea
+      internalID: 1532260632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_31
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 520
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea1dab7b011f324f889eb625518b775
+      internalID: -1150358332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_32
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 520
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353226036d6f4d14baa1a291ad2420e8
+      internalID: 1930816212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_33
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 523
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f28f4d9b57e911459e99ae98360ae56
+      internalID: 788620015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_34
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 520
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d97ea6926f981458b3b43b82a489e8
+      internalID: 2137047074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_35
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 520
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a52cf2a01a82aa4094d4aacb0813f63
+      internalID: -1433992072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_36
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 520
+        width: 33
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f2c196941c91d46936d7fd76512313
+      internalID: 16999449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_37
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 520
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b90996302ed34e4d9267500169a3c0c
+      internalID: -1060471519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_38
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 520
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6d2f9eda815394bb3e7e6574af2825
+      internalID: -275139636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_39
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 520
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dec22a8681dbf445987a1e9b14bf084
+      internalID: -1818853287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_40
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 520
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf65313cb17f33446bb625ef7a67e57b
+      internalID: 1983958814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_41
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 470
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843448df1c040ad44ba396bbd4751f84
+      internalID: 65937184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_42
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 471
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9035071d87469624e9cfc7bcf36585a7
+      internalID: 374273396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_43
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 472
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc26c2593fb13f449044938fce6d98e
+      internalID: -1593050733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_44
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 472
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6188d7abe4b9244b5bfe9441cb1ee3
+      internalID: -1818512306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_45
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 472
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184510264ffe1844c8f0ec4871c73ec9
+      internalID: -2015123454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_46
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 424
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40132f2e11875e849a75eec15c939a92
+      internalID: 333881581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_47
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 424
+        width: 41
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835d39dfac2ce1e49be897a4746feca7
+      internalID: -1490879248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_48
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 424
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb3897913a7a194bbf3da3fe616c9c3
+      internalID: 1870000727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_49
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 424
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b04d0dac9ee1a4095eb9d9a06c992d
+      internalID: 126503334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_50
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 424
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1c77f3477be4c499907ca8458afb84
+      internalID: 1328411388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_51
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 424
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd6bb45c8c34db340bb0fa9663516e31
+      internalID: -553379543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_52
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 424
+        width: 19
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815395adfad7fff43b5dd9622e9fdd5a
+      internalID: -620151206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_53
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 424
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e52d1b090b648048aa7cd5ad24b2290
+      internalID: 420177689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_54
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 424
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2514b3e6e77fc468bcdbf2ce550620
+      internalID: -99687125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_55
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 424
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b3e23d7dbda274a9f6b12db621374e
+      internalID: 1590257215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_56
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 359
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa3e2530edc64b4a817246f8e2693d1
+      internalID: 272011036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_57
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 359
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d07fe840ebc7024488aeb6e2b35d42f
+      internalID: 2035847446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_58
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 359
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9046a0e98b64cc4d981d7127619bb12
+      internalID: -1599077983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_59
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 359
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9b7888f1a8808429ae49fa24517852
+      internalID: 1665694945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_60
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 359
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01d8dad35004c042a038fee7a6c8049
+      internalID: 1682581495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_61
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 359
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9f359d7fc49284c9c39535a938c0f7
+      internalID: -782767997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_62
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 294
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec4b5250cbb0ec46a40926aeb875c8f
+      internalID: -1954217743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_63
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 294
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9cfa4568efc574b904990ccaa0f329
+      internalID: 159103966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_64
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 294
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdada01d73aa0141ba3c04fac0d71c3
+      internalID: 355387775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_65
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 294
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea8647f9615580409aba42b80b855e4
+      internalID: 1049248582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_66
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 294
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286611da3b571a6488203b77c75d3c91
+      internalID: 584588933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_67
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 294
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350637c9e8568e3448daffad0b0d786e
+      internalID: 922243165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_68
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 229
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb15a652bdd2144b890ac586c300ef5
+      internalID: 101724065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_69
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 229
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298580bb43618704680ead852648650f
+      internalID: -74545118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_70
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 229
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170cfdfcb380c75419c155ba76c152ed
+      internalID: 1817202100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_71
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 229
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1901450d6299ebc4ea365759dec83e6f
+      internalID: 11929904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_72
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 229
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325bd3ba2767a5c439714c9118b33416
+      internalID: -895948613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_archer_1_73
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 229
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abee6274f1f796e4589dbddc8c6bb9f5
+      internalID: -188808492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +1667,81 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sheet_archer_1_16: -431806317
+      sheet_archer_1_29: 1225846017
+      sheet_archer_1_38: -275139636
+      sheet_archer_1_56: 272011036
+      sheet_archer_1_52: -620151206
+      sheet_archer_1_42: 374273396
+      sheet_archer_1_58: -1599077983
+      sheet_archer_1_67: 922243165
+      sheet_archer_1_53: 420177689
+      sheet_archer_1_73: -188808492
+      sheet_archer_1_31: -1150358332
+      sheet_archer_1_6: -1889691481
+      sheet_archer_1_23: -1913128329
+      sheet_archer_1_39: -1818853287
+      sheet_archer_1_27: 1925882082
+      sheet_archer_1_54: -99687125
+      sheet_archer_1_26: 620077400
+      sheet_archer_1_57: 2035847446
+      sheet_archer_1_4: -480961802
+      sheet_archer_1_15: -1809901542
+      sheet_archer_1_33: 788620015
+      sheet_archer_1_41: 65937184
+      sheet_archer_1_44: -1818512306
+      sheet_archer_1_36: 16999449
+      sheet_archer_1_40: 1983958814
+      sheet_archer_1_0: -1942163037
+      sheet_archer_1_30: 1532260632
+      sheet_archer_1_43: -1593050733
+      sheet_archer_1_25: 2103439986
+      sheet_archer_1_51: -553379543
+      sheet_archer_1_48: 1870000727
+      sheet_archer_1_46: 333881581
+      sheet_archer_1_64: 355387775
+      sheet_archer_1_65: 1049248582
+      sheet_archer_1_28: -1699380181
+      sheet_archer_1_70: 1817202100
+      sheet_archer_1_72: -895948613
+      sheet_archer_1_71: 11929904
+      sheet_archer_1_59: 1665694945
+      sheet_archer_1_7: 1637261369
+      sheet_archer_1_49: 126503334
+      sheet_archer_1_45: -2015123454
+      sheet_archer_1_61: -782767997
+      sheet_archer_1_63: 159103966
+      sheet_archer_1_11: 748861551
+      sheet_archer_1_24: 896787922
+      sheet_archer_1_66: 584588933
+      sheet_archer_1_32: 1930816212
+      sheet_archer_1_18: 903758605
+      sheet_archer_1_8: -911467860
+      sheet_archer_1_19: -1587855338
+      sheet_archer_1_60: 1682581495
+      sheet_archer_1_55: 1590257215
+      sheet_archer_1_69: -74545118
+      sheet_archer_1_20: 77303937
+      sheet_archer_1_10: -173456198
+      sheet_archer_1_35: -1433992072
+      sheet_archer_1_37: -1060471519
+      sheet_archer_1_2: -786513907
+      sheet_archer_1_62: -1954217743
+      sheet_archer_1_1: -598699265
+      sheet_archer_1_21: 1005558605
+      sheet_archer_1_9: -1034320566
+      sheet_archer_1_3: -804675796
+      sheet_archer_1_34: 2137047074
+      sheet_archer_1_47: -1490879248
+      sheet_archer_1_13: 2095156532
+      sheet_archer_1_17: -1872452326
+      sheet_archer_1_12: 324280562
+      sheet_archer_1_68: 101724065
+      sheet_archer_1_22: 2121425955
+      sheet_archer_1_14: 1912561195
+      sheet_archer_1_50: 1328411388
+      sheet_archer_1_5: 810625277
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

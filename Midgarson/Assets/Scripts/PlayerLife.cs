@@ -70,5 +70,33 @@ public class PlayerLife : MonoBehaviour
         }
     }
 
-    
+    public void AddHealth(int health)
+    {
+        if (!((currentHealth+health) > 100))
+        {
+            currentHealth += health;
+            playerStatusUI.SetHealth(healthRange, shieldRange);
+        }
+        else
+        {
+            currentHealth = 100;
+            playerStatusUI.SetHealth(healthRange, shieldRange);
+        }
+    }
+
+    public void AddShield(int shield)
+    {
+        if (!((currentShield + shield) > 100))
+        {
+            currentShield += shield;
+            playerStatusUI.SetHealth(healthRange, shieldRange);
+        }
+        else
+        {
+            currentShield = 100;
+            playerStatusUI.SetHealth(healthRange, shieldRange);
+        }
+    }
+
+
 }

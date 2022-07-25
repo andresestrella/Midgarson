@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -48,11 +49,25 @@ public class PlayerMovement : MonoBehaviour
     float currentAngle,shootingAngle = 45;
     public GameObject bomb;
 
+    //Arrow
+    public GameObject arrow;
+    Vector2 arrowPos;
     bool flip;
 
+    //throwing Knife
+    public GameObject knife;
+    Vector2 knifePos;
+    bool _object;
     public LayerMask enemyLayers;
 
     private Animator anim;
+
+    //Shield
+    public GameObject shield;
+    private const float shieldDistance = 1.5f;
+    private bool shieldActive = false;
+    private int selectedShield = 0;
+    public ShieldDatabase shieldDB;
 
     private void Awake()
     {
@@ -60,7 +75,19 @@ public class PlayerMovement : MonoBehaviour
         mySprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         flip = false;
+
+        if (!PlayerPrefs.HasKey("selectedShield"))
+        {
+            selectedShield = 0;
+        }
+        else
+        {
+            selectedShield = PlayerPrefs.GetInt("selectedShield");
+        }
+
+        UpdateShield(selectedShield);
     }
+
     void Update()
     {
 
@@ -78,9 +105,24 @@ public class PlayerMovement : MonoBehaviour
         Run();
         Jump();
         BowAttack();
-        GettingHit();
-        ThrowingObject();
+        ThrowBomb();
+        throwKnife();
 
+        if (gameObject.GetComponent<PlayerLife>().currentShield > 0 && !shieldActive)
+        {
+            Instantiate(shield, gameObject.transform.position, Quaternion.identity).GetComponent<ShieldBehaviour>().Shoot(gameObject, shieldDistance);
+            shieldActive = true;
+        }else if (gameObject.GetComponent<PlayerLife>().currentShield == 0)
+        {
+            GameObject shield = GameObject.FindGameObjectWithTag("ShieldItem");
+
+            if(shield != null)
+            {
+                Destroy(shield);
+            }
+            
+            shieldActive = false;
+        }
 
     }
     void PlayerMoveKeyboard()
@@ -185,7 +227,6 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-
     void HeavyAttack()
     {
         if (Input.GetKeyDown(KeyCode.Q) && isGrounded)
@@ -221,34 +262,48 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool(SHOOTING_ANIMATION, false);
         }
     }
-    void ThrowingObject()
+    void _throw()
     {
-        if (Input.GetKeyDown(KeyCode.E) && isGrounded)
+        if(_object)
         {
             currentAngle = shootingAngle * Mathf.Deg2Rad;
-
-            anim.SetBool(THROWING_ANIMATION, true);
             Instantiate(bomb, gameObject.transform.position, Quaternion.identity).GetComponent<bombBehaviour>().Shoot(startingSpeed, currentAngle);
-
+        }
+        else
+        {
+            knifePos = gameObject.transform.position;
+            knifePos.x += flip ? -0.5f : 0.5f;
+            knifePos.y += 0.5f;
+            Instantiate(knife, knifePos, Quaternion.identity).GetComponent<ArrowBehaviour>().shoot(flip, 0.4f);
+        }
+    }
+    void ThrowBomb()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && isGrounded)
+        { 
+            anim.SetBool(THROWING_ANIMATION, true);
+            _object = true;
         }
         if (Input.GetKeyUp(KeyCode.E) && isGrounded)
         {
             anim.SetBool(THROWING_ANIMATION, false);
         }
     }
-    void GettingHit()
+    void throwKnife()
     {
-        if (Input.GetKeyDown(KeyCode.H) && isGrounded)
-        {
-            anim.SetBool(HIT_ANIMATION, true);
-        }
 
-        if (Input.GetKeyUp(KeyCode.H) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.T) && isGrounded)
         {
-            anim.SetBool(HIT_ANIMATION, false);
-        }
+            anim.SetBool(THROWING_ANIMATION, true);
+            _object = false;
 
-    } 
+        }
+        if (Input.GetKeyUp(KeyCode.T) && isGrounded)
+        {
+            anim.SetBool(THROWING_ANIMATION, false);
+            
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -277,8 +332,33 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool(FALL_ANIMATION, false);
             myBody.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
+        else if (collision.gameObject.CompareTag("Heal"))
+        {
+            Destroy(collision.gameObject);
+            gameObject.GetComponent<PlayerLife>().AddHealth(20);
+        }
+        else if (collision.gameObject.CompareTag("Shield"))
+        {
+            Destroy(collision.gameObject);
+            gameObject.GetComponent<PlayerLife>().AddShield(20);
+        }
+        else if (collision.gameObject.CompareTag("MinCoins"))
+        {
+            gameObject.GetComponent<PlayerLife>().sceneController.incrementCoins(1);
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.CompareTag("MedCoins"))
+        {
+            gameObject.GetComponent<PlayerLife>().sceneController.incrementCoins(5);
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.CompareTag("MaxCoins"))
+        {
+            gameObject.GetComponent<PlayerLife>().sceneController.incrementCoins(10);
+            Destroy(collision.gameObject);
+        }
 
-        
+
     }
 
     void OnCollisionExit2D(Collision2D collision){
@@ -287,5 +367,23 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //Se llama a la función desde el animator al terminar la animacion
+    //Esto se hace para que primero termine de animar y luego crear el objeto
+    void shootArrow()
+    {
+        arrowPos = gameObject.transform.position;
+        arrowPos.y += 0.15f;
+        Instantiate(arrow, arrowPos, Quaternion.identity).GetComponent<ArrowBehaviour>().shoot(flip,1f);
+    }
+
+    private void UpdateShield(int selectedOption)
+    {
+        Shield shieldScript = shieldDB.GetShield(selectedOption);
+        
+        if(shield != null)
+        {
+            shield.GetComponent<SpriteRenderer>().sprite = shieldScript.shieldSprite;
+        }
+    }
 
 }

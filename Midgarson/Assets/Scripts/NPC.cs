@@ -8,6 +8,7 @@ public class NPC : MonoBehaviour
 {
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI prompt;
     public string[] dialogue;
     private int index;
 
@@ -20,6 +21,7 @@ public class NPC : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.F) && playerIsClose && !isTalking){
             dialoguePanel.SetActive(true);
+            prompt.text = "";
             isTalking = true;
             StartCoroutine(Typing());
         }
@@ -36,6 +38,7 @@ public class NPC : MonoBehaviour
     public void zeroText()
     {
         dialogueText.text = "";
+        prompt.text = "Presione F para hablar";
         index = 0;
         isTalking = false;
         dialoguePanel.SetActive(false);
@@ -61,12 +64,14 @@ public class NPC : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player")){
             playerIsClose = true;
+            prompt.text = "Presione F para hablar";
         }
     }
     private void OnTriggerExit2D(Collider2D other){
         if(other.CompareTag("Player")){
             playerIsClose = false;
             zeroText();
+            prompt.text = "";
         }
     }
 }

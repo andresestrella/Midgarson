@@ -33,6 +33,10 @@ public class Enemy : MonoBehaviour
         */
     }
 
+    public GameObject playerDetected, hit;
+    //protected float life = 100;
+    public GameObject Item;
+
 
 
     public void behavor()
@@ -44,6 +48,14 @@ public class Enemy : MonoBehaviour
             animator.SetBool("IsAtacking", false);
             animator.SetFloat("Speed", 0);
             animator.SetBool("OnHitPlayer", false);
+            chrono += 1 * Time.deltaTime;
+            if (chrono >= 2)
+            {
+                Destroy(gameObject);
+                chrono = 0;
+
+            }
+            
         }
 
         if (!animator.GetBool("IsDead"))
@@ -71,6 +83,7 @@ public class Enemy : MonoBehaviour
                 {
                     rutine = UnityEngine.Random.Range(0, 2);
                     chrono = 0;
+                    
                 }
 
                 switch (rutine)
@@ -120,30 +133,69 @@ public class Enemy : MonoBehaviour
 
 
         }
+        else
+        {
+            if (Item != null)
+            {
+                DropItem();
+                Item = null;
+            }
+        }
 
 
     }
 
     public void takeDamage(int damage)
     {
-        if (!animator.GetBool("IsDead"))
+        if(!name.Equals(EnemyTag.Archery) && !name.Equals(EnemyTag.Boss) )
         {
-            life -= damage;
-            animator.SetBool("OnHit", true);
-            if (life <= 0.0)
+            if (!animator.GetBool("IsDead"))
             {
-                animator.SetBool("IsDead", true);
-                animator.SetBool("IsAtacking", false);
-                animator.SetFloat("Speed", 0);
-                animator.SetBool("OnHitPlayer", false);
-                isDead = true;
-                playerLife.sceneController.IncrementScore(1);
-                
+                life -= damage;
+                animator.SetBool("OnHit", true);
+                if (life <= 0.0)
+                {
+                    animator.SetBool("IsDead", true);
+                    animator.SetBool("IsAtacking", false);
+                    animator.SetFloat("Speed", 0);
+                    animator.SetBool("OnHitPlayer", false);
+                    isDead = true;
+
+                    playerLife.sceneController.IncrementScore(1);
+
+                }
+
+                animator.SetBool("OnHit", false);
             }
-
-            animator.SetBool("OnHit", false);
         }
+        else
+        {
+            if (!isDead)
+            {
+                life -= damage;
+                if(life <= 0.0)
+                {
+                    isDead = true;
+                    Destroy(gameObject);
+                    if (Item != null)
+                    {
+                        DropItem();
+                        Item = null;
+                    }
+                    playerLife.sceneController.IncrementScore(1);
+                    
+                }
+            }
+            
+        }
+        
 
+    }
+
+    public void DropItem()
+    {
+        Vector3 position = transform.position;
+        Instantiate(Item, position, Quaternion.identity);
     }
 
 }

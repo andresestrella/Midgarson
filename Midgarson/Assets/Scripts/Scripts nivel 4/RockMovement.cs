@@ -5,6 +5,7 @@ using UnityEngine;
 public class RockMovement : MonoBehaviour
 {
     Vector3 _deltaPos = new Vector3();
+    Vector3 currentSpeed = new Vector3();
     Vector3 moveSpeed = new Vector3(4,4,0);
     private SpriteRenderer mySprite;
     private bool falling = false;
@@ -28,7 +29,7 @@ public class RockMovement : MonoBehaviour
         }
         if(falling == true){
             //transform.Rotate (Vector3.forward * -1);
-            MoveDown();
+            FreeFall();
         }else{
             MoveLeft();
         }
@@ -37,10 +38,10 @@ public class RockMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other){
         
-        if (other.gameObject.tag == "Player"){
+        if (other.gameObject.CompareTag("Player")){
             other.gameObject.GetComponent<PlayerLife>().TakeDamage(10);
             Destroy(gameObject);
-        }else if (other.gameObject.tag == "Ground"){
+        }else{
             Destroy(gameObject);
         }
         
@@ -51,10 +52,10 @@ public class RockMovement : MonoBehaviour
         _deltaPos *= Time.deltaTime;
         gameObject.transform.Translate(_deltaPos);
     }
-    void MoveDown(){
-        _deltaPos.y = (float)1.0 * (- moveSpeed.y);
-        _deltaPos *= Time.deltaTime;
+    void FreeFall(){
+        _deltaPos = currentSpeed * Time.deltaTime + Physics.gravity * Mathf.Pow(Time.deltaTime, 2) / 2;
         gameObject.transform.Translate(_deltaPos);
+        currentSpeed += Physics.gravity * Time.deltaTime;
     }
 
     //MEJOR HACER ESTO CON ANIMACION
