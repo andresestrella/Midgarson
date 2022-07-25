@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7849551240827595234}
   - component: {fileID: -5135376826544243509}
   - component: {fileID: 7880607401668888753}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: sheet_1archer_2_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,33 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: def38cf89b11aa740a6bb43d789ef6df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rutine: 0
-  name: 0
-  damage: 0
-  chrono: 0
-  animator: {fileID: 0}
-  walkSpeed: 2
-  runSpeed: 6
-  target: {fileID: 0}
-  direction: 0
-  playerLife: {fileID: 0}
-  enemyBounds: 8
-  atackRange: 2
-  life: 100
-  isDead: 0
-  currPosX: 0
-  currPosY: 0
-  playerDetected: {fileID: 0}
-  hit: {fileID: 0}
-  Item: {fileID: 964758277733320115, guid: dd12da12626dd4b4da262d74375d44ba, type: 3}
   arrow: {fileID: 8563375324662989337, guid: 988610a37890602468e629cbe21784cc, type: 3}
   timeToshoot: 4
   countDown: 0
-  damageTaken: 0.9
-  anim: {fileID: 0}
-  otherAnimator: {fileID: 0}
-  player: {fileID: 0}
-  observandoDerecha: 1
 --- !u!61 &-5135376826544243509
 BoxCollider2D:
   m_ObjectHideFlags: 0

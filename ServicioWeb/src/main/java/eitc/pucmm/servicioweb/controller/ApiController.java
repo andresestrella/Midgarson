@@ -8,10 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.EntityNotFoundException;
 import javax.websocket.server.PathParam;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api")
@@ -58,9 +56,8 @@ public class ApiController {
     //Endpoints para los estados de juego
     @PutMapping("gameState/save")
     public boolean saveState(@RequestBody GameState gameState) {
-
-        try{
-            User user = userService.getUserById(gameState.getUserId());
+        User user = userService.getUserById(gameState.getUserId());
+        if (user != null) {
             if(gameStateService.existGameState(user.getId())) {
                 GameState old = gameStateService.loadGameState(user.getId());
                 old.setLevel(gameState.getLevel());
@@ -72,36 +69,20 @@ public class ApiController {
                 old.setCurrPosX(gameState.getCurrPosX());
                 old.setCurrPosY(gameState.getCurrPosY());
                 old.setScore(gameState.getScore());
-                gameState.getEnemies().stream().map(
-                        enemy -> {enemy = gameStateService.saveEnemy(enemy);
-                            return enemy;
-                        }
-                ).collect(Collectors.toList());
-                old.setEnemies(gameState.getEnemies());
                 return gameStateService.saveState(old);
             }
             else {
-                gameState.getEnemies().stream().map(
-                        enemy -> {enemy = gameStateService.saveEnemy(enemy);
-                            return enemy;
-                        }
-                ).collect(Collectors.toList());
-
                 return gameStateService.saveState(gameState);
             }
-        }catch (EntityNotFoundException e){
+
+        } else {
             return false;
         }
     }
 
     @GetMapping("gameState/load/{id}")
     public GameState loadGameState(@PathVariable long id){
-        try{
-            GameState gameState = gameStateService.loadGameState(id);
-            return gameState;
-        } catch (EntityNotFoundException e) {
-            return null;
-        }
-
+        GameState gameState = gameStateService.loadGameState(id);
+        return gameState;
     }
 }

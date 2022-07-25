@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,11 +20,8 @@ public class GameState
     public float currPosX;
     public float currPosY;
     public int score;
-    public Enemy[] enemies;
 
-    public GameState(long userId,int level,string dificulty, int playerHealth,
-        int playerShield, int money,string inventory, float currPosX,float currPosY,
-        int score, Enemy[] enemies)
+    public GameState(long userId,int level,string dificulty, int playerHealth,int playerShield, int money,string inventory, float currPosX,float currPosY,int score)
     {
         this.userId = userId;
         this.level = level;
@@ -37,7 +33,6 @@ public class GameState
         this.currPosX = currPosX;
         this.currPosY = currPosY;
         this.score = score;
-        this.enemies = enemies;
     }
 
 }

@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovBoss6 : Enemy
+public class MovBoss6 : MonoBehaviour
 {
     public Rigidbody2D rg;
     public Transform player;
     public bool observandoDerecha = true;
+    private Animator animator;
 
-    public float damageTaken = 0.9f;
+    public double life = 100;
+    public double damageTaken = 0.9;
 
     public Animator otherAnimator;
     public float simpleAttackRange = 9f;
@@ -16,9 +18,11 @@ public class MovBoss6 : Enemy
     public GameObject knife;
     public float timeToshoot, countDown;
 
+    public PlayerLife playerLife;
     public GrappieHook hook;
 
     int rutina;
+    float chrono;
 
 
     [SerializeField] private float vida;
@@ -34,6 +38,7 @@ public class MovBoss6 : Enemy
     public float velocityDash;
     float ditanciaPlayer;
 
+    GameObject target;
     private void Awake()
     {
         playerLife = GameObject.Find("Player 1").GetComponent<PlayerLife>();
@@ -41,7 +46,6 @@ public class MovBoss6 : Enemy
     }
     void Start()
     {
-        name = EnemyTag.Boss;
         animator = GetComponent<Animator>();
         rg = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player 1").GetComponent<Transform>();
