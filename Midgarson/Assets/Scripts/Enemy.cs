@@ -51,7 +51,8 @@ public class Enemy : MonoBehaviour
             chrono += 1 * Time.deltaTime;
             if (chrono >= 2)
             {
-                Destroy(gameObject);
+                //Destroy(gameObject);
+                gameObject.active = false;
                 chrono = 0;
 
             }
@@ -99,11 +100,11 @@ public class Enemy : MonoBehaviour
                         switch (direction)
                         {
                             case 0:
-                                transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
+                                //transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
                                 transform.rotation = Quaternion.Euler(0, 0, 0);
                                 break;
                             case 1:
-                                transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
+                                //transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
                                 transform.rotation = Quaternion.Euler(0, 180, 0);
                                 break;
                         }
@@ -147,6 +148,8 @@ public class Enemy : MonoBehaviour
 
     public void takeDamage(int damage)
     {
+        
+
         if(!name.Equals(EnemyTag.Archery) && !name.Equals(EnemyTag.Boss) )
         {
             if (!animator.GetBool("IsDead"))
@@ -176,7 +179,8 @@ public class Enemy : MonoBehaviour
                 if(life <= 0.0)
                 {
                     isDead = true;
-                    Destroy(gameObject);
+                    //Destroy(gameObject);
+                    gameObject.active = false;
                     if (Item != null)
                     {
                         DropItem();
@@ -185,6 +189,7 @@ public class Enemy : MonoBehaviour
                     playerLife.sceneController.IncrementScore(1);
                     
                 }
+
             }
             
         }
