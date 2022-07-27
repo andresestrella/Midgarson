@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovBoss5 : MonoBehaviour
+public class MovBoss5 : Enemy
 {
     public Rigidbody2D rg;
     public Transform player;
     public bool observandoDerecha = true;
-    private Animator animator;
 
-    public double life = 100;
-    public double damageTaken = 0.9;
+    public float damageTaken = 0.9f;
 
     public Animator otherAnimator;
     public float simpleAttackRange = 9f;
@@ -18,10 +16,7 @@ public class MovBoss5 : MonoBehaviour
     public GameObject knife;
     public float timeToshoot, countDown;
 
-    public PlayerLife playerLife;
-
     int rutina;
-    float chrono;
 
     [SerializeField] private float vida;
 
@@ -42,6 +37,7 @@ public class MovBoss5 : MonoBehaviour
     }
     void Start()
     {
+        name = EnemyTag.Boss;
         animator = GetComponent<Animator>();
         rg = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player 1").GetComponent<Transform>();

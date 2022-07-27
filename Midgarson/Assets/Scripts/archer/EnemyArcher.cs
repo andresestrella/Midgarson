@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyArcher : MonoBehaviour
+public class EnemyArcher : Enemy
 {
     public GameObject arrow;
     public float timeToshoot, countDown;
-    public double life = 100;
     public double damageTaken = 0.9;
     public Animator anim;
     public Animator otherAnimator;
@@ -18,6 +17,7 @@ public class EnemyArcher : MonoBehaviour
     {
         player = GameObject.Find("Player 1").GetComponent<Transform>();
         countDown = timeToshoot;
+        name = EnemyTag.Archery;
     }
 
     // Update is called once per frame
