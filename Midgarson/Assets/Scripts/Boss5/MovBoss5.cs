@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovBoss5 : MonoBehaviour
+public class MovBoss5 : Enemy
 {
     public Rigidbody2D rg;
     public Transform player;
     public bool observandoDerecha = true;
-    private Animator animator;
 
-    public double life = 100;
-    public double damageTaken = 0.9;
+    public float damageTaken = 0.9f;
 
     public Animator otherAnimator;
     public float simpleAttackRange = 9f;
@@ -18,10 +16,7 @@ public class MovBoss5 : MonoBehaviour
     public GameObject knife;
     public float timeToshoot, countDown;
 
-    public PlayerLife playerLife;
-
     int rutina;
-    float chrono;
 
     [SerializeField] private float vida;
 
@@ -42,6 +37,7 @@ public class MovBoss5 : MonoBehaviour
     }
     void Start()
     {
+        name = EnemyTag.Boss;
         animator = GetComponent<Animator>();
         rg = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player 1").GetComponent<Transform>();
@@ -50,67 +46,74 @@ public class MovBoss5 : MonoBehaviour
     }
     void Update()
     {
-
-        ditanciaPlayer = Vector2.Distance(transform.position, player.position);
-        animator.SetFloat("DistanciaPlayer", ditanciaPlayer);
-
-       
-        if (ditanciaPlayer > 10)
+        if (isDead)
         {
-            animator.SetBool("isWalking", false);
+            gameObject.GetComponent<Rigidbody2D>().simulated = false;
         }
         else
         {
-            chrono += 1 * Time.deltaTime;
+            ditanciaPlayer = Vector2.Distance(transform.position, player.position);
+            animator.SetFloat("DistanciaPlayer", ditanciaPlayer);
 
 
-
-            if (chrono >= Random.Range(1, 2))
+            if (ditanciaPlayer > 10)
             {
-                rutina = Random.Range(0, 3);
-                chrono = 0;
+                animator.SetBool("isWalking", false);
             }
-
-            if (rutina <= 1)
+            else
             {
-                animator.SetBool("isWalking", true);
-                if (ditanciaPlayer > 7)
+                chrono += 1 * Time.deltaTime;
+
+
+
+                if (chrono >= Random.Range(1, 2))
                 {
-                    Dash_skill();
+                    rutina = Random.Range(0, 3);
+                    chrono = 0;
                 }
 
-                if (ditanciaPlayer > 5 && ditanciaPlayer < 7)
-                {
-                    print("jump");
-                    Jump();
-                }
-
-            }
-            if (rutina > 1)
-            {
-                countDown -= Time.deltaTime;
-
-                if (countDown < 0)
-                {
-                    animator.SetBool("isWalking", false);
-                    ShootPlayer(!observandoDerecha);
-                    countDown = timeToshoot;
-
-                }
-                else
+                if (rutina <= 1)
                 {
                     animator.SetBool("isWalking", true);
+                    if (ditanciaPlayer > 7)
+                    {
+                        Dash_skill();
+                    }
+
+                    if (ditanciaPlayer > 5 && ditanciaPlayer < 7)
+                    {
+                        print("jump");
+                        Jump();
+                    }
 
                 }
+                if (rutina > 1)
+                {
+                    countDown -= Time.deltaTime;
+
+                    if (countDown < 0)
+                    {
+                        animator.SetBool("isWalking", false);
+                        ShootPlayer(!observandoDerecha);
+                        countDown = timeToshoot;
+
+                    }
+                    else
+                    {
+                        animator.SetBool("isWalking", true);
+
+                    }
 
 
 
+                }
             }
+
+
         }
 
 
 
-        
 
     }
 

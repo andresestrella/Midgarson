@@ -1,10 +1,14 @@
 package eitc.pucmm.servicioweb.classes;
 
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Value;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -23,32 +27,21 @@ public class GameState implements Serializable {
     private float currPosX;
     private float currPosY;
     private int score;
+    private float time;
+    @OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+    @JoinColumn(name = "id_enemy")
+    private Set<Enemy> enemies;
 
+    @ManyToOne()
+    private Item item1 = new Item(1,ItemTag.SHIELD,1);
 
-    /*
-    Se podría guardar un json
-    {[
-        arma1: {
-            tipo: x,
-            daño: y,
-            precio: z,
-            equipado: 1
-        },
-        casco: {
-            tipo: x,
-            specialEffect: "",
-            precio: z,
-            armorValue: y,
-            equipado: 1
-        }
-        arma2: {
-            tipo: x,
-            daño: y,
-            cantidad:w
-            precio: z
-        }
-    ]}
-     */
+    @ManyToOne()
+    private Item item2 = new Item(2,ItemTag.KNIFE,1);
 
+    @ManyToOne()
+    private Item item3= new Item(3,ItemTag.ARROW,0);
+
+    @ManyToOne()
+    private Item item4 = new Item(4,ItemTag.BOMB,5);
 
 }

@@ -14,7 +14,8 @@ public class PlayerStatusUI : MonoBehaviour
     [SerializeField] private Image healtBar, shieldBar;
     [SerializeField] private Image healtBarShadow, shieldBarShadow;
 
-    private float nextHealth, nextShield, timePlay = 0.0f;
+    private float nextHealth, nextShield;
+    public float timePlay = 0.0f;
 
     private bool activeShadowHealth = false, activeShadowShield = false;
 
@@ -105,6 +106,11 @@ public class PlayerStatusUI : MonoBehaviour
 
         return minutos + ":" + segundos;
 
+    }
+
+    public void setplaytime(float time)
+    {
+        timePlay = time;
     }
 
 }
