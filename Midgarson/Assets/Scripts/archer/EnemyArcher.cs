@@ -23,19 +23,27 @@ public class EnemyArcher : Enemy
     // Update is called once per frame
     void Update()
     {
-        distanciaPlayer = Vector2.Distance(transform.position, player.position);
-        if (distanciaPlayer < 30)
+        if (isDead)
         {
-            countDown -= Time.deltaTime;
-            if (countDown < 0)
-            {
-                ShootPlayer();
-                countDown = timeToshoot;
-            }
-
-            MirarPlayer();
-
+            gameObject.GetComponent<Rigidbody2D>().simulated = false;
         }
+        else
+        {
+            distanciaPlayer = Vector2.Distance(transform.position, player.position);
+            if (distanciaPlayer < 30)
+            {
+                countDown -= Time.deltaTime;
+                if (countDown < 0)
+                {
+                    ShootPlayer();
+                    countDown = timeToshoot;
+                }
+
+                MirarPlayer();
+
+            }
+        }
+
 
     }
 

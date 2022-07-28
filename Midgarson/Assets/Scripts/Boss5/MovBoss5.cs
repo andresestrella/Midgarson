@@ -46,67 +46,74 @@ public class MovBoss5 : Enemy
     }
     void Update()
     {
-
-        ditanciaPlayer = Vector2.Distance(transform.position, player.position);
-        animator.SetFloat("DistanciaPlayer", ditanciaPlayer);
-
-       
-        if (ditanciaPlayer > 10)
+        if (isDead)
         {
-            animator.SetBool("isWalking", false);
+            gameObject.GetComponent<Rigidbody2D>().simulated = false;
         }
         else
         {
-            chrono += 1 * Time.deltaTime;
+            ditanciaPlayer = Vector2.Distance(transform.position, player.position);
+            animator.SetFloat("DistanciaPlayer", ditanciaPlayer);
 
 
-
-            if (chrono >= Random.Range(1, 2))
+            if (ditanciaPlayer > 10)
             {
-                rutina = Random.Range(0, 3);
-                chrono = 0;
+                animator.SetBool("isWalking", false);
             }
-
-            if (rutina <= 1)
+            else
             {
-                animator.SetBool("isWalking", true);
-                if (ditanciaPlayer > 7)
+                chrono += 1 * Time.deltaTime;
+
+
+
+                if (chrono >= Random.Range(1, 2))
                 {
-                    Dash_skill();
+                    rutina = Random.Range(0, 3);
+                    chrono = 0;
                 }
 
-                if (ditanciaPlayer > 5 && ditanciaPlayer < 7)
-                {
-                    print("jump");
-                    Jump();
-                }
-
-            }
-            if (rutina > 1)
-            {
-                countDown -= Time.deltaTime;
-
-                if (countDown < 0)
-                {
-                    animator.SetBool("isWalking", false);
-                    ShootPlayer(!observandoDerecha);
-                    countDown = timeToshoot;
-
-                }
-                else
+                if (rutina <= 1)
                 {
                     animator.SetBool("isWalking", true);
+                    if (ditanciaPlayer > 7)
+                    {
+                        Dash_skill();
+                    }
+
+                    if (ditanciaPlayer > 5 && ditanciaPlayer < 7)
+                    {
+                        print("jump");
+                        Jump();
+                    }
 
                 }
+                if (rutina > 1)
+                {
+                    countDown -= Time.deltaTime;
+
+                    if (countDown < 0)
+                    {
+                        animator.SetBool("isWalking", false);
+                        ShootPlayer(!observandoDerecha);
+                        countDown = timeToshoot;
+
+                    }
+                    else
+                    {
+                        animator.SetBool("isWalking", true);
+
+                    }
 
 
 
+                }
             }
+
+
         }
 
 
 
-        
 
     }
 

@@ -20,6 +20,7 @@ public class GameStateController : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     // Update is called once per frame
@@ -39,10 +40,15 @@ public class GameStateController : MonoBehaviour
         {
             //id = 1;
         }
-
+        
         currentState = new GameState(1, 1, "easy", playerLife.currentHealth, playerLife.currentShield, 150,
             "gun", player.transform.position.x, player.transform.position.y, playerLife.sceneController.scorePlay
-            , enemies);
+            , enemies,playerLife.playerStatusUI.timePlay,
+            player.GetComponent<PlayerMovement>().item1,
+            player.GetComponent<PlayerMovement>().item2,
+            player.GetComponent<PlayerMovement>().item3,
+            player.GetComponent<PlayerMovement>().item4
+            );
         string s = JsonUtility.ToJson(currentState, true);
         findAllEnemies();
         if (loaded)
@@ -71,20 +77,33 @@ public class GameStateController : MonoBehaviour
         Debug.Log(player.transform.position);
         player.transform.position = new Vector3(currentState.currPosX, currentState.currPosY, 0);
         Debug.Log(player.transform.position);
-        playerLife.setLoadedHealth(currentState.playerHealth, currentState.playerShield, currentState.score);
+        playerLife.setLoadedStatus(currentState.playerHealth, currentState.playerShield, currentState.score, currentState.time);
+        extractItems(server.downloadHandler.text);
+        //Initialize items
+        player.GetComponent<PlayerMovement>().item1 = currentState.item1;
+        player.GetComponent<PlayerMovement>().item2 = currentState.item2;
+        player.GetComponent<PlayerMovement>().item3 = currentState.item3;
+        player.GetComponent<PlayerMovement>().item4 = currentState.item4;
     }
 
 
     private void findAllEnemies()
     {
 
-        var objsInScene = FindObjectsOfTypeAll(typeof(Enemy));
+        var objsInScene = FindObjectsOfType<Enemy>();
         int openBracketsIndex, closeBracketsIndex;
         string mappedEnemies = "[ ";
         int ind = 0;
-        gameStateJson = JsonUtility.ToJson(currentState);
+        gameStateJson = JsonUtility.ToJson(currentState)
+            .Insert(JsonUtility.ToJson(currentState).Length-1,
+            ",\"item1\":"+JsonUtility.ToJson( currentState.item1)+
+            ",\"item2\":" + JsonUtility.ToJson(currentState.item2)+
+            ",\"item3\":" + JsonUtility.ToJson(currentState.item3)+
+            ",\"item4\":" + JsonUtility.ToJson(currentState.item4)
+            );
         openBracketsIndex = gameStateJson.IndexOf("[");
         closeBracketsIndex = gameStateJson.IndexOf("]");
+        
         foreach (Enemy aux in objsInScene)
         {
             Enemy enemy = aux.GetComponent<Enemy>();
@@ -102,10 +121,38 @@ public class GameStateController : MonoBehaviour
         //return new List<Enemy>(objsInScene);
     }
 
+    private void extractItems(string obj)
+    {
+        int closeBrackets = obj.IndexOf("]"),ind = 0;
+        obj = obj.Substring(closeBrackets);
+        Match match = Regex.Match(obj, "({(.)[^}]+)}");
+        string item;
+
+        while (match.Success)
+        {
+            item = match.Value;
+            Item item1 = JsonUtility.FromJson<Item>(item);
+            switch (ind) {
+                case 0: currentState.item1 = item1;
+                    break;
+                case 1: currentState.item2 = item1;
+                    break;
+                case 2: currentState.item3 = item1;
+                    break;
+                default: currentState.item4 = item1;
+                    break;
+            }
+            
+            ind++;
+            match = match.NextMatch();
+
+        }
+    }
+
     private void addEnemiesToState(string obj)
     {
         string enemy = "";
-        Enemy[] enemies = new Enemy[FindObjectsOfTypeAll(typeof(Enemy)).Length];
+        Enemy[] enemies = new Enemy[FindObjectsOfType<Enemy>().Length];
         int openBracketsIndex, closeBracketsIndex;
         openBracketsIndex = obj.IndexOf("[");
         closeBracketsIndex = obj.IndexOf("]");
@@ -120,16 +167,20 @@ public class GameStateController : MonoBehaviour
             enemy = match.Value;
             EnemyDTO objTransfer = JsonUtility.FromJson<EnemyDTO>(enemy);
             Enemy enemyTransfer = new Enemy();
-            enemyTransfer.id = objTransfer.id;
-            enemyTransfer.isDead = objTransfer.isDead;
-            enemyTransfer.life = objTransfer.life;
-            enemyTransfer.name = objTransfer.name;
-            enemyTransfer.direction = objTransfer.direction;
-            enemyTransfer.damage = objTransfer.damage;
-            enemyTransfer.currPosX = objTransfer.currPosX;
-            enemyTransfer.currPosY = objTransfer.currPosY;
-            enemies[ind] = enemyTransfer;
-            ind++;
+            if (!enemyTransfer.isDead)
+            {
+                enemyTransfer.id = objTransfer.id;
+                enemyTransfer.isDead = objTransfer.isDead;
+                enemyTransfer.life = objTransfer.life;
+                enemyTransfer.name = objTransfer.name;
+                enemyTransfer.direction = objTransfer.direction;
+                enemyTransfer.damage = objTransfer.damage;
+                enemyTransfer.currPosX = objTransfer.currPosX;
+                enemyTransfer.currPosY = objTransfer.currPosY;
+                enemies[ind] = enemyTransfer;
+                ind++;
+            }
+            
             match = match.NextMatch();
             
         }
@@ -162,14 +213,16 @@ public class GameStateController : MonoBehaviour
     private void loadAllEnemies()
     {
         var objsInScene = FindObjectsOfType<Enemy>();
+        //var objsInScene = FindObjectsOfTypeAll(typeof(Enemy));
         int ind = 0;
         foreach (Enemy aux in objsInScene)
         {
             Enemy enemy = aux.GetComponent<Enemy>();
-            enemy.transform.position = new Vector3(currentState.enemies[ind].currPosX, currentState.enemies[ind].currPosY);
-            enemy.life = currentState.enemies[ind].life;
-            enemy.isDead = currentState.enemies[ind].isDead;
-            ind++;
+            
+                enemy.transform.position = new Vector3(currentState.enemies[ind].currPosX, currentState.enemies[ind].currPosY);
+                enemy.life = currentState.enemies[ind].life;
+                enemy.isDead = currentState.enemies[ind].isDead;
+                ind++;
         }
     }
 

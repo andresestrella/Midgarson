@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -45,8 +46,8 @@ public class PlayerMovement : MonoBehaviour
 
 
     //Bomb attack
-    Vector3 startingSpeed = new Vector3(10f,10f);
-    float currentAngle,shootingAngle = 45;
+    Vector3 startingSpeed = new Vector3(10f, 10f);
+    float currentAngle, shootingAngle = 45;
     public GameObject bomb;
 
     //Arrow
@@ -68,12 +69,21 @@ public class PlayerMovement : MonoBehaviour
     private int selectedShield = 0;
     public ShieldDatabase shieldDB;
 
+    //Items for gamestate
+    public Item item1 = new Item(1, ItemTag.SHIELD, 1),
+        item2 = new Item(2, ItemTag.KNIFE, 1),
+        item3 = new Item(3, ItemTag.ARROW, 0),
+        item4 = new Item(4, ItemTag.BOMB, 5);
+    private Dictionary<ItemTag, Item> items = new Dictionary<ItemTag, Item>();
+
     private void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
         mySprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         flip = false;
+
+
 
         if (!PlayerPrefs.HasKey("selectedShield"))
         {
@@ -124,6 +134,15 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+
+    private void Start()
+    {
+        items.Add(item1.tag, item1);
+        items.Add(item2.tag, item2);
+        items.Add(item3.tag, item3);
+        items.Add(item4.tag, item4);
+    }
+
     void PlayerMoveKeyboard()
     {
         movementX = Input.GetAxisRaw("Horizontal");
@@ -267,6 +286,7 @@ public class PlayerMovement : MonoBehaviour
         {
             currentAngle = shootingAngle * Mathf.Deg2Rad;
             Instantiate(bomb, gameObject.transform.position, Quaternion.identity).GetComponent<bombBehaviour>().Shoot(startingSpeed, currentAngle);
+            
         }
         else
         {
@@ -278,30 +298,42 @@ public class PlayerMovement : MonoBehaviour
     }
     void ThrowBomb()
     {
-        if (Input.GetKeyDown(KeyCode.E) && isGrounded)
-        { 
-            anim.SetBool(THROWING_ANIMATION, true);
-            _object = true;
-        }
-        if (Input.GetKeyUp(KeyCode.E) && isGrounded)
+        if(items[ItemTag.BOMB].count > 0)
         {
-            anim.SetBool(THROWING_ANIMATION, false);
+            if (Input.GetKeyDown(KeyCode.E) && isGrounded)
+            {
+                anim.SetBool(THROWING_ANIMATION, true);
+                _object = true;
+                items[ItemTag.BOMB].count--;
+            }
+            if (Input.GetKeyUp(KeyCode.E) && isGrounded)
+            {
+                anim.SetBool(THROWING_ANIMATION, false);
+                items[ItemTag.BOMB].count--;
+            }
+            
         }
+
     }
     void throwKnife()
     {
-
-        if (Input.GetKeyDown(KeyCode.T) && isGrounded)
+        if(items[ItemTag.KNIFE].count > 0)
         {
-            anim.SetBool(THROWING_ANIMATION, true);
-            _object = false;
+            if (Input.GetKeyDown(KeyCode.T) && isGrounded)
+            {
+                anim.SetBool(THROWING_ANIMATION, true);
+                _object = false;
 
+            }
+            if (Input.GetKeyUp(KeyCode.T) && isGrounded)
+            {
+                anim.SetBool(THROWING_ANIMATION, false);
+
+            }
+            //items[ItemTag.KNIFE].count--;
         }
-        if (Input.GetKeyUp(KeyCode.T) && isGrounded)
-        {
-            anim.SetBool(THROWING_ANIMATION, false);
-            
-        }
+
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

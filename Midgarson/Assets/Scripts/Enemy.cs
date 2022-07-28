@@ -48,11 +48,12 @@ public class Enemy : MonoBehaviour
             animator.SetBool("IsAtacking", false);
             animator.SetFloat("Speed", 0);
             animator.SetBool("OnHitPlayer", false);
+            gameObject.GetComponent<Rigidbody2D>().simulated = false;
             chrono += 1 * Time.deltaTime;
             if (chrono >= 2)
             {
                 //Destroy(gameObject);
-                gameObject.active = false;
+                //gameObject.active = false;
                 chrono = 0;
 
             }
@@ -163,7 +164,8 @@ public class Enemy : MonoBehaviour
                     animator.SetFloat("Speed", 0);
                     animator.SetBool("OnHitPlayer", false);
                     isDead = true;
-
+                    //transform.position = new Vector3(transform.position.x, transform.position.y, 10);
+                    gameObject.GetComponent<Rigidbody2D>().simulated = false;
                     playerLife.sceneController.IncrementScore(1);
 
                 }
@@ -180,7 +182,10 @@ public class Enemy : MonoBehaviour
                 {
                     isDead = true;
                     //Destroy(gameObject);
-                    gameObject.active = false;
+                    //gameObject.active = false;
+
+                    //transform.position = new Vector3(transform.position.x, transform.position.y,10);
+                    gameObject.GetComponent<Rigidbody2D>().simulated = false;
                     if (Item != null)
                     {
                         DropItem();

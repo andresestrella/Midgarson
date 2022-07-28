@@ -72,20 +72,25 @@ public class ApiController {
                 old.setCurrPosX(gameState.getCurrPosX());
                 old.setCurrPosY(gameState.getCurrPosY());
                 old.setScore(gameState.getScore());
-                gameState.getEnemies().stream().map(
+                old.setTime(gameState.getTime());
+                /*gameState.getEnemies().stream().map(
                         enemy -> {enemy = gameStateService.saveEnemy(enemy);
                             return enemy;
                         }
-                ).collect(Collectors.toList());
+                ).collect(Collectors.toList());*/
                 old.setEnemies(gameState.getEnemies());
+                old.setItem1(gameState.getItem1());
+                old.setItem2(gameState.getItem2());
+                old.setItem3(gameState.getItem3());
+                old.setItem4(gameState.getItem4());
                 return gameStateService.saveState(old);
             }
             else {
-                gameState.getEnemies().stream().map(
+                /*gameState.getEnemies().stream().map(
                         enemy -> {enemy = gameStateService.saveEnemy(enemy);
                             return enemy;
                         }
-                ).collect(Collectors.toList());
+                ).collect(Collectors.toList());*/
 
                 return gameStateService.saveState(gameState);
             }
