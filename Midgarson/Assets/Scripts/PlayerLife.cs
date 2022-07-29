@@ -58,17 +58,20 @@ public class PlayerLife : MonoBehaviour
         }
     }
 
-    public void setLoadedHealth(int health, int shield,int score)
+    public void setLoadedStatus(int health, int shield,int score,float time)
     {
         currentHealth = health;
         currentShield = shield;
         sceneController.loadScores(score);
         playerStatusUI.SetHealth(healthRange, shieldRange);
+        playerStatusUI.setplaytime(time);
         if (currentHealth <= 0)
         {
             sceneController.GameOver();
         }
     }
+
+
 
     public void AddHealth(int health)
     {

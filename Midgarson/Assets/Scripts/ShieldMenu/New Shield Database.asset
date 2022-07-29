@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e9e587c87bec834eb24c4a32284c115, type: 3}
+  m_Name: New Shield Database
+  m_EditorClassIdentifier: 
+  shield:
+  - shieldSprite: {fileID: 1201065413, guid: 5e2ab787448d4754abcf54ecff002b34, type: 3}
+  - shieldSprite: {fileID: -675407103, guid: 5e2ab787448d4754abcf54ecff002b34, type: 3}
+  - shieldSprite: {fileID: 255075532, guid: 5e2ab787448d4754abcf54ecff002b34, type: 3}
+  - shieldSprite: {fileID: 578963576, guid: 5e2ab787448d4754abcf54ecff002b34, type: 3}

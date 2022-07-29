@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class destroyEnemy : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Enemy")
-        {
-            Destroy(collision.gameObject);
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.tag == "Enemy"){
+            Destroy(other.gameObject);
         }
+
     }
 }

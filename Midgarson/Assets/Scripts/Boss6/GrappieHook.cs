@@ -21,7 +21,7 @@ public class GrappieHook : MonoBehaviour
     private void Start()
     {
         line = GetComponent<LineRenderer>();
-        player = GameObject.Find("Player1").GetComponent<Transform>();
+        player = GameObject.Find("Player 1").GetComponent<Transform>();
     }
 
     private void Update()
@@ -51,13 +51,15 @@ public class GrappieHook : MonoBehaviour
 
     public void StartGrapple()
     {
-       // Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        
+        // Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         Vector2 direction = player.position - transform.position;
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, maxDistance, grapplableMask);
 
         if (hit.collider != null)
         {
+            print("entro klk");
             isGrappling = true;
             target = hit.point;
             line.enabled = true;

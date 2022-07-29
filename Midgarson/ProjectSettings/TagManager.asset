@@ -13,6 +13,7 @@ TagManager:
   - MedCoins
   - MaxCoins
   - ShieldItem
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - UI
   - Ground
   - Enemies
-  - 
+  - Player
   - 
   - 
   - 
