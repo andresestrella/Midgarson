@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7880607401668888753}
   m_Layer: 0
   m_Name: sheet_1archer_2_0 (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,7 +138,6 @@ MonoBehaviour:
   currPosY: 0
   playerDetected: {fileID: 0}
   hit: {fileID: 0}
-  Item: {fileID: 964758277733320115, guid: cfac8fb988aa9c147ad441b6502d877a, type: 3}
   arrow: {fileID: 8563375324662989337, guid: 988610a37890602468e629cbe21784cc, type: 3}
   timeToshoot: 4
   countDown: 0

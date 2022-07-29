@@ -10,6 +10,7 @@ public class SceneController : MonoBehaviour
     public GameOverScreen gameOverScreen;
     public LevelClearScreen levelClearScreen;
     public static SceneController instancia;
+    private GameObject item;
 
     void Awake()
     {
@@ -17,7 +18,15 @@ public class SceneController : MonoBehaviour
     }
     void Start()
     {
+        GameObject[] list = Resources.LoadAll<GameObject>("Items");
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            int randomIndex = Random.Range(0, list.Length);
+            item = list[randomIndex];
+            enemies[i].GetComponent<Enemy>().item = item;
+        }
     }
 
     // Update is called once per frame
