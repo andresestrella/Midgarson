@@ -71,6 +71,7 @@ public class MovBoss6 : Enemy
             }
             else
             {
+<<<<<<< HEAD
                 if (true)
                 {
                     countBreak -= Time.deltaTime;
@@ -157,6 +158,62 @@ public class MovBoss6 : Enemy
                 }
 
             
+=======
+                chrono += 1 * Time.deltaTime;
+
+                if (ditanciaPlayer > 7 && ditanciaPlayer < 10)
+                {
+                    hook.StartGrapple();
+                }
+
+
+
+                if (chrono >= Random.Range(1, 2))
+                {
+                    rutina = Random.Range(0, 3);
+                    chrono = 0;
+                }
+
+                if (rutina <= 1)
+                {
+                    if (ditanciaPlayer > 5)
+                    {
+                        animator.SetBool("isWalking", true);
+                    }
+
+                    if (ditanciaPlayer > 7)
+                    {
+                        Dash_skill();
+                    }
+
+                    if (ditanciaPlayer > 5 && ditanciaPlayer < 7)
+                    {
+                        print("jump");
+                        Jump();
+                    }
+
+                }
+                if (rutina > 1)
+                {
+                    countDown -= Time.deltaTime;
+
+                    if (countDown < 0)
+                    {
+                        animator.SetBool("isWalking", false);
+                        ShootPlayer(!observandoDerecha);
+                        countDown = timeToshoot;
+
+                    }
+                    else
+                    {
+                        animator.SetBool("isWalking", true);
+
+                    }
+
+
+
+                }
+>>>>>>> main
 
             }
 

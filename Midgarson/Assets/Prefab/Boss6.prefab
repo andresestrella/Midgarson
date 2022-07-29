@@ -351,7 +351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grapplableMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
   maxDistance: 10
   grappleSpeed: 10
   grappleShootSpeed: 20

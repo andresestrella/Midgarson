@@ -16,7 +16,10 @@ public class MovBoss5 : Enemy
     public GameObject knife;
     public float timeToshoot, countDown;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
     int rutina;
 
     [SerializeField] private float vida;
@@ -71,6 +74,7 @@ public class MovBoss5 : Enemy
                 chrono += 1 * Time.deltaTime;
 
 
+<<<<<<< HEAD
                 if (true)
                 {
                     countBreak -= Time.deltaTime;
@@ -143,7 +147,50 @@ public class MovBoss5 : Enemy
 
 
 
+=======
 
+                if (chrono >= Random.Range(1, 2))
+                {
+                    rutina = Random.Range(0, 3);
+                    chrono = 0;
+                }
+
+                if (rutina <= 1)
+                {
+                    animator.SetBool("isWalking", true);
+                    if (ditanciaPlayer > 7)
+                    {
+                        Dash_skill();
+                    }
+
+                    if (ditanciaPlayer > 5 && ditanciaPlayer < 7)
+                    {
+                        print("jump");
+                        Jump();
+                    }
+>>>>>>> main
+
+                }
+                if (rutina > 1)
+                {
+                    countDown -= Time.deltaTime;
+
+                    if (countDown < 0)
+                    {
+                        animator.SetBool("isWalking", false);
+                        ShootPlayer(!observandoDerecha);
+                        countDown = timeToshoot;
+
+                    }
+                    else
+                    {
+                        animator.SetBool("isWalking", true);
+
+                    }
+
+
+
+                }
             }
 
 
