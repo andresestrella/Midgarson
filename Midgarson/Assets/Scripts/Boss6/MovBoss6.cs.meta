@@ -3,7 +3,19 @@ guid: b6d3c083355e89c4da0d6ee195bd2c69
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - animator: {instanceID: 0}
+  - target: {instanceID: 0}
+  - playerLife: {instanceID: 0}
+  - playerDetected: {instanceID: 0}
+  - hit: {instanceID: 0}
+  - Item: {fileID: 964758277733320115, guid: ceef31b2dbb745a42883a42308713aeb, type: 3}
+  - rg: {instanceID: 0}
+  - player: {instanceID: 0}
+  - otherAnimator: {instanceID: 0}
+  - knife: {instanceID: 0}
+  - hook: {instanceID: 0}
+  - controladorAtaque: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

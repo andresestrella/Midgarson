@@ -230,7 +230,6 @@ GameObject:
   - component: {fileID: 56732168}
   - component: {fileID: 56732170}
   - component: {fileID: 56732172}
-  - component: {fileID: 56732171}
   - component: {fileID: 56732173}
   m_Layer: 0
   m_Name: LargeBoat
@@ -333,17 +332,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.673435, y: 1.7000003}
   m_EdgeRadius: 0
---- !u!247 &56732171
-ConstantForce2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56732167}
-  m_Enabled: 1
-  m_Force: {x: 2, y: 0}
-  m_RelativeForce: {x: 0, y: 0}
-  m_Torque: 0
 --- !u!50 &56732172
 Rigidbody2D:
   serializedVersion: 4
@@ -2546,7 +2534,7 @@ PrefabInstance:
       objectReference: {fileID: 818684510}
     - target: {fileID: 3897567012592521214, guid: 8cc029e27e2e64b49a9bfda880935aa2, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7007322455594089258, guid: 8cc029e27e2e64b49a9bfda880935aa2, type: 3}
       propertyPath: sceneController
@@ -2862,6 +2850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStatusUI: {fileID: 2080914988}
   scorePlay: 0
+  coins: 0
   gameOverScreen: {fileID: 17227763}
   levelClearScreen: {fileID: 1859525690}
 --- !u!1 &820512059 stripped

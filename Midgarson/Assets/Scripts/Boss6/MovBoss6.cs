@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovBoss6 : MonoBehaviour
+public class MovBoss6 : Enemy
 {
     public Rigidbody2D rg;
     public Transform player;
     public bool observandoDerecha = true;
-    private Animator animator;
 
-    public double life = 100;
-    public double damageTaken = 0.9;
+    public float damageTaken = 0.9f;
 
     public Animator otherAnimator;
     public float simpleAttackRange = 9f;
@@ -18,11 +16,9 @@ public class MovBoss6 : MonoBehaviour
     public GameObject knife;
     public float timeToshoot, countDown;
 
-    public PlayerLife playerLife;
     public GrappieHook hook;
 
     int rutina;
-    float chrono;
 
 
     [SerializeField] private float vida;
@@ -38,7 +34,6 @@ public class MovBoss6 : MonoBehaviour
     public float velocityDash;
     float ditanciaPlayer;
 
-    GameObject target;
     private void Awake()
     {
         playerLife = GameObject.Find("Player 1").GetComponent<PlayerLife>();
@@ -46,6 +41,7 @@ public class MovBoss6 : MonoBehaviour
     }
     void Start()
     {
+        name = EnemyTag.Boss;
         animator = GetComponent<Animator>();
         rg = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player 1").GetComponent<Transform>();
@@ -55,63 +51,82 @@ public class MovBoss6 : MonoBehaviour
     void Update()
     {
 
-        ditanciaPlayer = Vector2.Distance(transform.position, player.position);
-        animator.SetFloat("DistanciaPlayer", ditanciaPlayer);
-
-        chrono += 1 * Time.deltaTime;
-
-        if (ditanciaPlayer > 7 && ditanciaPlayer < 10)
+        if (isDead)
         {
-            hook.StartGrapple();
+            gameObject.GetComponent<Rigidbody2D>().simulated = false;
         }
-
-
-
-        if (chrono >= Random.Range(1, 2))
+        else
         {
-            rutina = Random.Range(0, 3);
-            chrono = 0;
-        }
+            ditanciaPlayer = Vector2.Distance(transform.position, player.position);
+            animator.SetFloat("DistanciaPlayer", ditanciaPlayer);
 
-        if (rutina <= 1)
-        {
-            if (ditanciaPlayer > 5)
-            {
-                animator.SetBool("isWalking", true);
-            }
-   
-            if (ditanciaPlayer > 7)
-            {
-                Dash_skill();
-            }
-
-            if (ditanciaPlayer > 5 && ditanciaPlayer < 7)
-            {
-                print("jump");
-                Jump();
-            }
-
-        }
-        if (rutina > 1)
-        {
-            countDown -= Time.deltaTime;
-
-            if (countDown < 0)
+            if (ditanciaPlayer > 10)
             {
                 animator.SetBool("isWalking", false);
-                ShootPlayer(!observandoDerecha);
-                countDown = timeToshoot;
-
             }
             else
             {
-                animator.SetBool("isWalking", true);
+                chrono += 1 * Time.deltaTime;
+
+                if (ditanciaPlayer > 7 && ditanciaPlayer < 10)
+                {
+                    hook.StartGrapple();
+                }
+
+
+
+                if (chrono >= Random.Range(1, 2))
+                {
+                    rutina = Random.Range(0, 3);
+                    chrono = 0;
+                }
+
+                if (rutina <= 1)
+                {
+                    if (ditanciaPlayer > 5)
+                    {
+                        animator.SetBool("isWalking", true);
+                    }
+
+                    if (ditanciaPlayer > 7)
+                    {
+                        Dash_skill();
+                    }
+
+                    if (ditanciaPlayer > 5 && ditanciaPlayer < 7)
+                    {
+                        print("jump");
+                        Jump();
+                    }
+
+                }
+                if (rutina > 1)
+                {
+                    countDown -= Time.deltaTime;
+
+                    if (countDown < 0)
+                    {
+                        animator.SetBool("isWalking", false);
+                        ShootPlayer(!observandoDerecha);
+                        countDown = timeToshoot;
+
+                    }
+                    else
+                    {
+                        animator.SetBool("isWalking", true);
+
+                    }
+
+
+
+                }
 
             }
 
-
-
         }
+
+
+
 
 
     }

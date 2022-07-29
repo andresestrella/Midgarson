@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovBoss5 : MonoBehaviour
+public class MovBoss5 : Enemy
 {
     public Rigidbody2D rg;
     public Transform player;
     public bool observandoDerecha = true;
-    private Animator animator;
 
-    public double life = 100;
-    public double damageTaken = 0.9;
+    public float damageTaken = 0.9f;
 
     public Animator otherAnimator;
     public float simpleAttackRange = 9f;
@@ -18,10 +16,7 @@ public class MovBoss5 : MonoBehaviour
     public GameObject knife;
     public float timeToshoot, countDown;
 
-    public PlayerLife playerLife;
-
     int rutina;
-    float chrono;
 
     [SerializeField] private float vida;
 
@@ -42,6 +37,7 @@ public class MovBoss5 : MonoBehaviour
     }
     void Start()
     {
+        name = EnemyTag.Boss;
         animator = GetComponent<Animator>();
         rg = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player 1").GetComponent<Transform>();
@@ -50,80 +46,98 @@ public class MovBoss5 : MonoBehaviour
     }
     void Update()
     {
-
-        ditanciaPlayer = Vector2.Distance(transform.position, player.position);
-        animator.SetFloat("DistanciaPlayer", ditanciaPlayer);
-
-        chrono += 1 * Time.deltaTime;
-       
-
-
-        if (chrono >= Random.Range(1, 2))
+        if (isDead)
         {
-            rutina = Random.Range(0, 3);
-            chrono = 0;
+            gameObject.GetComponent<Rigidbody2D>().simulated = false;
         }
-
-        if (rutina <= 1)
+        else
         {
-            animator.SetBool("isWalking", true);
-            if (ditanciaPlayer > 7)
-            {
-                Dash_skill();
-            }
+            ditanciaPlayer = Vector2.Distance(transform.position, player.position);
+            animator.SetFloat("DistanciaPlayer", ditanciaPlayer);
 
-            if (ditanciaPlayer > 5 && ditanciaPlayer < 7)
-            {
-                print("jump");
-                Jump();
-            }
 
-        }
-        if (rutina > 1)
-        {
-            countDown -= Time.deltaTime;
-            
-             if (countDown < 0)
-             {
+            if (ditanciaPlayer > 10)
+            {
                 animator.SetBool("isWalking", false);
-                ShootPlayer(!observandoDerecha);
-                countDown = timeToshoot;
-
             }
             else
             {
-                animator.SetBool("isWalking", true);
+                chrono += 1 * Time.deltaTime;
 
+
+
+                if (chrono >= Random.Range(1, 2))
+                {
+                    rutina = Random.Range(0, 3);
+                    chrono = 0;
+                }
+
+                if (rutina <= 1)
+                {
+                    animator.SetBool("isWalking", true);
+                    if (ditanciaPlayer > 7)
+                    {
+                        Dash_skill();
+                    }
+
+                    if (ditanciaPlayer > 5 && ditanciaPlayer < 7)
+                    {
+                        print("jump");
+                        Jump();
+                    }
+
+                }
+                if (rutina > 1)
+                {
+                    countDown -= Time.deltaTime;
+
+                    if (countDown < 0)
+                    {
+                        animator.SetBool("isWalking", false);
+                        ShootPlayer(!observandoDerecha);
+                        countDown = timeToshoot;
+
+                    }
+                    else
+                    {
+                        animator.SetBool("isWalking", true);
+
+                    }
+
+
+
+                }
             }
 
-       
 
         }
+
+
 
 
     }
 
     void Dash_skill()
     {
-            timeDash += 1 * Time.deltaTime;
+        timeDash += 1 * Time.deltaTime;
 
-            if(timeDash < 0.35f)
-            {
-                dash = true;
-                animator.SetBool("Dash", true);
-                transform.Translate(Vector3.right * velocityDash * Time.fixedDeltaTime);
-            }
-            else
-            {
-                dash = false;
-                animator.SetBool("Dash", false);
-            }
+        if (timeDash < 0.35f)
+        {
+            dash = true;
+            animator.SetBool("Dash", true);
+            transform.Translate(Vector3.right * velocityDash * Time.fixedDeltaTime);
+        }
+        else
+        {
+            dash = false;
+            animator.SetBool("Dash", false);
+        }
     }
 
     void Jump()
     {
-          rg.AddForce(new Vector2(transform.position.x, jumpForce), ForceMode2D.Impulse);
-         // animator.SetBool("Jump", true);
+        rg.AddForce(new Vector2(transform.position.x, jumpForce), ForceMode2D.Impulse);
+        // animator.SetBool("Jump", true);
     }
 
 
@@ -141,9 +155,9 @@ public class MovBoss5 : MonoBehaviour
     {
         Collider2D[] objetos = Physics2D.OverlapCircleAll(controladorAtaque.position, radioAtaque);
 
-        foreach(Collider2D objeto in objetos)
+        foreach (Collider2D objeto in objetos)
         {
-            if(objeto.CompareTag("Player"))
+            if (objeto.CompareTag("Player"))
             {
                 playerLife.TakeDamage(5);
 
@@ -174,10 +188,10 @@ public class MovBoss5 : MonoBehaviour
             //agregar animacion de damage
             //  }
 
-           // if (animator.GetFloat("DistanciaPlayer") <= 2)//ver como le llame  o si no agregarle uno
-           // {
-              //  playerLife.TakeDamage(5);
-          //  }
+            // if (animator.GetFloat("DistanciaPlayer") <= 2)//ver como le llame  o si no agregarle uno
+            // {
+            //  playerLife.TakeDamage(5);
+            //  }
 
         }
 
@@ -191,7 +205,7 @@ public class MovBoss5 : MonoBehaviour
 
         if (life <= 0)
         {
-           //animacion de muerte
+            //animacion de muerte
         }
 
     }
