@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 2012381734799676406}
   m_Layer: 7
   m_Name: SwordmanEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -332,4 +332,3 @@ MonoBehaviour:
   currPosY: 0
   playerDetected: {fileID: 0}
   hit: {fileID: 0}
-  Item: {fileID: 964758277733320115, guid: dd12da12626dd4b4da262d74375d44ba, type: 3}

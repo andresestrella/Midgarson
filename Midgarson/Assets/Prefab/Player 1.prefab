@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 260465392}
   - component: {fileID: 260465391}
   - component: {fileID: 260465390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HookGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 588081584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 615978834}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 986977569}
   - component: {fileID: 986977571}
   - component: {fileID: 986977570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1383156850}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HookPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,7 +494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1496865248}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AxeAttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,7 +532,7 @@ GameObject:
   - component: {fileID: 6882761083453271556}
   - component: {fileID: 8687974867654685598}
   - component: {fileID: 775982191}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player 1
   m_TagString: Player
   m_Icon: {fileID: 0}

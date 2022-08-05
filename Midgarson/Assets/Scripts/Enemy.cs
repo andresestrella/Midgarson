@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     public bool isDead = false;
     public float currPosX;
     public float currPosY;
+    public GameObject item;
 
 
 
@@ -35,7 +36,6 @@ public class Enemy : MonoBehaviour
 
     public GameObject playerDetected, hit;
     //protected float life = 100;
-    public GameObject Item;
 
 
 
@@ -137,10 +137,10 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            if (Item != null)
+            if (item != null)
             {
                 DropItem();
-                Item = null;
+                item = null;
             }
         }
 
@@ -186,10 +186,10 @@ public class Enemy : MonoBehaviour
 
                     //transform.position = new Vector3(transform.position.x, transform.position.y,10);
                     gameObject.GetComponent<Rigidbody2D>().simulated = false;
-                    if (Item != null)
+                    if (item != null)
                     {
                         DropItem();
-                        Item = null;
+                        item = null;
                     }
                     playerLife.sceneController.IncrementScore(1);
                     
@@ -205,7 +205,7 @@ public class Enemy : MonoBehaviour
     public void DropItem()
     {
         Vector3 position = transform.position;
-        Instantiate(Item, position, Quaternion.identity);
+        Instantiate(item, position, Quaternion.identity);
     }
 
 }
