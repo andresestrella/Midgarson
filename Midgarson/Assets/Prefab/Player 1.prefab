@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -786401313
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -136,11 +136,11 @@ MonoBehaviour:
   m_rigidbody: {fileID: 6882761083453271558}
   rotateOverTime: 0
   rotationSpeed: 4
-  hasMaxDistance: 0
-  maxDistnace: 20
+  hasMaxDistance: 1
+  maxDistnace: 25
   launchToPoint: 1
-  launchType: 1
-  launchSpeed: 0.7
+  launchType: 0
+  launchSpeed: 1.2
   autoConfigureDistance: 0
   targetDistance: 3
   targetFrequncy: 1
@@ -280,8 +280,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -786401313
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
@@ -417,7 +417,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  StartWaveSize: 2
+  StartWaveSize: 3.04
   ropeProgressionCurve:
     serializedVersion: 2
     m_Curve:
@@ -676,6 +676,7 @@ MonoBehaviour:
   axeAttackRate: 4
   bomb: {fileID: 2063857220940564627, guid: 37b9f73d659eb8e4cae4e7541c2db68c, type: 3}
   arrow: {fileID: 3677692824331880756, guid: 2f797b1b06c429f46bf03571047b7577, type: 3}
+  lastThrow: 0
   knife: {fileID: 7063093504866126508, guid: f4d6d31db5eabee4cbe367513c3533bc, type: 3}
   enemyLayers:
     serializedVersion: 2
@@ -737,7 +738,7 @@ SpringJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -63.8, y: -3.1}
+  m_ConnectedAnchor: {x: -67.57671, y: -3.0833256}
   m_AutoConfigureDistance: 1
   m_Distance: 0.005
   m_DampingRatio: 1
