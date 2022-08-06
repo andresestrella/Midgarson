@@ -15478,6 +15478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStatusUI: {fileID: 1103380845}
   scorePlay: 0
+  coins: 0
   gameOverScreen: {fileID: 0}
   levelClearScreen: {fileID: 0}
 --- !u!114 &666228644
@@ -25879,6 +25880,10 @@ PrefabInstance:
       value: HUB
       objectReference: {fileID: 0}
     - target: {fileID: 1871742309985833324, guid: 8cc029e27e2e64b49a9bfda880935aa2, type: 3}
+      propertyPath: coins
+      value: 
+      objectReference: {fileID: 1103380846}
+    - target: {fileID: 1871742309985833324, guid: 8cc029e27e2e64b49a9bfda880935aa2, type: 3}
       propertyPath: sceneController
       value: 
       objectReference: {fileID: 666228643}
@@ -25893,6 +25898,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6ba1f866381b75498f3b014d7cd01b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1103380846 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3694576913460234722, guid: 8cc029e27e2e64b49a9bfda880935aa2, type: 3}
+  m_PrefabInstance: {fileID: 1103380844}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1104569326
