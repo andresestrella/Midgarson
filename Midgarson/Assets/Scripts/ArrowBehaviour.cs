@@ -45,11 +45,5 @@ public class ArrowBehaviour : MonoBehaviour
             collision.gameObject.GetComponent<Enemy>().takeDamage(damage);
             Destroy(gameObject);
         }
-
-        if (collision.gameObject.tag == "Player")
-        {
-            playerLife.TakeDamage(5);
-            Destroy(gameObject);
-        }
     }
 }
