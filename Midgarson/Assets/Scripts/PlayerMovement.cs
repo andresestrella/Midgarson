@@ -35,14 +35,14 @@ public class PlayerMovement : MonoBehaviour
     public float attackRange = 0.5f;
     public int attackDamage = 30;
     public float attackRate = 2f;
-    float nextAttackTime = 0f;
+    float nextAttackTime = 1f;
 
     //Axe Attack
     public Transform axeAttackPoint;
     public float axeAttackRange = 0.5f;
     public int axeAttackDamage = 60;
     public float axeAttackRate = 4f;
-    float nextAxeAttackTime = 0f;
+    float nextAxeAttackTime = 3f;
 
 
     //Bomb attack
@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
     bool flip;
 
     //throwing Knife
+    public float lastThrow = 0;
     public GameObject knife;
     Vector2 knifePos;
     bool _object;
@@ -82,7 +83,6 @@ public class PlayerMovement : MonoBehaviour
         mySprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         flip = false;
-
 
 
         if (!PlayerPrefs.HasKey("selectedShield"))
@@ -147,8 +147,6 @@ public class PlayerMovement : MonoBehaviour
     {
         movementX = Input.GetAxisRaw("Horizontal");
         bend = Input.GetButtonDown("Fire1");
-
-
 
         /*anim.SetBool(WALK_ANIMATION, movementX != 0.0f && movementX2 == 0f);
          anim.SetBool(RUN_ANIMATION, movementX != 0.0f && movementX2 != 0f);
@@ -221,25 +219,18 @@ public class PlayerMovement : MonoBehaviour
     void Attack()
     {
         
-        if (Input.GetMouseButtonDown(0) && isGrounded)
-        {
-            if (Time.time >= nextAttackTime)
+        if (Input.GetMouseButtonDown(0) && isGrounded && nextAttackTime >= 0.7f){
+            nextAttackTime = 0;
+            anim.SetBool(ATTACK_ANIMATION, true);
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+            foreach (Collider2D enemy in hitEnemies)
             {
-                anim.SetBool(ATTACK_ANIMATION, true);
-                Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-                foreach (Collider2D enemy in hitEnemies)
-                {
-                    Debug.Log("We hit " + enemy.name);
-                    enemy.GetComponent<Enemy>().takeDamage(attackDamage);
+                Debug.Log("We hit " + enemy.name);
+                enemy.GetComponent<Enemy>().takeDamage(attackDamage);
 
-                }
             }
-            nextAttackTime = Time.time + 1f / attackRate;
-
-        }   
-
-        if (Input.GetMouseButtonUp(0) && isGrounded)
-        {
+        }else {
+            nextAttackTime += Time.deltaTime;
             anim.SetBool(ATTACK_ANIMATION, false);
         }
         
@@ -247,10 +238,9 @@ public class PlayerMovement : MonoBehaviour
 
     void HeavyAttack()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Q) && isGrounded && nextAxeAttackTime >= 3f)
         {
-            if (Time.time >= nextAxeAttackTime)
-            {
+            nextAxeAttackTime = 0;
             anim.SetBool(HEAVY_ATTACK_ANIMATION, true);
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(axeAttackPoint.position, axeAttackRange, enemyLayers);
             foreach (Collider2D enemy in hitEnemies)
@@ -258,15 +248,16 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("We hit " + enemy.name);
                 enemy.GetComponent<Enemy>().takeDamage(axeAttackDamage);
             }
-        }
+            
             nextAxeAttackTime = Time.time + 1f / axeAttackRate;
         }
-        
-
-        if (Input.GetKeyUp(KeyCode.Q) && isGrounded)
+        else
         {
+            nextAxeAttackTime += Time.deltaTime;
             anim.SetBool(HEAVY_ATTACK_ANIMATION, false);
         }
+
+        
     }
 
     void BowAttack()
@@ -298,28 +289,26 @@ public class PlayerMovement : MonoBehaviour
     }
     void ThrowBomb()
     {
-        if(items[ItemTag.BOMB].count > 0)
+        
+        if (Input.GetKeyDown(KeyCode.E) && isGrounded && items[ItemTag.BOMB].count > 0)
         {
-            if (Input.GetKeyDown(KeyCode.E) && isGrounded)
-            {
-                anim.SetBool(THROWING_ANIMATION, true);
-                _object = true;
-                items[ItemTag.BOMB].count--;
-            }
-            if (Input.GetKeyUp(KeyCode.E) && isGrounded)
-            {
-                anim.SetBool(THROWING_ANIMATION, false);
-                items[ItemTag.BOMB].count--;
-            }
-            
+            anim.SetBool(THROWING_ANIMATION, true);
+            _object = true;
+            items[ItemTag.BOMB].count--;
         }
+        if (Input.GetKeyUp(KeyCode.E) && isGrounded)
+        {
+            anim.SetBool(THROWING_ANIMATION, false);
+            items[ItemTag.BOMB].count--;
+        }
+            
+        
 
     }
     void throwKnife()
     {
-        if(items[ItemTag.KNIFE].count > 0)
-        {
-            if (Input.GetKeyDown(KeyCode.T) && isGrounded)
+        
+            if (Input.GetKeyDown(KeyCode.T) && isGrounded && items[ItemTag.KNIFE].count > 0)
             {
                 anim.SetBool(THROWING_ANIMATION, true);
                 _object = false;
@@ -331,7 +320,7 @@ public class PlayerMovement : MonoBehaviour
 
             }
             //items[ItemTag.KNIFE].count--;
-        }
+        
 
 
     }
@@ -402,9 +391,14 @@ public class PlayerMovement : MonoBehaviour
     //Esto se hace para que primero termine de animar y luego crear el objeto
     void shootArrow()
     {
-        arrowPos = gameObject.transform.position;
-        arrowPos.y += 0.15f;
-        Instantiate(arrow, arrowPos, Quaternion.identity).GetComponent<ArrowBehaviour>().shoot(flip,1f);
+        if(items[ItemTag.ARROW].count > 0)
+        {
+            arrowPos = gameObject.transform.position;
+            arrowPos.y += 0.15f;
+            Instantiate(arrow, arrowPos, Quaternion.identity).GetComponent<ArrowBehaviour>().shoot(flip, 0.5f);
+            //items[ItemTag.KNIFE].count--;
+        }
+
     }
 
     private void UpdateShield(int selectedOption)

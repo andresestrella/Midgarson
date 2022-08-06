@@ -29,8 +29,12 @@ public class Boss1Movement : MonoBehaviour
 
     private Vector2 velocity = new Vector2();*/
 
+    public GrappieHook hook;
+
     void Awake () {
         //otherAnimator = otherObject.GetComponent<Animator>();
+        hook = GetComponent<GrappieHook>();
+        player = GameObject.Find("Player 1").GetComponent<Transform>();
     }
     private void Start() {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -93,6 +97,10 @@ public class Boss1Movement : MonoBehaviour
 
     private void followPlayer(){
         //anim.SetBool("isWalking", true);
+        if (Vector2.Distance(transform.position, player.position) > 5 && Vector2.Distance(transform.position, player.position) < 8)
+        {
+            hook.StartGrapple();
+        }
         if (transform.position.x < player.transform.position.x)
         {            
             transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
