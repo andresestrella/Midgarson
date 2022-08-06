@@ -63,7 +63,7 @@ public class ApiController {
             User user = userService.getUserById(gameState.getUserId());
             if(gameStateService.existGameState(user.getId())) {
                 GameState old = gameStateService.loadGameState(user.getId());
-                old.setLevel(gameState.getLevel());
+                old.setCurrLevel(gameState.getCurrLevel());
                 old.setDificulty(gameState.getDificulty());
                 old.setPlayerHealth(gameState.getPlayerHealth());
                 old.setPlayerShield(gameState.getPlayerShield());

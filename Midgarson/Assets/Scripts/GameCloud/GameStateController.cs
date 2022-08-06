@@ -63,6 +63,10 @@ public class GameStateController : MonoBehaviour
 
     }
 
+    public void onNextLevel() {
+        currentState.currLevel++;
+    }
+
 
     public IEnumerator LoadGame()
     {

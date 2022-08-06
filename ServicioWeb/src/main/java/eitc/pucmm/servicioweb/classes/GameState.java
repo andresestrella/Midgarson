@@ -18,7 +18,7 @@ public class GameState implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private long userId;
-    private int level;
+    private int currLevel = 1;
     private String dificulty;
     private int playerHealth;
     private int playerShield;
