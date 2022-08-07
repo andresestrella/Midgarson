@@ -401,13 +401,13 @@ public class PlayerMovement : MonoBehaviour
     //Esto se hace para que primero termine de animar y luego crear el objeto
     void shootArrow()
     {
-        if(items[ItemTag.ARROW].count > 0)
-        {
+        //if(items[ItemTag.ARROW].count > 0)
+        //{
             arrowPos = gameObject.transform.position;
             arrowPos.y += 0.15f;
             Instantiate(arrow, arrowPos, Quaternion.identity).GetComponent<ArrowBehaviour>().shoot(flip, 0.5f);
             //items[ItemTag.KNIFE].count--;
-        }
+        //}
 
     }
 
