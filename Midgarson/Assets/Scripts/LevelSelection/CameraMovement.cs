@@ -8,7 +8,7 @@ public class CameraMovement : MonoBehaviour
 
     Vector3 _deltaPos = new Vector3();
     Vector3 _movementSpeed = new Vector3(5,0);
-    const float MIN_X = 0f, MAX_X = 19.2f;
+    const float MIN_X = 0.88f, MAX_X = 19.2f;
 
     void Update() {
         transform.Translate(Vector3.right * 4 * Time.deltaTime * direction);

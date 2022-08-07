@@ -27,7 +27,7 @@ public class LevelStopBehavior : MonoBehaviour
         lvlStops.Add(lvl4Stop);
         lvlStops.Add(lvl5Stop);
         lvlStops.Add(lvl6Stop);
-        for(int i = 0; i < LevelInfo.playerCurrentLevel; i++){
+        for(int i = 0; i < GameManagement.currentLevel; i++){
             lvlStops[i].GetComponent<SpriteRenderer>().material = available;
         }
     }
