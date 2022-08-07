@@ -28,7 +28,7 @@ public static class GameManagement
     //public static string dificulad = "Marinero";
 
     //leif
-    public static float resistenciaLeif = 10f;
+    public static float resistenciaLeif = 1f;
     public static float damageLeif_givesEspada = 30f;
     public static float damageLeif_givesHacha = 60f;
     public static float damageLeif_givesFlecha = 10f;
@@ -70,30 +70,34 @@ public static class GameManagement
     public static float dropsProbability = 0.60f;
 
     //tienda
-    public static float coinsEarned;
-    public static float vidas;
-    public static float vidas_precio;//300    limite de compra: 3
-    public static bool vidas_available;
-    public static float flechas;
-    public static float flechas_precio;
-    public static float explosivo;
-    public static float explosivo_precio;
-    public static float armadura; 
-    public static float armadura_precio; //500
-    public static bool armadura_available;
-    public static float hacha;
-    public static float hacha_precio; //1300 2300 3000
-    public static bool hacha_available;
-    public static float espada;
-    public static float espada_precio; //700 800 1500
-    public static bool espada_available;
-    public static float cuchillo;
-    public static float cuchillo_precio; //200
-    public static float arco;
-    public static float arco_precio; //2300
-    public static bool arco_available;
+    public static float coinsEarned = 3200f;
+    public static float vidas_limit = 5f;
+    public static float vidas_precio = 300f;//300    limite de compra: 5
+    public static bool vidas_available = true;
+    public static float vidaLeif = 300f;
+    public static float flechasCantidad = 10f;
+    public static float flechas_precio = 30f;
+    public static float explosivo = 1f;
+    public static float explosivoCantidad = 3f;
+    public static float explosivo_precio = 300f;
+    public static bool explosivo_available = true;
+    public static float armadura = 1f; 
+    public static float armadura_precio = 500f; //500
+    public static bool armadura_available = true;
+    public static float hacha = 1f;
+    public static float hacha_precio = 1300f; //1300 2300 3000
+    public static bool hacha_available = true;
+    public static float espada = 1f;
+    public static float espada_precio = 700f; //700 800 1500
+    public static bool espada_available = true;
+    public static float cuchillo = 1f;
+    public static float cuchilloCantidad = 5f;
+    public static float cuchillo_precio = 200f; //200
+    public static float arco = 1f;
+    public static float arco_precio = 2300f; //2300
+    public static bool arco_available = true;
     public static float polvora;
-    public static float polvora_precio; //300
+    public static float polvora_precio = 300f; //300
 
     public static void backToDefaultDifficulty(){//marinero
         //leif
