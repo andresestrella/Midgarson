@@ -61,6 +61,7 @@ public class PlayerLife : MonoBehaviour
         if (currentHealth <= 0) {
             gameObject.GetComponent<PlayerMovement>().enabled = false;
             anim.SetBool(DYING_ANIMATION, true);
+
         }
     }
 
@@ -80,7 +81,7 @@ public class PlayerLife : MonoBehaviour
 
     public void _gameOver()
     {
-        Debug.Log("Morido");
+        anim.SetBool("auxDead", false);
         sceneController.GameOver();
     }
 
