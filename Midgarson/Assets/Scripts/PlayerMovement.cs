@@ -28,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
     private string THROWING_ANIMATION = "Throwing";
     private string STANDING_UP_ANIMATION = "StandingUp";
     private string HIT_ANIMATION = "Hit";
-    //private string DYING_ANIMATION = "";
 
     //Sword Attack
     public Transform attackPoint;
