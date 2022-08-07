@@ -2229,11 +2229,13 @@ MonoBehaviour:
   shield: {fileID: 1871742309965379893}
   score: {fileID: 1871742309572785282}
   time: {fileID: 1871742310028901501}
+  coins: {fileID: 3694576913460234722}
   barSpeed: 1
   healtBar: {fileID: 1871742310508191600}
   shieldBar: {fileID: 1871742309370396588}
   healtBarShadow: {fileID: 1871742310804559195}
   shieldBarShadow: {fileID: 1871742310275237629}
+  timePlay: 0
 --- !u!1 &1871742310000754825
 GameObject:
   m_ObjectHideFlags: 0
