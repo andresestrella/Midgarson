@@ -59,11 +59,11 @@ public class GrapplingGun : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             SetGrapplePoint();
         }
-        else if (Input.GetKey(KeyCode.H))
+        else if (Input.GetKey(KeyCode.F))
         {
             if (grappleRope.enabled)
             {
@@ -85,7 +85,7 @@ public class GrapplingGun : MonoBehaviour
                 }
             }
         }
-        else if (Input.GetKeyUp(KeyCode.H))
+        else if (Input.GetKeyUp(KeyCode.F))
         {
             grappleRope.enabled = false;
             m_springJoint2D.enabled = false;

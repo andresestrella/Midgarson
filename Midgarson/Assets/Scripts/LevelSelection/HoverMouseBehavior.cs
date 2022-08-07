@@ -14,12 +14,12 @@ public class HoverMouseBehavior : MonoBehaviour
     void Start()
     {
         lvlTitle.text = level;
-        lvlInfo.Add(LevelInfo.lvl1Title, LevelInfo.lvl1Score);
-        lvlInfo.Add(LevelInfo.lvl2Title, LevelInfo.lvl2Score);
-        lvlInfo.Add(LevelInfo.lvl3Title, LevelInfo.lvl3Score);
-        lvlInfo.Add(LevelInfo.lvl4Title, LevelInfo.lvl4Score);
-        lvlInfo.Add(LevelInfo.lvl5Title, LevelInfo.lvl5Score);
-        lvlInfo.Add(LevelInfo.lvl6Title, LevelInfo.lvl6Score);
+        lvlInfo.Add(GameManagement.lvl1Title, GameManagement.lvl1Score);
+        lvlInfo.Add(GameManagement.lvl2Title, GameManagement.lvl2Score);
+        lvlInfo.Add(GameManagement.lvl3Title, GameManagement.lvl3Score);
+        lvlInfo.Add(GameManagement.lvl4Title, GameManagement.lvl4Score);
+        lvlInfo.Add(GameManagement.lvl5Title, GameManagement.lvl5Score);
+        lvlInfo.Add(GameManagement.lvl6Title, GameManagement.lvl6Score);
         lvlInfoWindow.SetActive(false);
     }
 
