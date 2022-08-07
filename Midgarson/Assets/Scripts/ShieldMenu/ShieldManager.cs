@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ShieldManager : MonoBehaviour
 {
     public ShieldDatabase shieldDB;
-    public SpriteRenderer artworkSprite;
+    public Image artworkSprite;
 
     private int selectedShield = 0;
 

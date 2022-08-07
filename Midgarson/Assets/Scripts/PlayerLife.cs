@@ -44,24 +44,29 @@ public class PlayerLife : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-  
-        int porciento = 2;
-
-        if(currentShield == 0)
+        if(currentShield <= 0)
         {
-            porciento = 1;
+            currentHealth -= damage;
+            currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        }
+        else
+        {
+            currentShield -= damage * GameManagement.resistenciaLeif;
+            currentShield = Mathf.Clamp(currentShield, 0, maxShield);
         }
 
-        currentHealth -= damage/porciento;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        currentShield -= damage;
-        currentShield = Mathf.Clamp(currentShield, 0, maxShield);
         playerStatusUI.SetHealth(healthRange, shieldRange);
+<<<<<<< Updated upstream
 
         if (currentHealth <= 0) {
             gameObject.GetComponent<PlayerMovement>().enabled = false;
             anim.SetBool(DYING_ANIMATION, true);
 
+=======
+        if (currentHealth <= 0) {
+            gameObject.GetComponent<PlayerMovement>().enabled = false;
+            anim.SetBool(DYING_ANIMATION, true);
+>>>>>>> Stashed changes
         }
     }
 
