@@ -99,8 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39f45b183b863ab4e902216830c3ca69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openScene: Tienda
-  closeScene: Credits
+  openScene: MenuInGame
 --- !u!65 &5866075835754170247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -212,4 +211,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openScene: Tienda
-  closeScene: 

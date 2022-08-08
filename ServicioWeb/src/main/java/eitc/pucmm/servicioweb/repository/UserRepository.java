@@ -7,6 +7,9 @@ import java.util.List;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     List<User> findTop20ByOrderByPuntajeDesc();
-    User findByNameEqualsIgnoreCaseAndPasswordEqualsIgnoreCase(String Name, String Password);
+
+    User findByName(String username);
+
+    //User findById(Long id);
     User findByNameEqualsIgnoreCase(String Name);
 }

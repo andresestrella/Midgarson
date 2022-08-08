@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Networking;
+using System.Threading;
+using UnityEngine.SceneManagement;
 
 //Sería buena idea cambiar el nombre para identificar que es todo lo que tenga que ver con el servicio web
 public class LogIn : MonoBehaviour
@@ -11,9 +13,9 @@ public class LogIn : MonoBehaviour
 
     public TMP_InputField userName;
     public TMP_InputField password;
+    private GameStateController controller;
 
-
-    const string API_URI = "http://localhost:8080/api/";
+    const string API_URI = "http://localhost:8082/api/";
 
     public void LoginButton()
     {
@@ -24,6 +26,7 @@ public class LogIn : MonoBehaviour
     public void RegisterButton()
     {
         StartCoroutine(sendUserRequest(userName.text, password.text, "user/createUser"));
+        
     }
 
 
@@ -37,11 +40,30 @@ public class LogIn : MonoBehaviour
         www.SetRequestHeader("Content-Type", "application/json");
         yield return www.SendWebRequest();
 
-        user = getUser(username);
+        user = JsonUtility.FromJson<User>(www.downloadHandler.text);
         PlayerPrefs.SetInt("id", (int) user.id);
         PlayerPrefs.SetString("username", user.name);
         PlayerPrefs.SetString("password", password);
         PlayerPrefs.SetInt("puntaje", (int) user.puntaje);
+        PlayerPrefs.Save();
+        controller = GetComponent<GameStateController>();
+        yield return StartCoroutine(controller.LoadGame());
+        PlayerPrefs.SetInt("L1", controller.currentState.scoreL1);
+        PlayerPrefs.SetInt("L2", controller.currentState.scoreL2);
+        PlayerPrefs.SetInt("L3", controller.currentState.scoreL3);
+        PlayerPrefs.SetInt("L4", controller.currentState.scoreL4);
+        PlayerPrefs.SetInt("L5", controller.currentState.scoreL5);
+        PlayerPrefs.SetInt("L6", controller.currentState.scoreL6);
+        PlayerPrefs.Save();
+        if (endpoint.Equals("user/createUser"))
+        {
+            GameObject.Find("Canvas").GetComponent<Canvas>().scaleFactor = 0;
+            GameObject.Find("TimelineManager").GetComponent<TimelineController>().Play();
+            yield return new WaitForSeconds(21);
+
+            //Thread.Sleep(20000);
+        }
+        SceneManager.LoadScene("SelectLevel");
     }
 
     public User getUser(string username)

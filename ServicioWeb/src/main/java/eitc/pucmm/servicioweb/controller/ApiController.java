@@ -41,8 +41,19 @@ public class ApiController {
     }
 
     @RequestMapping(value = "user/validateUser", method = RequestMethod.PUT)
-    public boolean validateUser(@RequestBody User user){
-        return userService.checkCredentials(user.getName(), user.getPassword());
+    public User validateUser(@RequestBody User user){
+        try{
+            User user1 = userService.findUser(user.getName());
+            if(user1.getPassword().equals(user.getPassword())){
+                return user1;
+            }
+            else {
+                return null;
+            }
+        }catch (EntityNotFoundException e){
+            return null;
+        }
+
     }
 
     @RequestMapping(value = "user/deleteUser", method = RequestMethod.DELETE)
@@ -63,7 +74,7 @@ public class ApiController {
             User user = userService.getUserById(gameState.getUserId());
             if(gameStateService.existGameState(user.getId())) {
                 GameState old = gameStateService.loadGameState(user.getId());
-                old.setLevel(gameState.getLevel());
+                old.setCurrLevel(gameState.getCurrLevel());
                 old.setDificulty(gameState.getDificulty());
                 old.setPlayerHealth(gameState.getPlayerHealth());
                 old.setPlayerShield(gameState.getPlayerShield());
@@ -73,6 +84,12 @@ public class ApiController {
                 old.setCurrPosY(gameState.getCurrPosY());
                 old.setScore(gameState.getScore());
                 old.setTime(gameState.getTime());
+                old.setScoreL1(gameState.getScoreL1());
+                old.setScoreL2(gameState.getScoreL2());
+                old.setScoreL3(gameState.getScoreL3());
+                old.setScoreL4(gameState.getScoreL4());
+                old.setScoreL5(gameState.getScoreL5());
+                old.setScoreL6(gameState.getScoreL6());
                 /*gameState.getEnemies().stream().map(
                         enemy -> {enemy = gameStateService.saveEnemy(enemy);
                             return enemy;
@@ -83,7 +100,7 @@ public class ApiController {
                 old.setItem2(gameState.getItem2());
                 old.setItem3(gameState.getItem3());
                 old.setItem4(gameState.getItem4());
-                return gameStateService.saveState(old);
+                return gameStateService.saveState(old) != null;
             }
             else {
                 /*gameState.getEnemies().stream().map(
@@ -92,7 +109,7 @@ public class ApiController {
                         }
                 ).collect(Collectors.toList());*/
 
-                return gameStateService.saveState(gameState);
+                return gameStateService.saveState(gameState) != null;
             }
         }catch (EntityNotFoundException e){
             return false;
@@ -103,9 +120,13 @@ public class ApiController {
     public GameState loadGameState(@PathVariable long id){
         try{
             GameState gameState = gameStateService.loadGameState(id);
+            gameState.setIsFirstTime(false);
             return gameState;
-        } catch (EntityNotFoundException e) {
-            return null;
+        } catch (EntityNotFoundException | NullPointerException e) {
+            GameState gameState = new GameState();
+            gameState.setUserId(id);
+            gameState = gameStateService.saveState(gameState);
+            return gameState;
         }
 
     }

@@ -11,7 +11,7 @@ public class GameState
         set { id = value; }
     }
     public long userId;
-    public int level;
+    public int currLevel;
 
     public string dificulty;
     public int playerHealth;
@@ -23,11 +23,19 @@ public class GameState
     public int score;
     public Enemy[] enemies;
     public float time;
-    
+    public bool isFirstTime;
+
     public Item item1;
     public Item item2;
     public Item item3;
     public Item item4;
+
+    public int scoreL1;
+    public int scoreL2;
+    public int scoreL3;
+    public int scoreL4;
+    public int scoreL5;
+    public int scoreL6;
 
 
     public GameState(long userId, int level, string dificulty, int playerHealth,
@@ -35,7 +43,7 @@ public class GameState
         int score, Enemy[] enemies,float time,Item item1,Item item2,Item item3, Item item4)
     {
         this.userId = userId;
-        this.level = level;
+        this.currLevel = level;
         this.dificulty = dificulty;
         this.playerHealth = playerHealth;
         this.playerShield = playerShield;

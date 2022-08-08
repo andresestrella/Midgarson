@@ -2865,6 +2865,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7274765978289133342, guid: 8cc029e27e2e64b49a9bfda880935aa2, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8247697806831139713, guid: 8cc029e27e2e64b49a9bfda880935aa2, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1253.6213
@@ -2974,6 +2978,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yOffset: 0
+  settingsPosX: 1
+  settingsPosY: 2.34
   MIN_LIM_X: -3.48
   MAX_LIM_X: 38.48
   FollowSpeed: 10

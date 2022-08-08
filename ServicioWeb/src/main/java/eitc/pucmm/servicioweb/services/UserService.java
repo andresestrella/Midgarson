@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -19,18 +20,10 @@ public class UserService {
         return userRepository.findTop20ByOrderByPuntajeDesc();
     }
 
-    //Funcion para revisar las credenciales de un usuario
-    public boolean checkCredentials(String name, String password){
-        return userRepository.findByNameEqualsIgnoreCaseAndPasswordEqualsIgnoreCase(name,password) != null ? true : false;
-    }
-
     //Funcion para registra un usuario
     public User registerUser(User user){
-        if(userRepository.findByNameEqualsIgnoreCase(user.getName()) != null){
-            return null;
-        }else{
-            return userRepository.save(user);
-        }
+        user = userRepository.save(user);
+        return user;
     }
 
     //Funcion para modificar las credenciales de un usuario
@@ -43,7 +36,11 @@ public class UserService {
         userRepository.delete(user);
     }
 
-    public User getUserById(long userId) {
-        return userRepository.getById(userId);
+    public User findUser(String username) {
+        return userRepository.findByName(username);
+    }
+
+    public User getUserById(Long id){
+        return userRepository.findById(id).get();
     }
 }

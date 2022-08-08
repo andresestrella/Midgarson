@@ -7,7 +7,7 @@ public class PlayIntro : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.Find("TimelineManager").GetComponent<TimelineController>().Play();
+        //GameObject.Find("TimelineManager").GetComponent<TimelineController>().Play();
     }
 
     // Update is called once per frame

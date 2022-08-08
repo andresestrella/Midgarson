@@ -15,12 +15,12 @@ public class GameStateController : MonoBehaviour
     Enemy[] enemies;
     string gameStateJson = "";
     bool loaded = false;
-    public PlayerLife playerLife = new PlayerLife();
+    PlayerLife playerLife = new PlayerLife();
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        
+        playerLife = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLife>();
     }
 
     // Update is called once per frame
@@ -63,27 +63,43 @@ public class GameStateController : MonoBehaviour
 
     }
 
+    public void onNextLevel() {
+        currentState.currLevel++;
+    }
+
 
     public IEnumerator LoadGame()
     {
-        UnityWebRequest server = UnityWebRequest.Get(url + "load/1");
+
+        UnityWebRequest server = UnityWebRequest.Get(url + "load/"+PlayerPrefs.GetInt("id"));
         server.SetRequestHeader("Content-Type", "application/json");
         yield return server.SendWebRequest();
         Debug.Log("Received: " + server.downloadHandler.text);
         loaded = true;
         currentState = JsonUtility.FromJson<GameState>(server.downloadHandler.text);
-        addEnemiesToState(server.downloadHandler.text);
-        loadAllEnemies();
-        Debug.Log(player.transform.position);
-        player.transform.position = new Vector3(currentState.currPosX, currentState.currPosY, 0);
-        Debug.Log(player.transform.position);
-        playerLife.setLoadedStatus(currentState.playerHealth, currentState.playerShield, currentState.score, currentState.time);
-        extractItems(server.downloadHandler.text);
-        //Initialize items
-        player.GetComponent<PlayerMovement>().item1 = currentState.item1;
-        player.GetComponent<PlayerMovement>().item2 = currentState.item2;
-        player.GetComponent<PlayerMovement>().item3 = currentState.item3;
-        player.GetComponent<PlayerMovement>().item4 = currentState.item4;
+        if (!currentState.isFirstTime)
+        {
+            try
+            {
+                addEnemiesToState(server.downloadHandler.text);
+                loadAllEnemies();
+                player.transform.position = new Vector3(currentState.currPosX, currentState.currPosY, 0);
+                playerLife.setLoadedStatus(currentState.playerHealth, currentState.playerShield, currentState.score, currentState.time);
+                extractItems(server.downloadHandler.text);
+                //Initialize items
+                player.GetComponent<PlayerMovement>().item1 = currentState.item1;
+                player.GetComponent<PlayerMovement>().item2 = currentState.item2;
+                player.GetComponent<PlayerMovement>().item3 = currentState.item3;
+                player.GetComponent<PlayerMovement>().item4 = currentState.item4;
+            }
+            catch (System.Exception e)
+            {
+                print("era obvio xd");
+            }
+
+        }
+
+
     }
 
 
