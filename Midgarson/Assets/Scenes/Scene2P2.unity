@@ -221,6 +221,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4695568}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7756413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1871742309437732097, guid: 8cc029e27e2e64b49a9bfda880935aa2, type: 3}
+  m_PrefabInstance: {fileID: 1417738272}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555c6bec5bb640646862ccd3cfef763b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &17101177
 GameObject:
   m_ObjectHideFlags: 0
@@ -8630,11 +8641,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d82855f3d67004588a03942919b4e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStatusUI: {fileID: 0}
+  playerStatusUI: {fileID: 35269964}
   scorePlay: 0
   coins: 0
-  gameOverScreen: {fileID: 0}
-  levelClearScreen: {fileID: 0}
+  gameOverScreen: {fileID: 7756413}
+  levelClearScreen: {fileID: 977209377}
 --- !u!114 &394909687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8648,6 +8659,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yOffset: 2.7
+  settingsPosX: 4
+  settingsPosY: 5.34
   MIN_LIM_X: -120.86
   MAX_LIM_X: 234.33
   FollowSpeed: 10
@@ -22397,6 +22410,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 111
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &977209377 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1871742309629973384, guid: 8cc029e27e2e64b49a9bfda880935aa2, type: 3}
+  m_PrefabInstance: {fileID: 1417738272}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca46dd2df7b2680439269adb32c89ad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &977766600
 GameObject:
   m_ObjectHideFlags: 0
