@@ -25,7 +25,7 @@ public class enemyArrow : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-           playerLife.TakeDamage(5);
+           playerLife.TakeDamage(Mathf.RoundToInt( GameManagement.archerEnemyAttack_give));
            Destroy(gameObject);
         }
 

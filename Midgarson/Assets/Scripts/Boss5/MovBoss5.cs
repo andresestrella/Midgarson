@@ -48,6 +48,8 @@ public class MovBoss5 : Enemy
         player = GameObject.Find("Player 1").GetComponent<Transform>();
         countDown = timeToshoot;
         countBreak = breakTime;
+        damage = GameManagement.boss5EnemyAttack_give;
+        runSpeed = GameManagement.boss5EnemyAttack_velocity;
 
     }
     void Update()
@@ -198,7 +200,7 @@ public class MovBoss5 : Enemy
         {
             if (objeto.CompareTag("Player"))
             {
-                playerLife.TakeDamage(5);
+                playerLife.TakeDamage(Mathf.RoundToInt(damage));
 
             }
         }

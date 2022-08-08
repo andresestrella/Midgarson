@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public long? id;
     public int rutine;
     public new EnemyTag name;
-    public int damage;
+    public float damage;
     public float chrono = 0;
     float chrono2 = 0;
     public Animator animator;
@@ -65,7 +65,7 @@ public class Enemy : MonoBehaviour
 
             if (animator.GetBool("OnHitPlayer"))
             {
-                playerLife.TakeDamage(damage);
+                playerLife.TakeDamage(Mathf.RoundToInt( damage));
                 animator.SetBool("OnHitPlayer", false);
 
 
