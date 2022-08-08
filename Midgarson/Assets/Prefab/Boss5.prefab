@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3311731083544513601}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ControllerAtaque
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,9 +45,9 @@ GameObject:
   - component: {fileID: 3311731083839081582}
   - component: {fileID: 3311731083839081569}
   - component: {fileID: 3311731083839081568}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Boss5
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,9 +195,9 @@ MonoBehaviour:
   isDead: 0
   currPosX: 0
   currPosY: 0
+  item: {fileID: 0}
   playerDetected: {fileID: 0}
   hit: {fileID: 0}
-  Item: {fileID: 964758277733320115, guid: ceef31b2dbb745a42883a42308713aeb, type: 3}
   rg: {fileID: 0}
   player: {fileID: 0}
   observandoDerecha: 1

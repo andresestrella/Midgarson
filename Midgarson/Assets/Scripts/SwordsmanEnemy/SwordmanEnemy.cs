@@ -16,8 +16,10 @@ public class SwordmanEnemy : Enemy
     {
         animator = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player");
-        damage = 7;
+        damage = GameManagement.swordmanEnemyAttack_give;
+        runSpeed = GameManagement.swordmanEnemyAttack_velocity;
         name = EnemyTag.Swordsman;
+        playerLife = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLife>();
 
     }
 

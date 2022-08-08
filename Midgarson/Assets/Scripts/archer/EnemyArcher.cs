@@ -18,6 +18,7 @@ public class EnemyArcher : Enemy
         player = GameObject.Find("Player 1").GetComponent<Transform>();
         countDown = timeToshoot;
         name = EnemyTag.Archery;
+        damage = GameManagement.archerEnemyAttack_give;
     }
 
     // Update is called once per frame

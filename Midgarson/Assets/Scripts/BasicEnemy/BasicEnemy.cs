@@ -15,7 +15,8 @@ public class BasicEnemy : Enemy
     {
         animator = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player");
-        damage = 5;
+        damage = GameManagement.basicEnemyAttack_give;
+        runSpeed = GameManagement.basicEnemyAttack_velocity;
         name = EnemyTag.Basic;
     }
 

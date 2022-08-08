@@ -2,20 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss1Movement : MonoBehaviour
+public class Boss1Movement : Enemy
 {
     public Transform player;
     //public GameObject otherObject;
     public Animator otherAnimator;
-    public PlayerLife playerLife;
     
     public Rigidbody2D rb;
-    public double life = 100;
     public double damageTaken = 0.9;
     public float moveSpeed = 2f;
-
-    public float chrono;
-    public int rutine;
 
     public Animator anim;
 
@@ -38,6 +33,13 @@ public class Boss1Movement : MonoBehaviour
     }
     private void Start() {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
+        target = GameObject.FindGameObjectWithTag("Player");
+        damage = GameManagement.heavyEnemyAttack_give;
+        runSpeed = GameManagement.heavyEnemyAttack_velocity;
+        name = EnemyTag.Boss;
+        playerLife = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLife>();
         //dashTime = startDashTime;
     }
 
@@ -103,25 +105,21 @@ public class Boss1Movement : MonoBehaviour
         }
         if (transform.position.x < player.transform.position.x)
         {            
-            transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else
         {
-            transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.tag == "Player" && anim.GetBool("isDead") == false){           
-            if(otherAnimator.GetBool("Attack") == true){
-                life -= life * damageTaken;
-                print(life);
-                //agregar animacion de damage
-            }
+        if(other.gameObject.tag == "Player" && animator.GetBool("isDead") == false){           
+
             if(anim.GetBool("isAttacking") == true){
-                playerLife.TakeDamage(5);
+                playerLife.TakeDamage(Mathf.RoundToInt( damage));
             } /*else{
                 //PlayerLife.TakeDamage(10);
                 print("Take damage -10");
