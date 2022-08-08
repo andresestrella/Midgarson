@@ -18,4 +18,5 @@ public class SettingsInGame : MonoBehaviour
         print(CloseBehavior.closeThisScene);
         SceneManager.LoadScene(openScene, LoadSceneMode.Additive);
     }
+
 }

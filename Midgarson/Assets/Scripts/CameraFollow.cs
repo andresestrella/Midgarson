@@ -5,9 +5,10 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     private Transform player;
-    public float yOffset = 2.7f;
+    public float yOffset = 2.7f,settingsPosX = 4f,settingsPosY = 5.34f;
     public float MIN_LIM_X = -60, MAX_LIM_X = 130;
     public float FollowSpeed = 10f;
+    
 
     void Start()
     {
@@ -17,5 +18,7 @@ public class CameraFollow : MonoBehaviour
     {
         Vector3 newPos = new Vector3(Mathf.Clamp(player.position.x, MIN_LIM_X, MAX_LIM_X), player.position.y + yOffset, -10f);
         transform.position = Vector3.Slerp(transform.position, newPos, FollowSpeed*Time.deltaTime);
+        GameObject.Find("Settings").transform.position = new Vector3(Mathf.Clamp(player.position.x, MIN_LIM_X, MAX_LIM_X)+settingsPosX, player.position.y + settingsPosY);
+
     }
 }

@@ -16,8 +16,8 @@ public class GameStateService {
     private EnemyRepository enemyRepository;
 
     //Funcion para guardar un estado de juego
-    public boolean saveState(GameState gameState){
-        return gameStateRepository.save(gameState) != null;
+    public GameState saveState(GameState gameState){
+        return gameStateRepository.save(gameState);
     }
 
     //Funcion para cargar un estado de juego

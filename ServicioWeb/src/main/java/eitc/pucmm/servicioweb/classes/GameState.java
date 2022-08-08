@@ -27,7 +27,14 @@ public class GameState implements Serializable {
     private float currPosX;
     private float currPosY;
     private int score;
+    private int scoreL1;
+    private int scoreL2;
+    private int scoreL3;
+    private int scoreL4;
+    private int scoreL5;
+    private int scoreL6;
     private float time;
+    private Boolean isFirstTime = true;
     @OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
     @JoinColumn(name = "id_enemy")
     private Set<Enemy> enemies;

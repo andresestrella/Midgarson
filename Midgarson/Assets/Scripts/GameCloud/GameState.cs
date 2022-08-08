@@ -23,11 +23,19 @@ public class GameState
     public int score;
     public Enemy[] enemies;
     public float time;
-    
+    public bool isFirstTime;
+
     public Item item1;
     public Item item2;
     public Item item3;
     public Item item4;
+
+    public int scoreL1;
+    public int scoreL2;
+    public int scoreL3;
+    public int scoreL4;
+    public int scoreL5;
+    public int scoreL6;
 
 
     public GameState(long userId, int level, string dificulty, int playerHealth,
