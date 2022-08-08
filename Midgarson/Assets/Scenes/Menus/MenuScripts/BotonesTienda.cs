@@ -11,7 +11,6 @@ public class BotonesTienda : MonoBehaviour
     public TextMeshProUGUI hachaPrecio;
     public TextMeshProUGUI espadaPrecio;
     public TextMeshProUGUI bolsaExplosivosPrecio;
-    public TextMeshProUGUI polvoraPrecio;
     public TextMeshProUGUI flechasPrecio;
     public TextMeshProUGUI vidasPrecio;
     public TextMeshProUGUI cuchillosPrecio;
@@ -23,15 +22,9 @@ public class BotonesTienda : MonoBehaviour
     public Button hachaButton;
     public Button espadaButton;
     public Button bolsaExplosivosButton;
-    public Button polvoraButton;
     public Button flechasButton;
     public Button vidasButton;
     public Button cuchillosButton;
-
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
@@ -70,10 +63,11 @@ public class BotonesTienda : MonoBehaviour
                 GameManagement.coinsEarned -= 500f;
                 armaduraButton.interactable = false;
                 GameManagement.armadura_available = false;
-                GameManagement.resistenciaLeif = 0.5f;
-            }            
-        } else {
-            armaduraButton.interactable = false;
+                GameManagement.shieldUpdated = true;
+                //playerLife.AddShield(100);
+                GameManagement.escuchoLeif /= 2;
+                armaduraButton.interactable = false;
+            }
         }
     }
 
@@ -144,7 +138,8 @@ public class BotonesTienda : MonoBehaviour
             if(GameManagement.coinsEarned - 300f >= 0f){
                 GameManagement.coinsEarned -= 300f;
                 GameManagement.vidas_limit -= 1f;
-                PlayerLife.AddHealth(100);
+                GameManagement.vidaUpdated = true;
+                //playerLife.AddHealth(100);
             } 
         } else {
             GameManagement.vidas_available = false;
