@@ -41,7 +41,7 @@ public class PlayerLife : MonoBehaviour
             //Debug.Log(healthRange);
         }
     }
-
+    
     public void TakeDamage(int damage)
     {
         if(currentShield <= 0)
@@ -56,17 +56,9 @@ public class PlayerLife : MonoBehaviour
         }
 
         playerStatusUI.SetHealth(healthRange, shieldRange);
-<<<<<<< Updated upstream
-
         if (currentHealth <= 0) {
             gameObject.GetComponent<PlayerMovement>().enabled = false;
             anim.SetBool(DYING_ANIMATION, true);
-
-=======
-        if (currentHealth <= 0) {
-            gameObject.GetComponent<PlayerMovement>().enabled = false;
-            anim.SetBool(DYING_ANIMATION, true);
->>>>>>> Stashed changes
         }
     }
 
