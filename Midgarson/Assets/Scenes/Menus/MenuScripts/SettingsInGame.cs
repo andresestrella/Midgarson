@@ -12,7 +12,7 @@ public class SettingsInGame : MonoBehaviour
         
     }
 
-    private void OnMouseDown() {
+    public void OnMouseDown() {
         Time.timeScale = 0f;
         CloseBehavior.closeThisScene = SceneManager.GetActiveScene().name;
         print(CloseBehavior.closeThisScene);

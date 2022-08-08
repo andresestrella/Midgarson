@@ -18,7 +18,5 @@ public class CameraFollow : MonoBehaviour
     {
         Vector3 newPos = new Vector3(Mathf.Clamp(player.position.x, MIN_LIM_X, MAX_LIM_X), player.position.y + yOffset, -10f);
         transform.position = Vector3.Slerp(transform.position, newPos, FollowSpeed*Time.deltaTime);
-        GameObject.Find("Settings").transform.position = new Vector3(Mathf.Clamp(player.position.x, MIN_LIM_X, MAX_LIM_X)+settingsPosX, player.position.y + settingsPosY);
-
     }
 }
