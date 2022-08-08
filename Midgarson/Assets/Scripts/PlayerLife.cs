@@ -51,7 +51,7 @@ public class PlayerLife : MonoBehaviour
         }
         else
         {
-            currentShield -= damage * GameManagement.resistenciaLeif;
+            currentShield -= damage * GameManagement.escuchoLeif;
             currentShield = Mathf.Clamp(currentShield, 0, maxShield);
         }
 

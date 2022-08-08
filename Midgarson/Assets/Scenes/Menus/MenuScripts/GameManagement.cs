@@ -28,6 +28,9 @@ public static class GameManagement
     //public static string dificulad = "Marinero";
 
     //leif
+    public static bool shieldUpdated = false;
+    public static bool vidaUpdated = false;
+    public static int escuchoLeif = 1;
     public static float resistenciaLeif = 1f;
     public static float damageLeif_givesEspada = 30f;
     public static float damageLeif_givesHacha = 60f;
