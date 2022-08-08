@@ -29,10 +29,9 @@ public class bombBehaviour : MonoBehaviour
         _shooted = true;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-
-        if (other.gameObject.tag != "Player")
+        if (collision.gameObject.tag != "Player")
         {
             anim.SetBool(explode, true);
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(gameObject.transform.position, damageRange, enemyLayers);
@@ -44,7 +43,5 @@ public class bombBehaviour : MonoBehaviour
             Destroy(gameObject);
 
         }
-
     }
-    
 }
