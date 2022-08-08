@@ -40,6 +40,18 @@ public class PlayerLife : MonoBehaviour
             //SceneController.instancia.IncrementScore(1);
             //Debug.Log(healthRange);
         }
+
+        if (GameManagement.shieldUpdated)
+        {
+            GameManagement.shieldUpdated = false;
+            AddShield(100);
+        }
+
+        if (GameManagement.vidaUpdated)
+        {
+            GameManagement.vidaUpdated = false;
+            AddHealth(100);
+        }
     }
     
     public void TakeDamage(int damage)
