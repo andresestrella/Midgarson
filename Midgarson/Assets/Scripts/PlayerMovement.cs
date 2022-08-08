@@ -28,19 +28,18 @@ public class PlayerMovement : MonoBehaviour
     private string THROWING_ANIMATION = "Throwing";
     private string STANDING_UP_ANIMATION = "StandingUp";
     private string HIT_ANIMATION = "Hit";
-    //private string DYING_ANIMATION = "";
 
     //Sword Attack
     public Transform attackPoint;
     public float attackRange = 0.5f;
-    public int attackDamage = 30;
+    public float attackDamage;
     public float attackRate = 2f;
     float nextAttackTime = 1f;
 
     //Axe Attack
     public Transform axeAttackPoint;
     public float axeAttackRange = 0.5f;
-    public int axeAttackDamage = 60;
+    public float axeAttackDamage;
     public float axeAttackRate = 4f;
     float nextAxeAttackTime = 3f;
 
@@ -48,15 +47,18 @@ public class PlayerMovement : MonoBehaviour
     //Bomb attack
     Vector3 startingSpeed = new Vector3(10f, 10f);
     float currentAngle, shootingAngle = 45;
+    float bombDamage;
     public GameObject bomb;
 
     //Arrow
     public GameObject arrow;
+    public float arrowDamage;
     Vector2 arrowPos;
     bool flip;
 
     //throwing Knife
     public float lastThrow = 0;
+    public float knifeDamage;
     public GameObject knife;
     Vector2 knifePos;
     bool _object;
@@ -69,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
     private bool shieldActive = false;
     private int selectedShield = 0;
     public ShieldDatabase shieldDB;
+    float shieldResistance;
 
     //Items for gamestate
     public Item item1 = new Item(1, ItemTag.SHIELD, 1),
@@ -83,6 +86,13 @@ public class PlayerMovement : MonoBehaviour
         mySprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         flip = false;
+
+        arrowDamage = GameManagement.damageLeif_givesFlecha;
+        bombDamage = GameManagement.damageLeif_givesBomba;
+        knifeDamage = GameManagement.damageLeif_givesCuchillo;
+        axeAttackDamage = GameManagement.damageLeif_givesHacha;
+        attackDamage = GameManagement.damageLeif_givesEspada;
+        shieldResistance = GameManagement.resistenciaLeif;
 
 
         if (!PlayerPrefs.HasKey("selectedShield"))
@@ -226,7 +236,7 @@ public class PlayerMovement : MonoBehaviour
             foreach (Collider2D enemy in hitEnemies)
             {
                 Debug.Log("We hit " + enemy.name);
-                enemy.GetComponent<Enemy>().takeDamage(attackDamage);
+                enemy.GetComponent<Enemy>().takeDamage((int)attackDamage);
 
             }
         }else {
@@ -246,7 +256,7 @@ public class PlayerMovement : MonoBehaviour
             foreach (Collider2D enemy in hitEnemies)
             {
                 Debug.Log("We hit " + enemy.name);
-                enemy.GetComponent<Enemy>().takeDamage(axeAttackDamage);
+                enemy.GetComponent<Enemy>().takeDamage((int)axeAttackDamage);
             }
             
             nextAxeAttackTime = Time.time + 1f / axeAttackRate;
@@ -391,13 +401,13 @@ public class PlayerMovement : MonoBehaviour
     //Esto se hace para que primero termine de animar y luego crear el objeto
     void shootArrow()
     {
-        if(items[ItemTag.ARROW].count > 0)
-        {
+        //if(items[ItemTag.ARROW].count > 0)
+        //{
             arrowPos = gameObject.transform.position;
             arrowPos.y += 0.15f;
             Instantiate(arrow, arrowPos, Quaternion.identity).GetComponent<ArrowBehaviour>().shoot(flip, 0.5f);
             //items[ItemTag.KNIFE].count--;
-        }
+        //}
 
     }
 

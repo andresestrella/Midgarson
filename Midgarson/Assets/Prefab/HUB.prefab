@@ -2180,7 +2180,11 @@ MonoBehaviour:
   shield: {fileID: 1871742309965379893}
   score: {fileID: 1871742309572785282}
   time: {fileID: 1871742310028901501}
+<<<<<<< HEAD
   coins: {fileID: 0}
+=======
+  coins: {fileID: 3694576913460234722}
+>>>>>>> 7f75b8515bf65fa8f9229327921fcf7c2ccff9e7
   barSpeed: 1
   healtBar: {fileID: 1871742310508191600}
   shieldBar: {fileID: 1871742309370396588}

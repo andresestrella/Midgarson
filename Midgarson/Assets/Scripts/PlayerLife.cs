@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
+    private Animator anim;
+
     public SceneController sceneController;
     public PlayerStatusUI playerStatusUI;
+    private string DYING_ANIMATION = "isDead";
 
     public int maxHealth { get; private set; }
     public int currentHealth { get; private set; }
@@ -19,6 +22,8 @@ public class PlayerLife : MonoBehaviour
 
     private void Start()
     {
+        anim = GetComponent<Animator>();
+
         maxHealth = 100;
         currentHealth = maxHealth;
 
@@ -36,25 +41,24 @@ public class PlayerLife : MonoBehaviour
             //Debug.Log(healthRange);
         }
     }
-
+    
     public void TakeDamage(int damage)
     {
-  
-        int porciento = 2;
-
-        if(currentShield == 0)
+        if(currentShield <= 0)
         {
-            porciento = 1;
+            currentHealth -= damage;
+            currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        }
+        else
+        {
+            currentShield -= damage * GameManagement.escuchoLeif;
+            currentShield = Mathf.Clamp(currentShield, 0, maxShield);
         }
 
-        currentHealth -= damage/porciento;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        currentShield -= damage;
-        currentShield = Mathf.Clamp(currentShield, 0, maxShield);
         playerStatusUI.SetHealth(healthRange, shieldRange);
-        if(currentHealth <= 0){
-            //SceneController.instancia.GameOver();
-            sceneController.GameOver();
+        if (currentHealth <= 0) {
+            gameObject.GetComponent<PlayerMovement>().enabled = false;
+            anim.SetBool(DYING_ANIMATION, true);
         }
     }
 
@@ -67,11 +71,16 @@ public class PlayerLife : MonoBehaviour
         playerStatusUI.setplaytime(time);
         if (currentHealth <= 0)
         {
-            sceneController.GameOver();
+            gameObject.GetComponent<PlayerMovement>().enabled = false;
+            anim.SetBool(DYING_ANIMATION, true);
         }
     }
 
-
+    public void _gameOver()
+    {
+        anim.SetBool("auxDead", false);
+        sceneController.GameOver();
+    }
 
     public void AddHealth(int health)
     {
